@@ -1,0 +1,10 @@
+com\mongodb\starter\ApplicationStarter.class
+com\mongodb\starter\SpringConfiguration.class
+com\mongodb\starter\controllers\PersonController.class
+com\mongodb\starter\models\Address.class
+com\mongodb\starter\models\Car.class
+com\mongodb\starter\repositories\PersonRepository.class
+com\mongodb\starter\models\Person.class
+com\mongodb\starter\dtos\AverageAgeDTO.class
+com\mongodb\starter\SwaggerConfig.class
+com\mongodb\starter\repositories\MongoDBPersonRepository.class
