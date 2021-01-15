@@ -1,7 +1,7 @@
 [{
 	"_id": 1,
 	"name": "Bulbasaur",
-	"img": "http://www.serebii.net/pokemongo/pokemon/001.png",
+	"img": "http://www.serebii.net/pokemon/art/001.png",
 	"type": [
 		"Grass",
 		"Poison"
@@ -24,7 +24,7 @@
 }, {
 	"_id": 2,
 	"name": "Ivysaur",
-	"img": "http://www.serebii.net/pokemongo/pokemon/002.png",
+	"img": "http://www.serebii.net/pokemon/art/002.png",
 	"type": [
 		"Grass",
 		"Poison"
@@ -48,7 +48,7 @@
 }, {
 	"_id": 3,
 	"name": "Venusaur",
-	"img": "http://www.serebii.net/pokemongo/pokemon/003.png",
+	"img": "http://www.serebii.net/pokemon/art/003.png",
 	"type": [
 		"Grass",
 		"Poison"
@@ -71,7 +71,7 @@
 }, {
 	"_id": 4,
 	"name": "Charmander",
-	"img": "http://www.serebii.net/pokemongo/pokemon/004.png",
+	"img": "http://www.serebii.net/pokemon/art/004.png",
 	"type": [
 		"Fire"
 	],
@@ -92,7 +92,7 @@
 }, {
 	"_id": 5,
 	"name": "Charmeleon",
-	"img": "http://www.serebii.net/pokemongo/pokemon/005.png",
+	"img": "http://www.serebii.net/pokemon/art/005.png",
 	"type": [
 		"Fire"
 	],
@@ -114,7 +114,7 @@
 }, {
 	"_id": 6,
 	"name": "Charizard",
-	"img": "http://www.serebii.net/pokemongo/pokemon/006.png",
+	"img": "http://www.serebii.net/pokemon/art/006.png",
 	"type": [
 		"Fire",
 		"Flying"
@@ -136,7 +136,7 @@
 }, {
 	"_id": 7,
 	"name": "Squirtle",
-	"img": "http://www.serebii.net/pokemongo/pokemon/007.png",
+	"img": "http://www.serebii.net/pokemon/art/007.png",
 	"type": [
 		"Water"
 	],
@@ -156,7 +156,7 @@
 }, {
 	"_id": 8,
 	"name": "Wartortle",
-	"img": "http://www.serebii.net/pokemongo/pokemon/008.png",
+	"img": "http://www.serebii.net/pokemon/art/008.png",
 	"type": [
 		"Water"
 	],
@@ -177,7 +177,7 @@
 }, {
 	"_id": 9,
 	"name": "Blastoise",
-	"img": "http://www.serebii.net/pokemongo/pokemon/009.png",
+	"img": "http://www.serebii.net/pokemon/art/009.png",
 	"type": [
 		"Water"
 	],
@@ -197,7 +197,7 @@
 }, {
 	"_id": 10,
 	"name": "Caterpie",
-	"img": "http://www.serebii.net/pokemongo/pokemon/010.png",
+	"img": "http://www.serebii.net/pokemon/art/010.png",
 	"type": [
 		"Bug"
 	],
@@ -218,7 +218,7 @@
 }, {
 	"_id": 11,
 	"name": "Metapod",
-	"img": "http://www.serebii.net/pokemongo/pokemon/011.png",
+	"img": "http://www.serebii.net/pokemon/art/011.png",
 	"type": [
 		"Bug"
 	],
@@ -240,7 +240,7 @@
 }, {
 	"_id": 12,
 	"name": "Butterfree",
-	"img": "http://www.serebii.net/pokemongo/pokemon/012.png",
+	"img": "http://www.serebii.net/pokemon/art/012.png",
 	"type": [
 		"Bug",
 		"Flying"
@@ -264,7 +264,7 @@
 }, {
 	"_id": 13,
 	"name": "Weedle",
-	"img": "http://www.serebii.net/pokemongo/pokemon/013.png",
+	"img": "http://www.serebii.net/pokemon/art/013.png",
 	"type": [
 		"Bug",
 		"Poison"
@@ -287,7 +287,7 @@
 }, {
 	"_id": 14,
 	"name": "Kakuna",
-	"img": "http://www.serebii.net/pokemongo/pokemon/014.png",
+	"img": "http://www.serebii.net/pokemon/art/014.png",
 	"type": [
 		"Bug",
 		"Poison"
@@ -311,7 +311,7 @@
 }, {
 	"_id": 15,
 	"name": "Beedrill",
-	"img": "http://www.serebii.net/pokemongo/pokemon/015.png",
+	"img": "http://www.serebii.net/pokemon/art/015.png",
 	"type": [
 		"Bug",
 		"Poison"
@@ -334,7 +334,7 @@
 }, {
 	"_id": 16,
 	"name": "Pidgey",
-	"img": "http://www.serebii.net/pokemongo/pokemon/016.png",
+	"img": "http://www.serebii.net/pokemon/art/016.png",
 	"type": [
 		"Normal",
 		"Flying"
@@ -355,7 +355,7 @@
 }, {
 	"_id": 17,
 	"name": "Pidgeotto",
-	"img": "http://www.serebii.net/pokemongo/pokemon/017.png",
+	"img": "http://www.serebii.net/pokemon/art/017.png",
 	"type": [
 		"Normal",
 		"Flying"
@@ -377,7 +377,7 @@
 }, {
 	"_id": 18,
 	"name": "Pidgeot",
-	"img": "http://www.serebii.net/pokemongo/pokemon/018.png",
+	"img": "http://www.serebii.net/pokemon/art/018.png",
 	"type": [
 		"Normal",
 		"Flying"
@@ -398,7 +398,7 @@
 }, {
 	"_id": 19,
 	"name": "Rattata",
-	"img": "http://www.serebii.net/pokemongo/pokemon/019.png",
+	"img": "http://www.serebii.net/pokemon/art/019.png",
 	"type": [
 		"Normal"
 	],
@@ -414,7 +414,7 @@
 }, {
 	"_id": 20,
 	"name": "Raticate",
-	"img": "http://www.serebii.net/pokemongo/pokemon/020.png",
+	"img": "http://www.serebii.net/pokemon/art/020.png",
 	"type": [
 		"Normal"
 	],
@@ -430,7 +430,7 @@
 }, {
 	"_id": 21,
 	"name": "Spearow",
-	"img": "http://www.serebii.net/pokemongo/pokemon/021.png",
+	"img": "http://www.serebii.net/pokemon/art/021.png",
 	"type": [
 		"Normal",
 		"Flying"
@@ -448,7 +448,7 @@
 }, {
 	"_id": 22,
 	"name": "Fearow",
-	"img": "http://www.serebii.net/pokemongo/pokemon/022.png",
+	"img": "http://www.serebii.net/pokemon/art/022.png",
 	"type": [
 		"Normal",
 		"Flying"
@@ -466,7 +466,7 @@
 }, {
 	"_id": 23,
 	"name": "Ekans",
-	"img": "http://www.serebii.net/pokemongo/pokemon/023.png",
+	"img": "http://www.serebii.net/pokemon/art/023.png",
 	"type": [
 		"Poison"
 	],
@@ -483,7 +483,7 @@
 }, {
 	"_id": 24,
 	"name": "Arbok",
-	"img": "http://www.serebii.net/pokemongo/pokemon/024.png",
+	"img": "http://www.serebii.net/pokemon/art/024.png",
 	"type": [
 		"Poison"
 	],
@@ -500,7 +500,7 @@
 }, {
 	"_id": 25,
 	"name": "Pikachu",
-	"img": "http://www.serebii.net/pokemongo/pokemon/025.png",
+	"img": "http://www.serebii.net/pokemon/art/025.png",
 	"type": [
 		"Electric"
 	],
@@ -516,7 +516,7 @@
 }, {
 	"_id": 26,
 	"name": "Raichu",
-	"img": "http://www.serebii.net/pokemongo/pokemon/026.png",
+	"img": "http://www.serebii.net/pokemon/art/026.png",
 	"type": [
 		"Electric"
 	],
@@ -532,7 +532,7 @@
 }, {
 	"_id": 27,
 	"name": "Sandshrew",
-	"img": "http://www.serebii.net/pokemongo/pokemon/027.png",
+	"img": "http://www.serebii.net/pokemon/art/027.png",
 	"type": [
 		"Ground"
 	],
@@ -550,7 +550,7 @@
 }, {
 	"_id": 28,
 	"name": "Sandslash",
-	"img": "http://www.serebii.net/pokemongo/pokemon/028.png",
+	"img": "http://www.serebii.net/pokemon/art/028.png",
 	"type": [
 		"Ground"
 	],
@@ -568,7 +568,7 @@
 }, {
 	"_id": 29,
 	"name": "Nidoran ♀ (Female)",
-	"img": "http://www.serebii.net/pokemongo/pokemon/029.png",
+	"img": "http://www.serebii.net/pokemon/art/029.png",
 	"type": [
 		"Poison"
 	],
@@ -588,7 +588,7 @@
 }, {
 	"_id": 30,
 	"name": "Nidorina",
-	"img": "http://www.serebii.net/pokemongo/pokemon/030.png",
+	"img": "http://www.serebii.net/pokemon/art/030.png",
 	"type": [
 		"Poison"
 	],
@@ -609,7 +609,7 @@
 }, {
 	"_id": 31,
 	"name": "Nidoqueen",
-	"img": "http://www.serebii.net/pokemongo/pokemon/031.png",
+	"img": "http://www.serebii.net/pokemon/art/031.png",
 	"type": [
 		"Poison",
 		"Ground"
@@ -632,7 +632,7 @@
 }, {
 	"_id": 32,
 	"name": "Nidoran ♂ (Male)",
-	"img": "http://www.serebii.net/pokemongo/pokemon/032.png",
+	"img": "http://www.serebii.net/pokemon/art/032.png",
 	"type": [
 		"Poison"
 	],
@@ -652,7 +652,7 @@
 }, {
 	"_id": 33,
 	"name": "Nidorino",
-	"img": "http://www.serebii.net/pokemongo/pokemon/033.png",
+	"img": "http://www.serebii.net/pokemon/art/033.png",
 	"type": [
 		"Poison"
 	],
@@ -673,7 +673,7 @@
 }, {
 	"_id": 34,
 	"name": "Nidoking",
-	"img": "http://www.serebii.net/pokemongo/pokemon/034.png",
+	"img": "http://www.serebii.net/pokemon/art/034.png",
 	"type": [
 		"Poison",
 		"Ground"
@@ -696,7 +696,7 @@
 }, {
 	"_id": 35,
 	"name": "Clefairy",
-	"img": "http://www.serebii.net/pokemongo/pokemon/035.png",
+	"img": "http://www.serebii.net/pokemon/art/035.png",
 	"type": [
 		"Normal"
 	],
@@ -712,7 +712,7 @@
 }, {
 	"_id": 36,
 	"name": "Clefable",
-	"img": "http://www.serebii.net/pokemongo/pokemon/036.png",
+	"img": "http://www.serebii.net/pokemon/art/036.png",
 	"type": [
 		"Normal"
 	],
@@ -728,7 +728,7 @@
 }, {
 	"_id": 37,
 	"name": "Vulpix",
-	"img": "http://www.serebii.net/pokemongo/pokemon/037.png",
+	"img": "http://www.serebii.net/pokemon/art/037.png",
 	"type": [
 		"Fire"
 	],
@@ -746,7 +746,7 @@
 }, {
 	"_id": 38,
 	"name": "Ninetales",
-	"img": "http://www.serebii.net/pokemongo/pokemon/038.png",
+	"img": "http://www.serebii.net/pokemon/art/038.png",
 	"type": [
 		"Fire"
 	],
@@ -764,7 +764,7 @@
 },{
     "_id": 39,
     "name": "Jigglypuff",
-    "img": "http://www.serebii.net/pokemongo/pokemon/039.png",
+    "img": "http://www.serebii.net/pokemon/art/039.png",
     "type": [
       "Normal"
     ],
@@ -780,7 +780,7 @@
   }, {
     "_id": 40,
     "name": "Wigglytuff",
-    "img": "http://www.serebii.net/pokemongo/pokemon/040.png",
+    "img": "http://www.serebii.net/pokemon/art/040.png",
     "type": [
       "Normal"
     ],
@@ -796,7 +796,7 @@
   }, {
     "_id": 41,
     "name": "Zubat",
-    "img": "http://www.serebii.net/pokemongo/pokemon/041.png",
+    "img": "http://www.serebii.net/pokemon/art/041.png",
     "type": [
       "Poison",
       "Flying"
@@ -816,7 +816,7 @@
   }, {
     "_id": 42,
     "name": "Golbat",
-    "img": "http://www.serebii.net/pokemongo/pokemon/042.png",
+    "img": "http://www.serebii.net/pokemon/art/042.png",
     "type": [
       "Poison",
       "Flying"
@@ -836,7 +836,7 @@
   }, {
     "_id": 43,
     "name": "Oddish",
-    "img": "http://www.serebii.net/pokemongo/pokemon/043.png",
+    "img": "http://www.serebii.net/pokemon/art/043.png",
     "type": [
       "Grass",
       "Poison"
@@ -859,7 +859,7 @@
   }, {
     "_id": 44,
     "name": "Gloom",
-    "img": "http://www.serebii.net/pokemongo/pokemon/044.png",
+    "img": "http://www.serebii.net/pokemon/art/044.png",
     "type": [
       "Grass",
       "Poison"
@@ -883,7 +883,7 @@
   }, {
     "_id": 45,
     "name": "Vileplume",
-    "img": "http://www.serebii.net/pokemongo/pokemon/045.png",
+    "img": "http://www.serebii.net/pokemon/art/045.png",
     "type": [
       "Grass",
       "Poison"
@@ -906,7 +906,7 @@
   }, {
     "_id": 46,
     "name": "Paras",
-    "img": "http://www.serebii.net/pokemongo/pokemon/046.png",
+    "img": "http://www.serebii.net/pokemon/art/046.png",
     "type": [
       "Bug",
       "Grass"
@@ -928,7 +928,7 @@
   }, {
     "_id": 47,
     "name": "Parasect",
-    "img": "http://www.serebii.net/pokemongo/pokemon/047.png",
+    "img": "http://www.serebii.net/pokemon/art/047.png",
     "type": [
       "Bug",
       "Grass"
@@ -950,7 +950,7 @@
   }, {
     "_id": 48,
     "name": "Venonat",
-    "img": "http://www.serebii.net/pokemongo/pokemon/048.png",
+    "img": "http://www.serebii.net/pokemon/art/048.png",
     "type": [
       "Bug",
       "Poison"
@@ -970,7 +970,7 @@
   }, {
     "_id": 49,
     "name": "Venomoth",
-    "img": "http://www.serebii.net/pokemongo/pokemon/049.png",
+    "img": "http://www.serebii.net/pokemon/art/049.png",
     "type": [
       "Bug",
       "Poison"
@@ -990,7 +990,7 @@
   }, {
     "_id": 50,
     "name": "Diglett",
-    "img": "http://www.serebii.net/pokemongo/pokemon/050.png",
+    "img": "http://www.serebii.net/pokemon/art/050.png",
     "type": [
       "Ground"
     ],
@@ -1008,7 +1008,7 @@
   }, {
     "_id": 51,
     "name": "Dugtrio",
-    "img": "http://www.serebii.net/pokemongo/pokemon/051.png",
+    "img": "http://www.serebii.net/pokemon/art/051.png",
     "type": [
       "Ground"
     ],
@@ -1026,7 +1026,7 @@
   }, {
     "_id": 52,
     "name": "Meowth",
-    "img": "http://www.serebii.net/pokemongo/pokemon/052.png",
+    "img": "http://www.serebii.net/pokemon/art/052.png",
     "type": [
       "Normal"
     ],
@@ -1042,7 +1042,7 @@
   }, {
     "_id": 53,
     "name": "Persian",
-    "img": "http://www.serebii.net/pokemongo/pokemon/053.png",
+    "img": "http://www.serebii.net/pokemon/art/053.png",
     "type": [
       "Normal"
     ],
@@ -1058,7 +1058,7 @@
   }, {
     "_id": 54,
     "name": "Psyduck",
-    "img": "http://www.serebii.net/pokemongo/pokemon/054.png",
+    "img": "http://www.serebii.net/pokemon/art/054.png",
     "type": [
       "Water"
     ],
@@ -1075,7 +1075,7 @@
   }, {
     "_id": 55,
     "name": "Golduck",
-    "img": "http://www.serebii.net/pokemongo/pokemon/055.png",
+    "img": "http://www.serebii.net/pokemon/art/055.png",
     "type": [
       "Water"
     ],
@@ -1092,7 +1092,7 @@
   }, {
     "_id": 56,
     "name": "Mankey",
-    "img": "http://www.serebii.net/pokemongo/pokemon/056.png",
+    "img": "http://www.serebii.net/pokemon/art/056.png",
     "type": [
       "Fighting"
     ],
@@ -1110,7 +1110,7 @@
   }, {
     "_id": 57,
     "name": "Primeape",
-    "img": "http://www.serebii.net/pokemongo/pokemon/057.png",
+    "img": "http://www.serebii.net/pokemon/art/057.png",
     "type": [
       "Fighting"
     ],
@@ -1128,7 +1128,7 @@
   }, {
     "_id": 58,
     "name": "Growlithe",
-    "img": "http://www.serebii.net/pokemongo/pokemon/058.png",
+    "img": "http://www.serebii.net/pokemon/art/058.png",
     "type": [
       "Fire"
     ],
@@ -1146,7 +1146,7 @@
   }, {
     "_id": 59,
     "name": "Arcanine",
-    "img": "http://www.serebii.net/pokemongo/pokemon/059.png",
+    "img": "http://www.serebii.net/pokemon/art/059.png",
     "type": [
       "Fire"
     ],
@@ -1164,7 +1164,7 @@
   }, {
     "_id": 60,
     "name": "Poliwag",
-    "img": "http://www.serebii.net/pokemongo/pokemon/060.png",
+    "img": "http://www.serebii.net/pokemon/art/060.png",
     "type": [
       "Water"
     ],
@@ -1184,7 +1184,7 @@
   }, {
     "_id": 61,
     "name": "Poliwhirl",
-    "img": "http://www.serebii.net/pokemongo/pokemon/061.png",
+    "img": "http://www.serebii.net/pokemon/art/061.png",
     "type": [
       "Water"
     ],
@@ -1205,7 +1205,7 @@
   }, {
     "_id": 62,
     "name": "Poliwrath",
-    "img": "http://www.serebii.net/pokemongo/pokemon/062.png",
+    "img": "http://www.serebii.net/pokemon/art/062.png",
     "type": [
       "Water",
       "Fighting"
@@ -1229,7 +1229,7 @@
   }, {
     "_id": 63,
     "name": "Abra",
-    "img": "http://www.serebii.net/pokemongo/pokemon/063.png",
+    "img": "http://www.serebii.net/pokemon/art/063.png",
     "type": [
       "Psychic"
     ],
@@ -1250,7 +1250,7 @@
   }, {
     "_id": 64,
     "name": "Kadabra",
-    "img": "http://www.serebii.net/pokemongo/pokemon/064.png",
+    "img": "http://www.serebii.net/pokemon/art/064.png",
     "type": [
       "Psychic"
     ],
@@ -1272,7 +1272,7 @@
   }, {
     "_id": 65,
     "name": "Alakazam",
-    "img": "http://www.serebii.net/pokemongo/pokemon/065.png",
+    "img": "http://www.serebii.net/pokemon/art/065.png",
     "type": [
       "Psychic"
     ],
@@ -1293,7 +1293,7 @@
   }, {
     "_id": 66,
     "name": "Machop",
-    "img": "http://www.serebii.net/pokemongo/pokemon/066.png",
+    "img": "http://www.serebii.net/pokemon/art/066.png",
     "type": [
       "Fighting"
     ],
@@ -1314,7 +1314,7 @@
   }, {
     "_id": 67,
     "name": "Machoke",
-    "img": "http://www.serebii.net/pokemongo/pokemon/067.png",
+    "img": "http://www.serebii.net/pokemon/art/067.png",
     "type": [
       "Fighting"
     ],
@@ -1336,7 +1336,7 @@
   }, {
     "_id": 68,
     "name": "Machamp",
-    "img": "http://www.serebii.net/pokemongo/pokemon/068.png",
+    "img": "http://www.serebii.net/pokemon/art/068.png",
     "type": [
       "Fighting"
     ],
@@ -1357,7 +1357,7 @@
   }, {
     "_id": 69,
     "name": "Bellsprout",
-    "img": "http://www.serebii.net/pokemongo/pokemon/069.png",
+    "img": "http://www.serebii.net/pokemon/art/069.png",
     "type": [
       "Grass",
       "Poison"
@@ -1380,7 +1380,7 @@
   }, {
     "_id": 70,
     "name": "Weepinbell",
-    "img": "http://www.serebii.net/pokemongo/pokemon/070.png",
+    "img": "http://www.serebii.net/pokemon/art/070.png",
     "type": [
       "Grass",
       "Poison"
@@ -1404,7 +1404,7 @@
   }, {
     "_id": 71,
     "name": "Victreebel",
-    "img": "http://www.serebii.net/pokemongo/pokemon/071.png",
+    "img": "http://www.serebii.net/pokemon/art/071.png",
     "type": [
       "Grass",
       "Poison"
@@ -1427,7 +1427,7 @@
   }, {
     "_id": 72,
     "name": "Tentacool",
-    "img": "http://www.serebii.net/pokemongo/pokemon/072.png",
+    "img": "http://www.serebii.net/pokemon/art/072.png",
     "type": [
       "Water",
       "Poison"
@@ -1446,7 +1446,7 @@
   }, {
     "_id": 73,
     "name": "Tentacruel",
-    "img": "http://www.serebii.net/pokemongo/pokemon/073.png",
+    "img": "http://www.serebii.net/pokemon/art/073.png",
     "type": [
       "Water",
       "Poison"
@@ -1465,7 +1465,7 @@
   }, {
     "_id": 74,
     "name": "Geodude",
-    "img": "http://www.serebii.net/pokemongo/pokemon/074.png",
+    "img": "http://www.serebii.net/pokemon/art/074.png",
     "type": [
       "Rock",
       "Ground"
@@ -1490,7 +1490,7 @@
   }, {
     "_id": 75,
     "name": "Graveler",
-    "img": "http://www.serebii.net/pokemongo/pokemon/075.png",
+    "img": "http://www.serebii.net/pokemon/art/075.png",
     "type": [
       "Rock",
       "Ground"
@@ -1516,7 +1516,7 @@
   }, {
     "_id": 76,
     "name": "Golem",
-    "img": "http://www.serebii.net/pokemongo/pokemon/076.png",
+    "img": "http://www.serebii.net/pokemon/art/076.png",
     "type": [
       "Rock",
       "Ground"
@@ -1541,7 +1541,7 @@
   },{
     "_id": 77,
     "name": "Ponyta",
-    "img": "http://www.serebii.net/pokemongo/pokemon/077.png",
+    "img": "http://www.serebii.net/pokemon/art/077.png",
     "type": [
       "Fire"
     ],
@@ -1559,7 +1559,7 @@
   }, {
     "_id": 78,
     "name": "Rapidash",
-    "img": "http://www.serebii.net/pokemongo/pokemon/078.png",
+    "img": "http://www.serebii.net/pokemon/art/078.png",
     "type": [
       "Fire"
     ],
@@ -1577,7 +1577,7 @@
   }, {
     "_id": 79,
     "name": "Slowpoke",
-    "img": "http://www.serebii.net/pokemongo/pokemon/079.png",
+    "img": "http://www.serebii.net/pokemon/art/079.png",
     "type": [
       "Water",
       "Psychic"
@@ -1598,7 +1598,7 @@
   }, {
     "_id": 80,
     "name": "Slowbro",
-    "img": "http://www.serebii.net/pokemongo/pokemon/080.png",
+    "img": "http://www.serebii.net/pokemon/art/080.png",
     "type": [
       "Water",
       "Psychic"
@@ -1619,7 +1619,7 @@
   }, {
     "_id": 81,
     "name": "Magnemite",
-    "img": "http://www.serebii.net/pokemongo/pokemon/081.png",
+    "img": "http://www.serebii.net/pokemon/art/081.png",
     "type": [
       "Electric"
     ],
@@ -1637,7 +1637,7 @@
   }, {
     "_id": 82,
     "name": "Magneton",
-    "img": "http://www.serebii.net/pokemongo/pokemon/082.png",
+    "img": "http://www.serebii.net/pokemon/art/082.png",
     "type": [
       "Electric"
     ],
@@ -1655,7 +1655,7 @@
   }, {
     "_id": 83,
     "name": "Farfetch'd",
-    "img": "http://www.serebii.net/pokemongo/pokemon/083.png",
+    "img": "http://www.serebii.net/pokemon/art/083.png",
     "type": [
       "Normal",
       "Flying"
@@ -1669,7 +1669,7 @@
   }, {
     "_id": 84,
     "name": "Doduo",
-    "img": "http://www.serebii.net/pokemongo/pokemon/084.png",
+    "img": "http://www.serebii.net/pokemon/art/084.png",
     "type": [
       "Normal",
       "Flying"
@@ -1687,7 +1687,7 @@
   }, {
     "_id": 85,
     "name": "Dodrio",
-    "img": "http://www.serebii.net/pokemongo/pokemon/085.png",
+    "img": "http://www.serebii.net/pokemon/art/085.png",
     "type": [
       "Normal",
       "Flying"
@@ -1705,7 +1705,7 @@
   }, {
     "_id": 86,
     "name": "Seel",
-    "img": "http://www.serebii.net/pokemongo/pokemon/086.png",
+    "img": "http://www.serebii.net/pokemon/art/086.png",
     "type": [
       "Water"
     ],
@@ -1722,7 +1722,7 @@
   }, {
     "_id": 87,
     "name": "Dewgong",
-    "img": "http://www.serebii.net/pokemongo/pokemon/087.png",
+    "img": "http://www.serebii.net/pokemon/art/087.png",
     "type": [
       "Water",
       "Ice"
@@ -1742,7 +1742,7 @@
   }, {
     "_id": 88,
     "name": "Grimer",
-    "img": "http://www.serebii.net/pokemongo/pokemon/088.png",
+    "img": "http://www.serebii.net/pokemon/art/088.png",
     "type": [
       "Poison"
     ],
@@ -1759,7 +1759,7 @@
   }, {
     "_id": 89,
     "name": "Muk",
-    "img": "http://www.serebii.net/pokemongo/pokemon/089.png",
+    "img": "http://www.serebii.net/pokemon/art/089.png",
     "type": [
       "Poison"
     ],
@@ -1776,7 +1776,7 @@
   }, {
     "_id": 90,
     "name": "Shellder",
-    "img": "http://www.serebii.net/pokemongo/pokemon/090.png",
+    "img": "http://www.serebii.net/pokemon/art/090.png",
     "type": [
       "Water"
     ],
@@ -1793,7 +1793,7 @@
   }, {
     "_id": 91,
     "name": "Cloyster",
-    "img": "http://www.serebii.net/pokemongo/pokemon/091.png",
+    "img": "http://www.serebii.net/pokemon/art/091.png",
     "type": [
       "Water",
       "Ice"
@@ -1813,7 +1813,7 @@
   }, {
     "_id": 92,
     "name": "Gastly",
-    "img": "http://www.serebii.net/pokemongo/pokemon/092.png",
+    "img": "http://www.serebii.net/pokemon/art/092.png",
     "type": [
       "Ghost",
       "Poison"
@@ -1836,7 +1836,7 @@
   }, {
     "_id": 93,
     "name": "Haunter",
-    "img": "http://www.serebii.net/pokemongo/pokemon/093.png",
+    "img": "http://www.serebii.net/pokemon/art/093.png",
     "type": [
       "Ghost",
       "Poison"
@@ -1860,7 +1860,7 @@
   }, {
     "_id": 94,
     "name": "Gengar",
-    "img": "http://www.serebii.net/pokemongo/pokemon/094.png",
+    "img": "http://www.serebii.net/pokemon/art/094.png",
     "type": [
       "Ghost",
       "Poison"
@@ -1883,7 +1883,7 @@
   }, {
     "_id": 95,
     "name": "Onix",
-    "img": "http://www.serebii.net/pokemongo/pokemon/095.png",
+    "img": "http://www.serebii.net/pokemon/art/095.png",
     "type": [
       "Rock",
       "Ground"
@@ -1901,7 +1901,7 @@
   }, {
     "_id": 96,
     "name": "Drowzee",
-    "img": "http://www.serebii.net/pokemongo/pokemon/096.png",
+    "img": "http://www.serebii.net/pokemon/art/096.png",
     "type": [
       "Psychic"
     ],
@@ -1919,7 +1919,7 @@
   }, {
     "_id": 97,
     "name": "Hypno",
-    "img": "http://www.serebii.net/pokemongo/pokemon/097.png",
+    "img": "http://www.serebii.net/pokemon/art/097.png",
     "type": [
       "Psychic"
     ],
@@ -1937,7 +1937,7 @@
   }, {
     "_id": 98,
     "name": "Krabby",
-    "img": "http://www.serebii.net/pokemongo/pokemon/098.png",
+    "img": "http://www.serebii.net/pokemon/art/098.png",
     "type": [
       "Water"
     ],
@@ -1954,7 +1954,7 @@
   }, {
     "_id": 99,
     "name": "Kingler",
-    "img": "http://www.serebii.net/pokemongo/pokemon/099.png",
+    "img": "http://www.serebii.net/pokemon/art/099.png",
     "type": [
       "Water"
     ],
@@ -1971,7 +1971,7 @@
   }, {
     "_id": 100,
     "name": "Voltorb",
-    "img": "http://www.serebii.net/pokemongo/pokemon/100.png",
+    "img": "http://www.serebii.net/pokemon/art/100.png",
     "type": [
       "Electric"
     ],
@@ -1987,7 +1987,7 @@
   }, {
     "_id": 101,
     "name": "Electrode",
-    "img": "http://www.serebii.net/pokemongo/pokemon/101.png",
+    "img": "http://www.serebii.net/pokemon/art/101.png",
     "type": [
       "Electric"
     ],
@@ -2003,7 +2003,7 @@
   }, {
     "_id": 102,
     "name": "Exeggcute",
-    "img": "http://www.serebii.net/pokemongo/pokemon/102.png",
+    "img": "http://www.serebii.net/pokemon/art/102.png",
     "type": [
       "Grass",
       "Psychic"
@@ -2026,7 +2026,7 @@
   }, {
     "_id": 103,
     "name": "Exeggutor",
-    "img": "http://www.serebii.net/pokemongo/pokemon/103.png",
+    "img": "http://www.serebii.net/pokemon/art/103.png",
     "type": [
       "Grass",
       "Psychic"
@@ -2049,7 +2049,7 @@
   }, {
     "_id": 104,
     "name": "Cubone",
-    "img": "http://www.serebii.net/pokemongo/pokemon/104.png",
+    "img": "http://www.serebii.net/pokemon/art/104.png",
     "type": [
       "Ground"
     ],
@@ -2067,7 +2067,7 @@
   }, {
     "_id": 105,
     "name": "Marowak",
-    "img": "http://www.serebii.net/pokemongo/pokemon/105.png",
+    "img": "http://www.serebii.net/pokemon/art/105.png",
     "type": [
       "Ground"
     ],
@@ -2085,7 +2085,7 @@
   }, {
     "_id": 106,
     "name": "Hitmonlee",
-    "img": "http://www.serebii.net/pokemongo/pokemon/106.png",
+    "img": "http://www.serebii.net/pokemon/art/106.png",
     "type": [
       "Fighting"
     ],
@@ -2099,7 +2099,7 @@
   }, {
     "_id": 107,
     "name": "Hitmonchan",
-    "img": "http://www.serebii.net/pokemongo/pokemon/107.png",
+    "img": "http://www.serebii.net/pokemon/art/107.png",
     "type": [
       "Fighting"
     ],
@@ -2113,7 +2113,7 @@
   }, {
     "_id": 108,
     "name": "Lickitung",
-    "img": "http://www.serebii.net/pokemongo/pokemon/108.png",
+    "img": "http://www.serebii.net/pokemon/art/108.png",
     "type": [
       "Normal"
     ],
@@ -2125,7 +2125,7 @@
   }, {
     "_id": 109,
     "name": "Koffing",
-    "img": "http://www.serebii.net/pokemongo/pokemon/109.png",
+    "img": "http://www.serebii.net/pokemon/art/109.png",
     "type": [
       "Poison"
     ],
@@ -2142,7 +2142,7 @@
   },{
     "_id": 110,
     "name": "Weezing",
-    "img": "http://www.serebii.net/pokemongo/pokemon/110.png",
+    "img": "http://www.serebii.net/pokemon/art/110.png",
     "type": [
       "Poison"
     ],
@@ -2159,7 +2159,7 @@
   }, {
     "_id": 111,
     "name": "Rhyhorn",
-    "img": "http://www.serebii.net/pokemongo/pokemon/111.png",
+    "img": "http://www.serebii.net/pokemon/art/111.png",
     "type": [
       "Ground",
       "Rock"
@@ -2181,7 +2181,7 @@
   }, {
     "_id": 112,
     "name": "Rhydon",
-    "img": "http://www.serebii.net/pokemongo/pokemon/112.png",
+    "img": "http://www.serebii.net/pokemon/art/112.png",
     "type": [
       "Ground",
       "Rock"
@@ -2203,7 +2203,7 @@
   }, {
     "_id": 113,
     "name": "Chansey",
-    "img": "http://www.serebii.net/pokemongo/pokemon/113.png",
+    "img": "http://www.serebii.net/pokemon/art/113.png",
     "type": [
       "Normal"
     ],
@@ -2215,7 +2215,7 @@
   }, {
     "_id": 114,
     "name": "Tangela",
-    "img": "http://www.serebii.net/pokemongo/pokemon/114.png",
+    "img": "http://www.serebii.net/pokemon/art/114.png",
     "type": [
       "Grass"
     ],
@@ -2231,7 +2231,7 @@
   }, {
     "_id": 115,
     "name": "Kangaskhan",
-    "img": "http://www.serebii.net/pokemongo/pokemon/115.png",
+    "img": "http://www.serebii.net/pokemon/art/115.png",
     "type": [
       "Normal"
     ],
@@ -2243,7 +2243,7 @@
   }, {
     "_id": 116,
     "name": "Horsea",
-    "img": "http://www.serebii.net/pokemongo/pokemon/116.png",
+    "img": "http://www.serebii.net/pokemon/art/116.png",
     "type": [
       "Water"
     ],
@@ -2260,7 +2260,7 @@
   }, {
     "_id": 117,
     "name": "Seadra",
-    "img": "http://www.serebii.net/pokemongo/pokemon/117.png",
+    "img": "http://www.serebii.net/pokemon/art/117.png",
     "type": [
       "Water"
     ],
@@ -2277,7 +2277,7 @@
   }, {
     "_id": 118,
     "name": "Goldeen",
-    "img": "http://www.serebii.net/pokemongo/pokemon/118.png",
+    "img": "http://www.serebii.net/pokemon/art/118.png",
     "type": [
       "Water"
     ],
@@ -2294,7 +2294,7 @@
   }, {
     "_id": 119,
     "name": "Seaking",
-    "img": "http://www.serebii.net/pokemongo/pokemon/119.png",
+    "img": "http://www.serebii.net/pokemon/art/119.png",
     "type": [
       "Water"
     ],
@@ -2311,7 +2311,7 @@
   }, {
     "_id": 120,
     "name": "Staryu",
-    "img": "http://www.serebii.net/pokemongo/pokemon/120.png",
+    "img": "http://www.serebii.net/pokemon/art/120.png",
     "type": [
       "Water"
     ],
@@ -2328,7 +2328,7 @@
   }, {
     "_id": 121,
     "name": "Starmie",
-    "img": "http://www.serebii.net/pokemongo/pokemon/121.png",
+    "img": "http://www.serebii.net/pokemon/art/121.png",
     "type": [
       "Water",
       "Psychic"
@@ -2349,7 +2349,7 @@
   }, {
     "_id": 122,
     "name": "Mr. Mime",
-    "img": "http://www.serebii.net/pokemongo/pokemon/122.png",
+    "img": "http://www.serebii.net/pokemon/art/122.png",
     "type": [
       "Psychic"
     ],
@@ -2363,7 +2363,7 @@
   }, {
     "_id": 123,
     "name": "Scyther",
-    "img": "http://www.serebii.net/pokemongo/pokemon/123.png",
+    "img": "http://www.serebii.net/pokemon/art/123.png",
     "type": [
       "Bug",
       "Flying"
@@ -2380,7 +2380,7 @@
   }, {
     "_id": 124,
     "name": "Jynx",
-    "img": "http://www.serebii.net/pokemongo/pokemon/124.png",
+    "img": "http://www.serebii.net/pokemon/art/124.png",
     "type": [
       "Ice",
       "Psychic"
@@ -2398,7 +2398,7 @@
   }, {
     "_id": 125,
     "name": "Electabuzz",
-    "img": "http://www.serebii.net/pokemongo/pokemon/125.png",
+    "img": "http://www.serebii.net/pokemon/art/125.png",
     "type": [
       "Electric"
     ],
@@ -2410,7 +2410,7 @@
   }, {
     "_id": 126,
     "name": "Magmar",
-    "img": "http://www.serebii.net/pokemongo/pokemon/126.png",
+    "img": "http://www.serebii.net/pokemon/art/126.png",
     "type": [
       "Fire"
     ],
@@ -2424,7 +2424,7 @@
   }, {
     "_id": 127,
     "name": "Pinsir",
-    "img": "http://www.serebii.net/pokemongo/pokemon/127.png",
+    "img": "http://www.serebii.net/pokemon/art/127.png",
     "type": [
       "Bug"
     ],
@@ -2438,7 +2438,7 @@
   }, {
     "_id": 128,
     "name": "Tauros",
-    "img": "http://www.serebii.net/pokemongo/pokemon/128.png",
+    "img": "http://www.serebii.net/pokemon/art/128.png",
     "type": [
       "Normal"
     ],
@@ -2450,7 +2450,7 @@
   }, {
     "_id": 129,
     "name": "Magikarp",
-    "img": "http://www.serebii.net/pokemongo/pokemon/129.png",
+    "img": "http://www.serebii.net/pokemon/art/129.png",
     "type": [
       "Water"
     ],
@@ -2467,7 +2467,7 @@
   },{
     "_id": 130,
     "name": "Gyarados",
-    "img": "http://www.serebii.net/pokemongo/pokemon/130.png",
+    "img": "http://www.serebii.net/pokemon/art/130.png",
     "type": [
       "Water",
       "Flying"
@@ -2485,7 +2485,7 @@
   }, {
     "_id": 131,
     "name": "Lapras",
-    "img": "http://www.serebii.net/pokemongo/pokemon/131.png",
+    "img": "http://www.serebii.net/pokemon/art/131.png",
     "type": [
       "Water",
       "Ice"
@@ -2501,7 +2501,7 @@
   }, {
     "_id": 132,
     "name": "Ditto",
-    "img": "http://www.serebii.net/pokemongo/pokemon/132.png",
+    "img": "http://www.serebii.net/pokemon/art/132.png",
     "type": [
       "Normal"
     ],
@@ -2513,7 +2513,7 @@
   }, {
     "_id": 133,
     "name": "Eevee",
-    "img": "http://www.serebii.net/pokemongo/pokemon/133.png",
+    "img": "http://www.serebii.net/pokemon/art/133.png",
     "type": [
       "Normal"
     ],
@@ -2535,7 +2535,7 @@
   }, {
     "_id": 134,
     "name": "Vaporeon",
-    "img": "http://www.serebii.net/pokemongo/pokemon/134.png",
+    "img": "http://www.serebii.net/pokemon/art/134.png",
     "type": [
       "Water"
     ],
@@ -2552,7 +2552,7 @@
   }, {
     "_id": 135,
     "name": "Jolteon",
-    "img": "http://www.serebii.net/pokemongo/pokemon/135.png",
+    "img": "http://www.serebii.net/pokemon/art/135.png",
     "type": [
       "Electric"
     ],
@@ -2568,7 +2568,7 @@
   }, {
     "_id": 136,
     "name": "Flareon",
-    "img": "http://www.serebii.net/pokemongo/pokemon/136.png",
+    "img": "http://www.serebii.net/pokemon/art/136.png",
     "type": [
       "Fire"
     ],
@@ -2586,7 +2586,7 @@
   }, {
     "_id": 137,
     "name": "Porygon",
-    "img": "http://www.serebii.net/pokemongo/pokemon/137.png",
+    "img": "http://www.serebii.net/pokemon/art/137.png",
     "type": [
       "Normal"
     ],
@@ -2598,7 +2598,7 @@
   }, {
     "_id": 138,
     "name": "Omanyte",
-    "img": "http://www.serebii.net/pokemongo/pokemon/138.png",
+    "img": "http://www.serebii.net/pokemon/art/138.png",
     "type": [
       "Rock",
       "Water"
@@ -2618,7 +2618,7 @@
   }, {
     "_id": 139,
     "name": "Omastar",
-    "img": "http://www.serebii.net/pokemongo/pokemon/139.png",
+    "img": "http://www.serebii.net/pokemon/art/139.png",
     "type": [
       "Rock",
       "Water"
@@ -2638,7 +2638,7 @@
   }, {
     "_id": 140,
     "name": "Kabuto",
-    "img": "http://www.serebii.net/pokemongo/pokemon/140.png",
+    "img": "http://www.serebii.net/pokemon/art/140.png",
     "type": [
       "Rock",
       "Water"
@@ -2658,7 +2658,7 @@
   }, {
     "_id": 141,
     "name": "Kabutops",
-    "img": "http://www.serebii.net/pokemongo/pokemon/141.png",
+    "img": "http://www.serebii.net/pokemon/art/141.png",
     "type": [
       "Rock",
       "Water"
@@ -2678,7 +2678,7 @@
   }, {
     "_id": 142,
     "name": "Aerodactyl",
-    "img": "http://www.serebii.net/pokemongo/pokemon/142.png",
+    "img": "http://www.serebii.net/pokemon/art/142.png",
     "type": [
       "Rock",
       "Flying"
@@ -2695,7 +2695,7 @@
   }, {
     "_id": 143,
     "name": "Snorlax",
-    "img": "http://www.serebii.net/pokemongo/pokemon/143.png",
+    "img": "http://www.serebii.net/pokemon/art/143.png",
     "type": [
       "Normal"
     ],
@@ -2707,7 +2707,7 @@
   }, {
     "_id": 144,
     "name": "Articuno",
-    "img": "http://www.serebii.net/pokemongo/pokemon/144.png",
+    "img": "http://www.serebii.net/pokemon/art/144.png",
     "type": [
       "Ice",
       "Flying"
@@ -2723,7 +2723,7 @@
   }, {
     "_id": 145,
     "name": "Zapdos",
-    "img": "http://www.serebii.net/pokemongo/pokemon/145.png",
+    "img": "http://www.serebii.net/pokemon/art/145.png",
     "type": [
       "Electric",
       "Flying"
@@ -2737,7 +2737,7 @@
   }, {
     "_id": 146,
     "name": "Moltres",
-    "img": "http://www.serebii.net/pokemongo/pokemon/146.png",
+    "img": "http://www.serebii.net/pokemon/art/146.png",
     "type": [
       "Fire",
       "Flying"
@@ -2752,7 +2752,7 @@
   }, {
     "_id": 147,
     "name": "Dratini",
-    "img": "http://www.serebii.net/pokemongo/pokemon/147.png",
+    "img": "http://www.serebii.net/pokemon/art/147.png",
     "type": [
       "Dragon"
     ],
@@ -2773,7 +2773,7 @@
   }, {
     "_id": 148,
     "name": "Dragonair",
-    "img": "http://www.serebii.net/pokemongo/pokemon/148.png",
+    "img": "http://www.serebii.net/pokemon/art/148.png",
     "type": [
       "Dragon"
     ],
@@ -2795,7 +2795,7 @@
   }, {
     "_id": 149,
     "name": "Dragonite",
-    "img": "http://www.serebii.net/pokemongo/pokemon/149.png",
+    "img": "http://www.serebii.net/pokemon/art/149.png",
     "type": [
       "Dragon",
       "Flying"
@@ -2818,7 +2818,7 @@
   }, {
     "_id": 150,
     "name": "Mewtwo",
-    "img": "http://www.serebii.net/pokemongo/pokemon/150.png",
+    "img": "http://www.serebii.net/pokemon/art/150.png",
     "type": [
       "Psychic"
     ],
@@ -2832,7 +2832,7 @@
   }, {
     "_id": 151,
     "name": "Mew",
-    "img": "http://www.serebii.net/pokemongo/pokemon/151.png",
+    "img": "http://www.serebii.net/pokemon/art/151.png",
     "type": [
       "Psychic"
     ],
