@@ -15,20 +15,23 @@ namespace Trial.Models
         public String firstName { get; set; }
         public String lastName { get; set; }
         public int age { get; set; }
-        public Address address { get; set; }
+        //public Address address { get; set; }
          //public DateTime createdAt { get; set; }
-        public Boolean insurance { get; set; }
+        //public Boolean insurance { get; set; }
         //public List<Car> cars { get; set; }
 
         public Person()
         {
 
         }
+       
 
-        public Person(ObjectId id, String firstName)
+        public Person(String firstName, string lastName, int age)
         {
             //this.Id = id;
             this.firstName = firstName;
+            this.lastName = lastName;
+            this.age = age;
         }
     }
 }
