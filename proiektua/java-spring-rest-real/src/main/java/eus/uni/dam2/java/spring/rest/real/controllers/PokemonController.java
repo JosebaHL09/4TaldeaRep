@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package eus.uni.dam2.java.spring.rest.real.controllers;
 
 import eus.uni.dam2.java.spring.rest.real.model.Pokemon;
@@ -36,13 +31,13 @@ public class PokemonController {
         return pokemonRepository.save(pokemon);
     }
 
-    @PostMapping("pokemones")
+    @PostMapping("multiplePokemon")
     @ResponseStatus(HttpStatus.CREATED)
-    public List<Pokemon> postPokemones(@RequestBody List<Pokemon> pokemon) {
+    public List<Pokemon> postMultiplePokemon(@RequestBody List<Pokemon> pokemon) {
         return pokemonRepository.saveAll(pokemon);
     }
 
-    @GetMapping("pokemon/all")
+    @GetMapping("pokemon")
     public List<Pokemon> getAllPokemon() {
         return pokemonRepository.findAll();
     }
@@ -77,7 +72,7 @@ public class PokemonController {
     }
 
     @DeleteMapping("multiplePokemon/{ids}")
-    public Long deletePokemones(@PathVariable String ids) {
+    public Long deleteMultiplePokemon(@PathVariable String ids) {
         List<String> listIdsString = asList(ids.split(","));
         List<Integer> listIds = new ArrayList<>();
         for (String s : listIdsString) {
@@ -86,8 +81,8 @@ public class PokemonController {
         return pokemonRepository.delete(listIds);
     }
 
-    @DeleteMapping("pokemon/all")
-    public Long deletePokemones() {
+    @DeleteMapping("pokemon")
+    public Long deleteAllPokemon() {
         return pokemonRepository.deleteAll();
     }
 

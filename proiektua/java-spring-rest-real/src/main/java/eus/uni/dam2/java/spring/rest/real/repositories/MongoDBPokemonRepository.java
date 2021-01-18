@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package eus.uni.dam2.java.spring.rest.real.repositories;
 
 import com.mongodb.ReadConcern;
@@ -12,18 +7,19 @@ import com.mongodb.WriteConcern;
 import com.mongodb.client.ClientSession;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoCollection;
-import static com.mongodb.client.model.Filters.eq;
-import static com.mongodb.client.model.Filters.in;
 import com.mongodb.client.model.FindOneAndReplaceOptions;
 import com.mongodb.client.model.ReplaceOneModel;
-import static com.mongodb.client.model.ReturnDocument.AFTER;
 import com.mongodb.client.model.WriteModel;
-import eus.uni.dam2.java.spring.rest.real.model.Pokemon;
+import org.bson.BsonDocument;
+import org.springframework.beans.factory.annotation.Autowired;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
-import org.bson.BsonDocument;
-import org.springframework.beans.factory.annotation.Autowired;
+
+import static com.mongodb.client.model.Filters.eq;
+import static com.mongodb.client.model.Filters.in;
+import static com.mongodb.client.model.ReturnDocument.AFTER;
+import eus.uni.dam2.java.spring.rest.real.model.Pokemon;
 
 /**
  *
