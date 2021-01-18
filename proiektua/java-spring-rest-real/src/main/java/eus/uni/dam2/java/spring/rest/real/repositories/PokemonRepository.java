@@ -26,9 +26,9 @@ public interface PokemonRepository {
 
     long deleteAll();
 
-    Pokemon update(Pokemon person);
+    Pokemon update(Pokemon pokemon);
 
-    long update(List<Pokemon> persons);
+    long update(List<Pokemon> pokemon);
 
     //double getAverageAge();
 
