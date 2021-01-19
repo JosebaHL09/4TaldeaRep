@@ -1,7 +1,0 @@
-eus\uni\dam2\java\spring\rest\real\controllers\PokemonController.class
-eus\uni\dam2\java\spring\rest\real\starter\ApplicationStarter.class
-eus\uni\dam2\java\spring\rest\real\model\Pokemon.class
-eus\uni\dam2\java\spring\rest\real\starter\SpringConfiguration.class
-eus\uni\dam2\java\spring\rest\real\repositories\MongoDBPokemonRepository.class
-eus\uni\dam2\java\spring\rest\real\repositories\PokemonRepository.class
-eus\uni\dam2\java\spring\rest\real\starter\SwaggerConfig.class
