@@ -1,0 +1,5 @@
+1.- MONGO
+https://raw.githubusercontent.com/Biuni/PokemonGO-Pokedex/master/pokedex.json
+clase y lo que borramos
+
+2.- JAVA

@@ -13,6 +13,10 @@ import java.util.List;
 
 import static java.util.Arrays.asList;
 
+/**
+ *
+ * @author lopez.pablo
+ */
 @RestController
 @RequestMapping("/api")
 public class PokemonController {
@@ -20,21 +24,39 @@ public class PokemonController {
     private final static Logger LOGGER = LoggerFactory.getLogger(PokemonController.class);
     private final PokemonRepository pokemonRepository;
 
+    /**
+     *
+     * @param pokemonRepository
+     */
     public PokemonController(PokemonRepository pokemonRepository) {
         this.pokemonRepository = pokemonRepository;
     }
 
+    /**
+     *
+     * @param pokemon
+     * @return
+     */
     @PostMapping("pokemon")
     @ResponseStatus(HttpStatus.CREATED)
     public Pokemon postPokemon(@RequestBody Pokemon pokemon) {
         return pokemonRepository.save(pokemon);
     }
 
+    /**
+     *
+     * @return
+     */
     @GetMapping("pokemon")
     public List<Pokemon> getAllPokemon() {
         return pokemonRepository.findAll();
     }
 
+    /**
+     *
+     * @param id
+     * @return
+     */
     @GetMapping("pokemon/{id}")
     public ResponseEntity<Pokemon> getPokemon(@PathVariable int id) {
         Pokemon pokemon = pokemonRepository.findOne(id);
@@ -44,6 +66,11 @@ public class PokemonController {
         return ResponseEntity.ok(pokemon);
     }
 
+    /**
+     *
+     * @param ids
+     * @return
+     */
     @GetMapping("multiplePokemon/{ids}")
     public List<Pokemon> getMultiplePokemon(@PathVariable String ids) {
         List<String> listIdsString = asList(ids.split(","));
@@ -54,21 +81,40 @@ public class PokemonController {
         return pokemonRepository.findAll(listIds);
     }
 
+    /**
+     *
+     * @return
+     */
     @GetMapping("pokemon/count")
     public Long getCount() {
         return pokemonRepository.count();
     }
 
+    /**
+     *
+     * @param id
+     * @return
+     */
     @DeleteMapping("pokemon/{id}")
     public Long deletePokemon(@PathVariable int id) {
         return pokemonRepository.delete(id);
     }
 
+    /**
+     *
+     * @param pokemon
+     * @return
+     */
     @PutMapping("pokemon")
     public Pokemon putPokemon(@RequestBody Pokemon pokemon) {
         return pokemonRepository.update(pokemon);
     }
     
+    /**
+     *
+     * @param e
+     * @return
+     */
     @ExceptionHandler(RuntimeException.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public final Exception handleAllExceptions(RuntimeException e) {

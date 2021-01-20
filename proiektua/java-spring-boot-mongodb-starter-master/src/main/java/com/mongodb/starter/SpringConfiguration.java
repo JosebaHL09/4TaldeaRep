@@ -17,12 +17,20 @@ import org.springframework.context.annotation.Configuration;
 import static org.bson.codecs.configuration.CodecRegistries.fromProviders;
 import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
 
+/**
+ *
+ * @author lopez.pablo
+ */
 @Configuration
 public class SpringConfiguration {
 
     @Value("${spring.data.mongodb.uri}")
     private String connectionString;
 
+    /**
+     *
+     * @return
+     */
     @Bean
     public MongoClient mongoClient() {
         CodecRegistry pojoCodecRegistry = fromProviders(PojoCodecProvider.builder().automatic(true).build());
@@ -33,6 +41,10 @@ public class SpringConfiguration {
                                                       .build());
     }
     
+    /**
+     *
+     * @return
+     */
     @Bean
     public PokemonRepository pokemonRepository(){
         return new MongoDBPokemonRepository();
