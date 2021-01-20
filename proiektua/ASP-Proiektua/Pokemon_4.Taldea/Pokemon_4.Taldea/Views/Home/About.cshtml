@@ -1,0 +1,125 @@
+﻿@model IEnumerable<Pokemon_4.Taldea.Models.Pokemon>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.img)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.height)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.weight)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.weaknesses)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.prev_evolution)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.next_evolution)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.img)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.type)
+            <td>
+                @Html.DisplayFor(modelItem => item.height)
+            <td>
+                @Html.DisplayFor(modelItem => item.weight)
+            <td>
+                @Html.DisplayFor(modelItem => item.weaknesses)
+            <td>
+                @Html.DisplayFor(modelItem => item.prev_evolution)
+            <td>
+                @Html.DisplayFor(modelItem => item.next_evolution)
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <th></th>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+    }
+    <div class="col-lg-1 borderrak" id="blokekategoria" style="margin-top:350px; margin-right:100px;">
+        <table class="table">
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <img class="ardo-argazkia" src="@Html.DisplayFor(modelItem => item.img)" style="width:80px;height:90px; margin-top:25px; margin-right:20px;" />
+                    </td>
+                    <td>
+                        <div class="row kategoriaMotaIzenburua">
+                            Pokemon izena: @Html.DisplayFor(modelItem => item.name)
+                        </div>
+                        <div class="row ">
+                            <div class="col-lg-1">
+                                <div><p style="font-size:16px; font-weight:bold; margin-left:-15px;"> @Html.DisplayFor(modelItem => item.type)</p></div>
+                            </div>
+                            <div class="col-lg-1">
+
+                                <img if(item.type= ='GrassPoison' ): src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2016/08/187200-tipos-pokemon-maplerose.jpg?itok=HkPzZNqp" style="width:50px;height:40px; margin-left:20px; margin-top:-5px;" />
+                            </div>
+                            <div class="col-lg-1">
+                                <p style="font-size:16px; font-weight:bold; margin-top:10px; margin-left:10px; "> @Html.DisplayFor(modelItem => item.height)</p>
+                            </div>
+                            <div class="col-lg-1">
+                                <img src="~/Content/argazkiak/ikonoak/edukia.jpg" style="width:50px;height:60px; margin-top:-10px;" />
+                            </div>
+                            <div class="col-lg-1">
+                                <p style="font-size:16px; font-weight:bold; margin-top:10px; margin-left:-20px; ">@Html.DisplayFor(modelItem => item.weight)</p>
+                            </div>
+                            <div class="col-lg-1">
+                                <img src="~/Content/argazkiak/ikonoak/urtea.jpg" style="width:50px;height:40px" />
+                            </div>
+                            <div class="col-lg-1">
+                                <p style="font-size:16px; font-weight:bold; margin-top:10px; margin-left:-20px; ">@Html.DisplayFor(modelItem => item.weaknesses)</p>
+                            </div>
+
+                            <div class="col-lg-1">
+                                <p style="font-size:16px; font-weight:bold; margin-top:6px; margin-left:-18px; ">@Html.DisplayFor(modelItem => item.prev_evolution)</p>
+                            </div>
+
+                            <div class="col-lg-1">
+                                <p style="font-size:16px; font-weight:bold; margin-top:6px; margin-left:-35px; ">@Html.DisplayFor(modelItem => item.next_evolution)</p>
+                            </div>
+                        </div>
+                    </td>
+
+                </tr>
+            }
+
+        </table>
+    </div>
+</table>
+

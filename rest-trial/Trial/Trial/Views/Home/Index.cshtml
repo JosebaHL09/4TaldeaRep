@@ -20,12 +20,6 @@
         <th>
             @Html.DisplayNameFor(model => model.age)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.insurance)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.address)
-        </th>
         <th></th>
     </tr>
 
@@ -40,12 +34,7 @@
     <td>
         @Html.DisplayFor(modelItem => item.age)
     </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.insurance)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.address)
-    </td>
+   
     <td>
         @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
         @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
