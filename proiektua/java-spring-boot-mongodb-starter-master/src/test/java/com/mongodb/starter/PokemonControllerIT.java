@@ -54,11 +54,6 @@ class PokemonControllerIT {
         URL = "http://localhost:" + port + "/api";
     }
 
-    @AfterEach
-    void tearDown() {
-        pokemonRepository.deleteAll();
-    }
-
     @DisplayName("POST /pokemon with 1 pokemon")
     @Test
     void postPokemon() {
@@ -86,20 +81,6 @@ class PokemonControllerIT {
                 .containsExactlyInAnyOrderElementsOf(testHelper.getListPokemon());
     }
 
-    @DisplayName("GET /pokemon with 2 pokemon")
-    @Test
-    void getAllPokemon() {
-        // GIVEN
-        List<Pokemon> pokemonInserted = pokemonRepository.saveAll(testHelper.getListPokemon());
-        // WHEN
-        ResponseEntity<List<Pokemon>> result = rest.exchange(URL + "/pokemon", HttpMethod.GET, null,
-                new ParameterizedTypeReference<List<Pokemon>>() {
-        });
-        // THEN
-        assertThat(result.getStatusCode()).isEqualTo(HttpStatus.OK);
-        assertThat(result.getBody()).containsExactlyInAnyOrderElementsOf(pokemonInserted);
-    }
-
     @DisplayName("GET /pokemon/{id}")
     @Test
     void getPokemonById() {
@@ -112,26 +93,12 @@ class PokemonControllerIT {
         assertThat(result.getStatusCode()).isEqualTo(HttpStatus.OK);
         assertThat(result.getBody()).isEqualTo(pokemonInserted);
     }
-
-    /*@DisplayName("GET /multiplePokemon/{ids}")
-    @Test
-    void getMultiplePokemonById() {
-        // GIVEN
-        List<Pokemon> pokemonInserted = pokemonRepository.saveAll(testHelper.getListPokemon());
-        List<String> idsInserted = pokemonInserted.stream().map(Pokemon::getId).map(ObjectId::toString).collect(toList());
-        // WHEN
-        String url = URL + "/persons/" + String.join(",", idsInserted);
-        ResponseEntity<List<Pokemon>> result = rest.exchange(url, HttpMethod.GET, null, new ParameterizedTypeReference<List<Pokemon>>() {
-        });
-        // THEN
-        assertThat(result.getStatusCode()).isEqualTo(HttpStatus.OK);
-        assertThat(result.getBody()).containsExactlyInAnyOrderElementsOf(pokemonInserted);
-    }*/
+    
     @DisplayName("GET /pokemon/count")
     @Test
     void getCount() {
         // GIVEN
-        pokemonRepository.saveAll(testHelper.getListPokemon());
+        pokemonRepository.count();
         // WHEN
         ResponseEntity<Long> result = rest.getForEntity(URL + "/pokemon/count", Long.class);
         // THEN
@@ -155,37 +122,6 @@ class PokemonControllerIT {
         assertThat(pokemonRepository.count()).isEqualTo(0L);
     }
 
-    /*@DisplayName("DELETE /multiplePokemon/{ids}")
-    @Test
-    void deleteMultiplePokemonByIds() {
-        // GIVEN
-        List<Pokemon> pokemonInserted = pokemonRepository.saveAll(testHelper.getListPokemon());
-        List<String> idsInserted = pokemonInserted.stream().map(Pokemon::getId).map(Pokemong::toString).collect(toList());
-        // WHEN
-        ResponseEntity<Long> result = rest.exchange(URL + "/persons/" + String.join(",", idsInserted), HttpMethod.DELETE, null,
-                new ParameterizedTypeReference<Long>() {
-        });
-        // THEN
-        assertThat(result.getStatusCode()).isEqualTo(HttpStatus.OK);
-        assertThat(result.getBody()).isEqualTo(2L);
-        assertThat(pokemonRepository.count()).isEqualTo(0L);
-    }
-     */
-    @DisplayName("DELETE /pokemon")
-    @Test
-    void deletePokemon() {
-        // GIVEN
-        pokemonRepository.saveAll(testHelper.getListPokemon());
-        // WHEN
-        ResponseEntity<Long> result = rest.exchange(URL + "/pokemon", HttpMethod.DELETE, null,
-                new ParameterizedTypeReference<Long>() {
-        });
-        // THEN
-        assertThat(result.getStatusCode()).isEqualTo(HttpStatus.OK);
-        assertThat(result.getBody()).isEqualTo(2L);
-        assertThat(pokemonRepository.count()).isEqualTo(0L);
-    }
-
     @DisplayName("PUT /pokemon")
     @Test
     void putPokemon() {
@@ -199,23 +135,6 @@ class PokemonControllerIT {
         assertThat(result.getStatusCode()).isEqualTo(HttpStatus.OK);
         assertThat(result.getBody()).isEqualTo(pokemonRepository.findOne(pokemonInserted.getId()));
         assertThat(pokemonRepository.count()).isEqualTo(1L);
-    }
-
-    @DisplayName("PUT /multiplePokemon with 2 pokemon")
-    @Test
-    void putMultiplePokemon() {
-        // GIVEN
-        List<Pokemon> pokemonInserted = pokemonRepository.saveAll(testHelper.getListPokemon());
-        // WHEN
-        HttpEntity<List<Pokemon>> body = new HttpEntity<>(pokemonInserted);
-        ResponseEntity<Long> result = rest.exchange(URL + "/multiplePokemon", HttpMethod.PUT, body, new ParameterizedTypeReference<Long>() {
-        });
-        // THEN
-        assertThat(result.getStatusCode()).isEqualTo(HttpStatus.OK);
-        assertThat(result.getBody()).isEqualTo(2L);
-        Pokemon max = pokemonRepository.findOne(pokemonInserted.get(0).getId());
-        Pokemon alex = pokemonRepository.findOne(pokemonInserted.get(1).getId());
-        assertThat(pokemonRepository.count()).isEqualTo(2L);
     }
 
     private void createPokemonCollectionIfNotPresent(MongoClient mongoClient) {
