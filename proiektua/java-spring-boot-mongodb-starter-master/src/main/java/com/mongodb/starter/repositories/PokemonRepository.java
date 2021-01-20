@@ -10,8 +10,6 @@ public interface PokemonRepository {
 
     Pokemon save(Pokemon pokemon);
 
-    List<Pokemon> saveAll(List<Pokemon> pokemon);
-
     List<Pokemon> findAll();
 
     List<Pokemon> findAll(List<Integer> ids);
@@ -22,12 +20,6 @@ public interface PokemonRepository {
 
     long delete(int id);
 
-    long delete(List<Integer> ids);
-
-    long deleteAll();
-
     Pokemon update(Pokemon pokemon);
-
-    long update(List<Pokemon> pokemon);
 
 }

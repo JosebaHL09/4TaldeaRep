@@ -30,12 +30,6 @@ public class PokemonController {
         return pokemonRepository.save(pokemon);
     }
 
-    @PostMapping("multiplePokemon")
-    @ResponseStatus(HttpStatus.CREATED)
-    public List<Pokemon> postMultiplePokemon(@RequestBody List<Pokemon> pokemon) {
-        return pokemonRepository.saveAll(pokemon);
-    }
-
     @GetMapping("pokemon")
     public List<Pokemon> getAllPokemon() {
         return pokemonRepository.findAll();
@@ -70,31 +64,11 @@ public class PokemonController {
         return pokemonRepository.delete(id);
     }
 
-    @DeleteMapping("multiplePokemon/{ids}")
-    public Long deleteMultiplePokemon(@PathVariable String ids) {
-        List<String> listIdsString = asList(ids.split(","));
-        List<Integer> listIds = new ArrayList<>();
-        for (String s : listIdsString) {
-            listIds.add(Integer.valueOf(s));
-        }
-        return pokemonRepository.delete(listIds);
-    }
-
-    @DeleteMapping("pokemon")
-    public Long deleteAllPokemon() {
-        return pokemonRepository.deleteAll();
-    }
-
     @PutMapping("pokemon")
     public Pokemon putPokemon(@RequestBody Pokemon pokemon) {
         return pokemonRepository.update(pokemon);
     }
-
-    @PutMapping("multiplePokemon")
-    public Long putMultiplePokemon(@RequestBody List<Pokemon> pokemon) {
-        return pokemonRepository.update(pokemon);
-    }
-
+    
     @ExceptionHandler(RuntimeException.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public final Exception handleAllExceptions(RuntimeException e) {

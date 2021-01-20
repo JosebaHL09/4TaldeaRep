@@ -21,6 +21,7 @@ import static com.mongodb.client.model.Filters.in;
 import static com.mongodb.client.model.ReturnDocument.AFTER;
 import com.mongodb.starter.models.Pokemon;
 import javax.annotation.PostConstruct;
+import org.bson.Document;
 
 /**
  *
@@ -41,31 +42,35 @@ public class MongoDBPokemonRepository implements PokemonRepository {
     void init() {
         pokemonCollection = client.getDatabase("pokedex").getCollection("pokemon", Pokemon.class);
     }
-    
+
     @Override
     public Pokemon save(Pokemon pokemon) {
+        pokemon.setId(0);
+        List<Pokemon> pokemonGuztiak = findAll();
+        for (int i = 0; i < pokemonGuztiak.size(); i++) {
+            Pokemon p = pokemonGuztiak.get(i);
+            if (p.getId() != i + 1) {
+                pokemon.setId(i + 1);
+                break;
+            }
+        }
+        if (pokemon.getId() == 0) {
+            Pokemon azkenPokemon = pokemonCollection.find().sort(new Document("_id", -1)).first();
+            int id = azkenPokemon.getId() + 1;
+            pokemon.setId(id);
+        }
         pokemonCollection.insertOne(pokemon);
         return pokemon;
     }
 
     @Override
-    public List<Pokemon> saveAll(List<Pokemon> pokemon) {
-        try (ClientSession clientSession = client.startSession()) {
-            return clientSession.withTransaction(() -> {
-                pokemonCollection.insertMany(clientSession, pokemon);
-                return pokemon;
-            }, txnOptions);
-        }
-    }
-
-    @Override
     public List<Pokemon> findAll() {
-        return pokemonCollection.find().into(new ArrayList<>());
+        return pokemonCollection.find().sort(new Document("_id", 1)).into(new ArrayList<>());
     }
 
     @Override
     public List<Pokemon> findAll(List<Integer> ids) {
-        return pokemonCollection.find(in("_id", ids)).into(new ArrayList<>());
+        return pokemonCollection.find(in("_id", ids)).sort(new Document("_id", 1)).into(new ArrayList<>());
     }
 
     @Override
@@ -84,36 +89,8 @@ public class MongoDBPokemonRepository implements PokemonRepository {
     }
 
     @Override
-    public long delete(List<Integer> ids) {
-        try (ClientSession clientSession = client.startSession()) {
-            return clientSession.withTransaction(
-                    () -> pokemonCollection.deleteMany(clientSession, in("_id", ids)).getDeletedCount(),
-                    txnOptions);
-        }
-    }
-
-    @Override
-    public long deleteAll() {
-        try (ClientSession clientSession = client.startSession()) {
-            return clientSession.withTransaction(
-                    () -> pokemonCollection.deleteMany(clientSession, new BsonDocument()).getDeletedCount(), txnOptions);
-        }
-    }
-
-    @Override
     public Pokemon update(Pokemon pokemon) {
         FindOneAndReplaceOptions options = new FindOneAndReplaceOptions().returnDocument(AFTER);
         return pokemonCollection.findOneAndReplace(eq("_id", pokemon.getId()), pokemon, options);
-    }
-
-    @Override
-    public long update(List<Pokemon> pokemon) {
-        List<WriteModel<Pokemon>> writes = pokemon.stream()
-                                                 .map(p -> new ReplaceOneModel<>(eq("_id", p.getId()), p))
-                                                 .collect(Collectors.toList());
-        try (ClientSession clientSession = client.startSession()) {
-            return clientSession.withTransaction(
-                    () -> pokemonCollection.bulkWrite(clientSession, writes).getModifiedCount(), txnOptions);
-        }
     }
 }
