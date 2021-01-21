@@ -14,7 +14,7 @@ import java.util.List;
 import static java.util.Arrays.asList;
 
 /**
- *
+ *  Controller that allows MVC connect with Java Service
  *
  */
 @RestController
@@ -34,8 +34,8 @@ public class PokemonController {
 
     /**
      *
-     * @param pokemon
-     * @return
+     * @param pokemon Instance of Pokemon you want to insert
+     * @return Instance of the inserted Pokemon
      */
     @PostMapping("pokemon")
     @ResponseStatus(HttpStatus.CREATED)
@@ -45,7 +45,7 @@ public class PokemonController {
 
     /**
      *
-     * @return
+     * @return List of every Pokemon
      */
     @GetMapping("pokemon")
     public List<Pokemon> getAllPokemon() {
@@ -54,8 +54,8 @@ public class PokemonController {
 
     /**
      *
-     * @param id
-     * @return
+     * @param id Id of the Pokemon as an Integer
+     * @return JSON representation of the Pokemon with the inserted ID
      */
     @GetMapping("pokemon/{id}")
     public ResponseEntity<Pokemon> getPokemon(@PathVariable int id) {
@@ -68,8 +68,8 @@ public class PokemonController {
 
     /**
      *
-     * @param ids
-     * @return
+     * @param ids String that includes one or more ID separated by comma "," 
+     * @return List of Pokemon found
      */
     @GetMapping("multiplePokemon/{ids}")
     public List<Pokemon> getMultiplePokemon(@PathVariable String ids) {
@@ -92,8 +92,8 @@ public class PokemonController {
 
     /**
      *
-     * @param id
-     * @return
+     * @param id Id of the Pokemon you want to delete
+     * @return Number of Documents affected by the query
      */
     @DeleteMapping("pokemon/{id}")
     public Long deletePokemon(@PathVariable int id) {
@@ -102,7 +102,7 @@ public class PokemonController {
 
     /**
      *
-     * @param pokemon Instance of Pokemon you want to update, 
+     * @param pokemon Instance of Pokemon you want to update
      * @return Instance of the updated Pokemon
      */
     @PutMapping("pokemon")
