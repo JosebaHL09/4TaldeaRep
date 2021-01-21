@@ -4,6 +4,7 @@ import com.mongodb.ReadConcern;
 import com.mongodb.ReadPreference;
 import com.mongodb.TransactionOptions;
 import com.mongodb.WriteConcern;
+import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.model.FindOneAndReplaceOptions;
@@ -17,6 +18,7 @@ import static com.mongodb.client.model.ReturnDocument.AFTER;
 import com.mongodb.starter.models.Pokemon;
 import javax.annotation.PostConstruct;
 import org.bson.Document;
+import org.bson.conversions.Bson;
 
 /**
  *
@@ -87,6 +89,17 @@ public class MongoDBPokemonRepository implements PokemonRepository {
     }
 
     /**
+     * Finds one or more Pokemon in the database that have the introduced type
+     *
+     * @param type List of IDs of the Pokemon you want to find
+     * @return List of Pokemon
+     */
+    @Override
+    public List<Pokemon> findByType(String type) {
+        return pokemonCollection.find(eq("type", type)).sort(new Document("_id", 1)).into(new ArrayList<>());
+    }
+
+    /**
      * Finds one Pokemon in the database using a ID
      *
      * @param id ID of the Pokemon you want to find
@@ -128,5 +141,10 @@ public class MongoDBPokemonRepository implements PokemonRepository {
     public Pokemon update(Pokemon pokemon) {
         FindOneAndReplaceOptions options = new FindOneAndReplaceOptions().returnDocument(AFTER);
         return pokemonCollection.findOneAndReplace(eq("_id", pokemon.getId()), pokemon, options);
+    }
+    
+    @Override
+    public List<String> findTypes(){
+        return pokemonCollection.distinct("type", String.class).into(new ArrayList<>());
     }
 }

@@ -14,7 +14,7 @@ import java.util.List;
 import static java.util.Arrays.asList;
 
 /**
- *  Controller that allows MVC connect with Java Service
+ * Controller that allows MVC connect with Java Service
  *
  */
 @RestController
@@ -26,6 +26,7 @@ public class PokemonController {
 
     /**
      * Setter for the PokemonRepository of this instance
+     *
      * @param pokemonRepository
      */
     public PokemonController(PokemonRepository pokemonRepository) {
@@ -68,7 +69,7 @@ public class PokemonController {
 
     /**
      *
-     * @param ids String that includes one or more ID separated by comma "," 
+     * @param ids String that includes one or more ID separated by comma ","
      * @return List of Pokemon found
      */
     @GetMapping("multiplePokemon/{ids}")
@@ -79,6 +80,16 @@ public class PokemonController {
             listIds.add(Integer.valueOf(s));
         }
         return pokemonRepository.findAll(listIds);
+    }
+
+    /**
+     *
+     * @param type
+     * @return
+     */
+    @GetMapping("multiplePokemon/type/{type}")
+    public List<Pokemon> getMultiplePokemonByType(@PathVariable String type) {
+        return pokemonRepository.findByType(type);
     }
 
     /**
@@ -110,8 +121,14 @@ public class PokemonController {
         return pokemonRepository.update(pokemon);
     }
 
+    @PutMapping("type")
+    public List<String> findTypes() {
+        return pokemonRepository.findTypes();
+    }
+
     /**
      * Handles All Exceptions
+     *
      * @param e Runtime Exception
      * @return Runtime Exception
      */

@@ -94,6 +94,19 @@ class PokemonControllerIT {
         assertThat(result.getBody()).isEqualTo(pokemonInserted);
     }
     
+    @DisplayName("GET /multiplePokemon/type/{type}")
+    @Test
+    void getMultiplePokemonByType() {
+        // GIVEN
+        Pokemon pokemonInserted = pokemonRepository.save(testHelper.getCharizard());
+        List<String> type = pokemonInserted.getType();
+        // WHEN
+        ResponseEntity<Pokemon> result = rest.getForEntity(URL + "/multiplePokemon/type/" + type, Pokemon.class);
+        // THEN
+        assertThat(result.getStatusCode()).isEqualTo(HttpStatus.OK);
+        assertThat(result.getBody()).isEqualTo(pokemonInserted);
+    }
+    
     @DisplayName("GET /pokemon/count")
     @Test
     void getCount() {
