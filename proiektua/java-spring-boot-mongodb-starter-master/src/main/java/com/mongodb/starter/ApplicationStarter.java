@@ -4,15 +4,15 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- *
- * @author lopez.pablo
+ *  Main Class
+ * 
  */
 @SpringBootApplication
 public class ApplicationStarter {
 
     /**
      *
-     * @param args
+     * @param args Contains the supplied command-line arguments as an array of String objects.
      */
     public static void main(String[] args) {
         SpringApplication.run(ApplicationStarter.class, args);

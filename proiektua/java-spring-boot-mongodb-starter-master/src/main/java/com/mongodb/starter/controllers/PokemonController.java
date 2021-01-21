@@ -15,7 +15,7 @@ import static java.util.Arrays.asList;
 
 /**
  *
- * @author lopez.pablo
+ *
  */
 @RestController
 @RequestMapping("/api")
@@ -25,7 +25,7 @@ public class PokemonController {
     private final PokemonRepository pokemonRepository;
 
     /**
-     *
+     * Setter for the PokemonRepository of this instance
      * @param pokemonRepository
      */
     public PokemonController(PokemonRepository pokemonRepository) {
@@ -102,18 +102,18 @@ public class PokemonController {
 
     /**
      *
-     * @param pokemon
-     * @return
+     * @param pokemon Instance of Pokemon you want to update, 
+     * @return Instance of the updated Pokemon
      */
     @PutMapping("pokemon")
     public Pokemon putPokemon(@RequestBody Pokemon pokemon) {
         return pokemonRepository.update(pokemon);
     }
-    
+
     /**
-     *
-     * @param e
-     * @return
+     * Handles All Exceptions
+     * @param e Runtime Exception
+     * @return Runtime Exception
      */
     @ExceptionHandler(RuntimeException.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)

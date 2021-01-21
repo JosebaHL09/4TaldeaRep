@@ -17,16 +17,16 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 import static com.google.common.base.Predicates.not;
 
 /**
- *
- * @author lopez.pablo
+ * Class that includes the Swagger Configuration, extends WebMvcConfigurationSupport
+ * 
  */
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig extends WebMvcConfigurationSupport {
 
     /**
-     *
-     * @return
+     * Bean of Swagger main configuration
+     * @return New instance of Docket
      */
     @Bean
     public Docket api() {
@@ -49,8 +49,8 @@ public class SwaggerConfig extends WebMvcConfigurationSupport {
     }
 
     /**
-     *
-     * @param registry
+     * Adds Resource Handlers
+     * @param registry ResourceHandlerRegistry
      */
     @Override
     protected void addResourceHandlers(ResourceHandlerRegistry registry) {
@@ -59,8 +59,8 @@ public class SwaggerConfig extends WebMvcConfigurationSupport {
     }
 
     /**
-     *
-     * @param configurer
+     * Configures DefaultServletHandlerConfigurer
+     * @param configurer DefaultServletHandlerConfigurer
      */
     @Override
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {

@@ -20,7 +20,8 @@ import org.bson.Document;
 
 /**
  *
- * Class that implements PokemonRepository Interface to allow PokemonController to perform CRUD operations in the database
+ * Class that implements PokemonRepository Interface to allow PokemonController
+ * to perform CRUD operations in the database
  */
 public class MongoDBPokemonRepository implements PokemonRepository {
 
@@ -39,9 +40,10 @@ public class MongoDBPokemonRepository implements PokemonRepository {
     }
 
     /**
+     * Saves a Pokemon in the database
      *
-     * @param pokemon New Instance of Pokemon created in 
-     * @return 
+     * @param pokemon New Instance of Pokemon you want to insert
+     * @return Instance of Pokemon
      */
     @Override
     public Pokemon save(Pokemon pokemon) {
@@ -64,8 +66,9 @@ public class MongoDBPokemonRepository implements PokemonRepository {
     }
 
     /**
+     * Finds every Pokemon in the database
      *
-     * @return
+     * @return Every Pokemon instance from the database
      */
     @Override
     public List<Pokemon> findAll() {
@@ -73,9 +76,10 @@ public class MongoDBPokemonRepository implements PokemonRepository {
     }
 
     /**
+     * Finds one or more Pokemon in the database using a list of IDs
      *
-     * @param ids
-     * @return
+     * @param ids List of IDs of the Pokemon you want to find
+     * @return List of Pokemon
      */
     @Override
     public List<Pokemon> findAll(List<Integer> ids) {
@@ -83,9 +87,10 @@ public class MongoDBPokemonRepository implements PokemonRepository {
     }
 
     /**
+     * Finds one Pokemon in the database using a ID
      *
-     * @param id
-     * @return
+     * @param id ID of the Pokemon you want to find
+     * @return Instance of Pokemon
      */
     @Override
     public Pokemon findOne(int id) {
@@ -93,8 +98,9 @@ public class MongoDBPokemonRepository implements PokemonRepository {
     }
 
     /**
+     * Returns the number of Pokemon in the collection
      *
-     * @return
+     * @return Number of Documents in the collection
      */
     @Override
     public long count() {
@@ -102,9 +108,10 @@ public class MongoDBPokemonRepository implements PokemonRepository {
     }
 
     /**
+     * Deletes one Pokemon in the database using a ID
      *
-     * @param id
-     * @return
+     * @param id ID of the Pokemon you want to delete
+     * @return Number of documents affected (0 or 1)
      */
     @Override
     public long delete(int id) {
@@ -112,9 +119,10 @@ public class MongoDBPokemonRepository implements PokemonRepository {
     }
 
     /**
+     * Updates one Pokemon in the database
      *
-     * @param pokemon
-     * @return
+     * @param pokemon Instance of Pokemon you want to update
+     * @return Instance of Pokemon
      */
     @Override
     public Pokemon update(Pokemon pokemon) {

@@ -6,56 +6,56 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 /**
+ * Interface that allows PokemonController access the MongoDB database
  *
- * @author lopez.pablo
  */
 @Repository
 public interface PokemonRepository {
 
     /**
      *
-     * @param pokemon  New Instance of Pokemon created in the ASP side
-     * @return
+     * @param pokemon New Instance of Pokemon you want to insert
+     * @return Instance of Pokemon
      */
     Pokemon save(Pokemon pokemon);
 
     /**
      *
-     * @return
+     * @return Every Pokemon instance from the database
      */
     List<Pokemon> findAll();
 
     /**
      *
-     * @param ids
-     * @return
+     * @param ids List of IDs of the Pokemon you want to find
+     * @return List of Pokemon
      */
     List<Pokemon> findAll(List<Integer> ids);
 
     /**
      *
-     * @param id
-     * @return
+     * @param id ID of the Pokemon you want to find
+     * @return Instance of Pokemon
      */
     Pokemon findOne(int id);
 
     /**
      *
-     * @return
+     * @return Number of Documents in the collection
      */
     long count();
 
     /**
      *
-     * @param id
-     * @return
+     * @param id ID of the Pokemon you want to delete
+     * @return Number of documents affected (0 or 1)
      */
     long delete(int id);
 
     /**
      *
-     * @param pokemon
-     * @return
+     * @param pokemon Instance of Pokemon you want to update
+     * @return Instance of the updated Pokemon
      */
     Pokemon update(Pokemon pokemon);
 
