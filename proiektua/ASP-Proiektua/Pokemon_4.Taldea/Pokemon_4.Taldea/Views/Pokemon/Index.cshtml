@@ -23,6 +23,10 @@
                         </div>
                         <div class="row ">
                             <div class="col-lg-1" style="margin-right:10px;">
+                                @foreach (var type in item.type)
+                                {
+                                    <p>@Html.DisplayFor(modelItem => type)</p>
+                                }
                                 <div><p style="font-size:16px; font-weight:bold; margin-left:-15px;"> @Html.DisplayFor(modelItem => item.type)</p></div>
                             </div>
                             <div class="col-lg-1" style="margin-right:90px;">
@@ -42,15 +46,31 @@
                                 <img src="https://img.icons8.com/ios/452/weight-kg.png" style="width:50px;height:60px; margin-top:-17px; margin-left:-25px; " />
                             </div>
                             <div class="col-lg-1">
+                                @foreach (var weakness in item.weaknesses)
+                                {
+                                <p>@Html.DisplayFor(modelItem => weakness)</p>
+                                }
                                 <p style="font-size:16px; font-weight:bold;  margin-left:-20px; ">@Html.DisplayFor(modelItem => item.weaknesses)</p>
                             </div>
 
                             <div class="col-lg-1">
-                                <p style="font-size:16px; font-weight:bold; margin-top:6px; margin-left:-18px; ">@Html.DisplayFor(modelItem => item.prev_evolution)</p>
+                                @if (item.prev_evolution != null)
+                                {
+                                    foreach (var p in item.prev_evolution)
+                                    {
+                                        <p>@Html.DisplayFor(modelItem => p.num), @Html.DisplayFor(modelItem => p.name)</p>
+                                    }
+                                }
                             </div>
 
                             <div class="col-lg-1">
-                                <p style="font-size:16px; font-weight:bold; margin-top:6px; margin-left:-35px; ">@Html.DisplayFor(modelItem => item.next_evolution)</p>
+                                @if (item.next_evolution != null)
+                                {
+                                    foreach (var p in item.next_evolution)
+                                    {
+                                        <p>@Html.DisplayFor(modelItem => p.num), @Html.DisplayFor(modelItem => p.name)</p>
+                                    }
+                                }
                             </div>
                         </div>
                     </td>
