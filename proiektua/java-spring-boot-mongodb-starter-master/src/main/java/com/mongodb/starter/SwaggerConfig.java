@@ -16,9 +16,18 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import static com.google.common.base.Predicates.not;
 
+/**
+ * Class that includes the Swagger Configuration.
+ * 
+ */
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig extends WebMvcConfigurationSupport {
+
+    /**
+     * Bean of Swagger main configuration
+     * @return New instance of Docket
+     */
     @Bean
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2).select()
@@ -39,12 +48,20 @@ public class SwaggerConfig extends WebMvcConfigurationSupport {
                                    .build();
     }
 
+    /**
+     * Adds Resource Handlers
+     * @param registry ResourceHandlerRegistry
+     */
     @Override
     protected void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("swagger-ui.html").addResourceLocations("classpath:/META-INF/resources/");
         registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
     }
 
+    /**
+     * Configures DefaultServletHandlerConfigurer
+     * @param configurer DefaultServletHandlerConfigurer
+     */
     @Override
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
         configurer.enable();
