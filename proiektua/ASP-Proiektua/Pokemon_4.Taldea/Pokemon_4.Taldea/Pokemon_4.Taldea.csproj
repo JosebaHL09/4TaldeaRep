@@ -122,6 +122,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\PokemonController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -135,14 +136,26 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\fontawesome-all.css" />
     <Content Include="Content\magnific-popup.css" />
-    <Content Include="Content\styles.css" />
     <Content Include="Content\swiper.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Irudiak\fondo.png" />
+    <Content Include="Irudiak\hexagon-green.svg" />
+    <Content Include="Irudiak\hexagon-white.svg" />
+    <Content Include="Irudiak\pokeball.svg" />
     <Content Include="Irudiak\prueba.jpg" />
-    <Content Include="Models\bootstrap.css" />
+    <Content Include="JavaScript\bootstrap.min.js" />
+    <Content Include="JavaScript\isotope.pkgd.min.js" />
+    <Content Include="JavaScript\jquery.easing.min.js" />
+    <Content Include="JavaScript\jquery.magnific-popup.js" />
+    <Content Include="JavaScript\jquery.min.js" />
+    <Content Include="JavaScript\morphext.min.js" />
+    <Content Include="JavaScript\popper.min.js" />
+    <Content Include="JavaScript\scripts.js" />
+    <Content Include="JavaScript\swiper.min.js" />
+    <Content Include="JavaScript\validator.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
