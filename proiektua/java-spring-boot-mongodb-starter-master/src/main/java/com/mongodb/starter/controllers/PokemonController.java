@@ -79,13 +79,14 @@ public class PokemonController {
         for (String s : listIdsString) {
             listIds.add(Integer.valueOf(s));
         }
+        
         return pokemonRepository.findAll(listIds);
     }
 
     /**
      *
-     * @param type
-     * @return
+     * @param type Type of a Pokemon
+     * @return List of Pokemon that have the introduced type
      */
     @GetMapping("multiplePokemon/type/{type}")
     public List<Pokemon> getMultiplePokemonByType(@PathVariable String type) {
@@ -94,7 +95,7 @@ public class PokemonController {
 
     /**
      *
-     * @return
+     * @return Number of Documents in the collection
      */
     @GetMapping("pokemon/count")
     public Long getCount() {
@@ -121,6 +122,10 @@ public class PokemonController {
         return pokemonRepository.update(pokemon);
     }
 
+    /**
+     *
+     * @return List of String with every different Type
+     */
     @PutMapping("type")
     public List<String> findTypes() {
         return pokemonRepository.findTypes();

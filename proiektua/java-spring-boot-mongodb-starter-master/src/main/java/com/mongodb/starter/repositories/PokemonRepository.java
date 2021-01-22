@@ -66,7 +66,10 @@ public interface PokemonRepository {
      */
     Pokemon update(Pokemon pokemon);
     
-    
+    /**
+     *
+     * @return List of String with every different Type
+     */
     List<String> findTypes();
 
 }
