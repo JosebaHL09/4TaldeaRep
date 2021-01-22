@@ -87,6 +87,17 @@ public class MongoDBPokemonRepository implements PokemonRepository {
     }
 
     /**
+     * Finds one or more Pokemon in the database that have the introduced type
+     *
+     * @param type List of IDs of the Pokemon you want to find
+     * @return List of Pokemon
+     */
+    @Override
+    public List<Pokemon> findByType(String type) {
+        return pokemonCollection.find(eq("type", type)).sort(new Document("_id", 1)).into(new ArrayList<>());
+    }
+
+    /**
      * Finds one Pokemon in the database using a ID
      *
      * @param id ID of the Pokemon you want to find
@@ -128,5 +139,14 @@ public class MongoDBPokemonRepository implements PokemonRepository {
     public Pokemon update(Pokemon pokemon) {
         FindOneAndReplaceOptions options = new FindOneAndReplaceOptions().returnDocument(AFTER);
         return pokemonCollection.findOneAndReplace(eq("_id", pokemon.getId()), pokemon, options);
+    }
+    
+    /**
+     *
+     * @return List of String with every different Type
+     */
+    @Override
+    public List<String> findTypes(){
+        return pokemonCollection.distinct("type", String.class).into(new ArrayList<>());
     }
 }

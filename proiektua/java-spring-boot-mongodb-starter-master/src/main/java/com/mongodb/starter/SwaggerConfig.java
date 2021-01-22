@@ -17,7 +17,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 import static com.google.common.base.Predicates.not;
 
 /**
- * Class that includes the Swagger Configuration, extends WebMvcConfigurationSupport
+ * Class that includes the Swagger Configuration.
  * 
  */
 @Configuration

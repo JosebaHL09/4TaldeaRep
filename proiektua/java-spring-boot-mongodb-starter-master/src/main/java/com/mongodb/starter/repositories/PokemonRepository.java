@@ -31,6 +31,13 @@ public interface PokemonRepository {
      * @return List of Pokemon
      */
     List<Pokemon> findAll(List<Integer> ids);
+    
+    /**
+     *
+     * @param type All the Pokemon that have the type you want to find
+     * @return List of Pokemon
+     */
+    List<Pokemon> findByType(String type);
 
     /**
      *
@@ -58,5 +65,11 @@ public interface PokemonRepository {
      * @return Instance of the updated Pokemon
      */
     Pokemon update(Pokemon pokemon);
+    
+    /**
+     *
+     * @return List of String with every different Type
+     */
+    List<String> findTypes();
 
 }

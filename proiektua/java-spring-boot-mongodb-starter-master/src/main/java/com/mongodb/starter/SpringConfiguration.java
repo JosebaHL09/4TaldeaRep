@@ -4,10 +4,8 @@ import com.mongodb.ConnectionString;
 import com.mongodb.MongoClientSettings;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
-import com.mongodb.starter.models.Pokemon;
 import com.mongodb.starter.repositories.MongoDBPokemonRepository;
 import com.mongodb.starter.repositories.PokemonRepository;
-import java.util.List;
 import org.bson.codecs.configuration.CodecRegistry;
 import org.bson.codecs.pojo.PojoCodecProvider;
 import org.springframework.beans.factory.annotation.Value;
@@ -19,7 +17,7 @@ import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
 
 /**
  *
- *  Class that contains @Configuration annotation. It indicates that a class declares one or more @Bean methods and may be processed by the Spring container to generate bean definitions and service requests for those beans at runtime.
+ *  Class that contains Spring @Configuration annotation. It indicates that a class declares one or more @Bean methods and may be processed by the Spring container to generate bean definitions and service requests for those beans at runtime.
  */
 @Configuration
 public class SpringConfiguration {
