@@ -162,9 +162,6 @@ namespace Pokemon_4.Taldea.Models
             return "Pokemon{" + "id=" + num + ", name=" + name + '}';
         }
 
-        public void insertPokemon(String name,String img, List<String> type, String height, String weight,List<String> weakness,List<Pokemon> prev_evo,List<Pokemon> next_evo)
-        {
-            
-        }
+        
     }
 }

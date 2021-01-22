@@ -66,5 +66,30 @@ namespace Pokemon_4.Taldea.Controllers
 
             return RedirectToAction("Index");
         }
+
+        public ActionResult Insert(FormCollection collection)
+        {
+
+            string izena = collection["name"];
+            string i = collection["img"];
+
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("http://192.168.72.7:8080/");
+
+                //HTTP DELETE
+                var postTask = client.DeleteAsync("api/pokemon");
+                postTask.Wait();
+
+                var result = postTask.Result;
+                if (result.IsSuccessStatusCode)
+                {
+
+                    return RedirectToAction("Index");
+                }
+            }
+
+            return RedirectToAction("Index");
+        }
     }
 }
