@@ -9,78 +9,65 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-    <div class="col-lg-1 borderrak" id="blokekategoria" style="margin-top:150px; margin-bottom:100px; margin-right:100px;">
-        <table class="table">
-            @foreach (var item in Model)
+<br />
+<br />
+<br />
+<br />
+<br />
+@foreach (var item in Model)
+{
+<div class="container row" style="border:solid; margin: 20px; border-radius: 10px; max-width:1800px; height:auto">
+    <div class="container col-lg-4">
+        <div class="container row"><img class="ardo-argazkia" style="margin-left:40px;" src="@Html.DisplayFor(modelItem => item.img)" /></div>
+        <div class="container row" style="font-size:26px; margin-left:110px; margin-top:5px; margin-bottom:20px; color:royalblue; font-weight:bold" >
+            @foreach (var name in item.name)
             {
-                <tr>
-                    <td>
-                        <img class="ardo-argazkia" src="@Html.DisplayFor(modelItem => item.img)" style="width:80px;height:90px; margin-top:25px; margin-right:20px;" />
-                    </td>
-                    <td>
-                        <div class="row kategoriaMotaIzenburua">
-                            Pokemon izena: @Html.DisplayFor(modelItem => item.name)
-                        </div>
-                        <div class="row ">
-                            <div class="col-lg-1" style="margin-right:10px;">
-                                @foreach (var type in item.type)
-                                {
-                                    <p>@Html.DisplayFor(modelItem => type)</p>
-                                }
-                                <div><p style="font-size:16px; font-weight:bold; margin-left:-15px;"> @Html.DisplayFor(modelItem => item.type)</p></div>
-                            </div>
-                            <div class="col-lg-1" style="margin-right:90px;">
-
-                                <img src="https://static.vecteezy.com/system/resources/previews/000/119/820/non_2x/free-type-pokemon-vector.png" style="width:100px;height:80px; margin-left:20px; margin-top:-25px;" />
-                            </div>
-                            <div class="col-lg-1">
-                                <p style="font-size:16px; font-weight:bold; margin-top:1px; margin-left:-20px; "> @Html.DisplayFor(modelItem => item.height)</p>
-                            </div>
-                            <div class="col-lg-1">
-                                <img src="https://image.flaticon.com/icons/png/512/349/349410.png" style="width:50px;height:60px; margin-top:-10px; margin-left:-35px;" />
-                            </div>
-                            <div class="col-lg-1">
-                                <p style="font-size:16px; font-weight:bold;  margin-left:-20px;  margin-top:5px;">@Html.DisplayFor(modelItem => item.weight)</p>
-                            </div>
-                            <div class="col-lg-1">
-                                <img src="https://img.icons8.com/ios/452/weight-kg.png" style="width:50px;height:60px; margin-top:-17px; margin-left:-25px; " />
-                            </div>
-                            <div class="col-lg-1">
-                                @foreach (var weakness in item.weaknesses)
-                                {
-                                <p>@Html.DisplayFor(modelItem => weakness)</p>
-                                }
-                                <p style="font-size:16px; font-weight:bold;  margin-left:-20px; ">@Html.DisplayFor(modelItem => item.weaknesses)</p>
-                            </div>
-
-                            <div class="col-lg-1">
-                                @if (item.prev_evolution != null)
-                                {
-                                    foreach (var p in item.prev_evolution)
-                                    {
-                                        <p>@Html.DisplayFor(modelItem => p.num), @Html.DisplayFor(modelItem => p.name)</p>
-                                    }
-                                }
-                            </div>
-
-                            <div class="col-lg-1">
-                                @if (item.next_evolution != null)
-                                {
-                                    foreach (var p in item.next_evolution)
-                                    {
-                                        <p>@Html.DisplayFor(modelItem => p.num), @Html.DisplayFor(modelItem => p.name)</p>
-                                    }
-                                }
-                            </div>
-                            <div  class="col-lg-1">
-                                @Html.ActionLink("Ezabatu", "Delete", new {id = item.id });
-                            </div>
-                        </div>
-                    </td>
-
-                </tr>
+                @name
+               
             }
-
-        </table>
+        </div>
     </div>
+    <hr>
+    <div class="col-lg-4">
+        <div class="container row" style="margin-top:-270px; margin-bottom:200px; margin-left:140px;max-width:400px;">
+            <p style=" color:black; font-weight:bold; margin-left:-50px;">Tipo</p>
+            @foreach (var type in item.type)
+            {
+                var irudia = type + ".png";
+                <img style="max-height: 80px; margin-top:-10px;" src="~/Irudiak/tipos/@irudia" />
+            }
+        </div>
+        <div class="container row" style="margin-top:-200px;; margin-left:140px;">
+            <p style=" color:black; font-weight:bold; margin-top:10px; margin-left:-50px;">Debilidad</p>
+            @foreach (var weaknesses in item.weaknesses)
+
+            {
+                var irudia = weaknesses + ".png";
+                <img style="max-height: 80px; margin-top:-10px;" src="~/Irudiak/tipos/@irudia" />
+            }
+        </div>
+        <div class="container row urdina" style="margin-top:20px; margin-bottom:30px; margin-left:200px;">
+            <div class="container row">
+                <div class="container col-lg-2" style="margin-left:40px">
+                    <div class="container row letra-zuria">
+                        <p>Altura</p>
+                    </div>
+                    <div class="container row letra-beltza">
+                        <p>@Html.DisplayFor(modelItem => item.height)</p>
+                    </div>
+                </div>
+                <div class="container col-lg-2">
+                    <div class="container row letra-zuria">
+                        <p>Peso</p>
+                    </div>
+                    <div class="container row letra-beltza">
+                        <p>@Html.DisplayFor(modelItem => item.weight)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}
+
 

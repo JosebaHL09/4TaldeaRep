@@ -41,7 +41,7 @@ namespace Pokemon_4.Taldea.Models
 
         public string toString()
         {
-            return "Pokemon{" + "id=" + id + ", name=" + name + ", img=" + img + ", type=" + type + ", height=" + height + ", weight=" + weight + ", weaknesses=" + weaknesses + ", prev_evolution=" + prev_evolution + ", next_evolution=" + next_evolution + '}';
+            return "Pokemon{" + "id=" + id + ", name=" + name + ", img=" + img + ", type=" + type + ", height=" + height + ", weight=" + weight + ", weaknesses=" + weaknesses + ", prev_evolution=" +prev_evolution + ", next_evolution=" + next_evolution + '}';
         }
 
         public String toStringPokemonArray(List<Pokemon> lista)
@@ -62,7 +62,5 @@ namespace Pokemon_4.Taldea.Models
         {
             return "Pokemon{" + "id=" + num + ", name=" + name + '}';
         }
-
-        
     }
 }
