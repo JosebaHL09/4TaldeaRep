@@ -5,25 +5,25 @@ namespace Pokemon_4.Taldea.Models
 {
     public class Pokemon
     {
-        public int id;
-        public String num;
-        public String name;
-        public String img;
-        public List<String> type;
-        public String height;
-        public String weight;
-        public List<String> weaknesses;
-        public List<Pokemon> prev_evolution;
-        public List<Pokemon> next_evolution;
+        public int id { get; set; }
+        public String num { get; set; }
+        public String name { get; set; }
+        public String img { get; set; }
+        public List<String> type { get; set; }
+        public String height { get; set; }
+        public String weight { get; set; }
+        public List<String> weaknesses { get; set; }
+        public List<Pokemon> prev_evolution { get; set; }
+        public List<Pokemon> next_evolution { get; set; }
 
         public Pokemon()
         {
         }
 
-        public Pokemon(String num, String name)
+        public Pokemon(String name, String img)
         {
-            this.num = num;
             this.name = name;
+            this.img = img;
         }
 
         public Pokemon(int id, String name, String img, List<String> type, String height, String weight, List<String> weaknesses, List<Pokemon> prev_evolution, List<Pokemon> next_evolution)
@@ -36,105 +36,6 @@ namespace Pokemon_4.Taldea.Models
             this.weight = weight;
             this.weaknesses = weaknesses;
             this.prev_evolution = prev_evolution;
-            this.next_evolution = next_evolution;
-        }
-        public int getId()
-        {
-            return id;
-        }
-
-        public void setId(int id)
-        {
-            this.id = id;
-        }
-
-        public String getNum()
-        {
-            return num;
-        }
-
-        public void setNum(String num)
-        {
-            this.num = num;
-        }
-
-        public String getName()
-        {
-            return name;
-        }
-
-        public void setName(String name)
-        {
-            this.name = name;
-        }
-
-        public String getImg()
-        {
-            return img;
-        }
-
-        public void setImg(String img)
-        {
-            this.img = img;
-        }
-
-        public List<String> getType()
-        {
-            return type;
-        }
-
-        public void setType(List<String> type)
-        {
-            this.type = type;
-        }
-
-        public String getHeight()
-        {
-            return height;
-        }
-
-        public void setHeight(String height)
-        {
-            this.height = height;
-        }
-
-        public String getWeight()
-        {
-            return weight;
-        }
-
-        public void setWeight(String weight)
-        {
-            this.weight = weight;
-        }
-
-        public List<String> getWeaknesses()
-        {
-            return weaknesses;
-        }
-
-        public void setWeaknesses(List<String> weaknesses)
-        {
-            this.weaknesses = weaknesses;
-        }
-
-        public List<Pokemon> getPrev_evolution()
-        {
-            return prev_evolution;
-        }
-
-        public void setPrev_evolution(List<Pokemon> prev_evolution)
-        {
-            this.prev_evolution = prev_evolution;
-        }
-
-        public List<Pokemon> getNext_evolution()
-        {
-            return next_evolution;
-        }
-
-        public void setNext_evolution(List<Pokemon> next_evolution)
-        {
             this.next_evolution = next_evolution;
         }
 

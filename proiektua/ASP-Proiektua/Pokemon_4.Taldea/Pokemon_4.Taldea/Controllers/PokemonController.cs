@@ -67,24 +67,34 @@ namespace Pokemon_4.Taldea.Controllers
             return RedirectToAction("Index");
         }
 
-        public ActionResult Insert(FormCollection collection)
+        public ActionResult Insert()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(FormCollection collection)
         {
 
             string izena = collection["name"];
             string i = collection["img"];
+            string height = collection["height"];
+            string weight = collection["weight"];
+
+            Pokemon p = new Pokemon(izena, i);
 
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri("http://192.168.72.7:8080/");
 
-                //HTTP DELETE
-                var postTask = client.DeleteAsync("api/pokemon");
+                //HTTP POST
+                var content = new JsonContent(p);
+                var postTask = client.PostAsJsonAsync<Pokemon>("api/pokemon", p);
                 postTask.Wait();
-
+                var Res = postTask.Result;
                 var result = postTask.Result;
                 if (result.IsSuccessStatusCode)
                 {
-
                     return RedirectToAction("Index");
                 }
             }
