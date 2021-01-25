@@ -6,7 +6,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System.Web.Mvc;
-
+using PagedList;
 
 namespace Pokemon_4.Taldea.Controllers
 {
@@ -14,7 +14,7 @@ namespace Pokemon_4.Taldea.Controllers
     {
         //Hosted web API REST Service base url  
         string Baseurl = "http://192.168.72.7:8080/";
-        public async Task<ActionResult> Index()
+        public async Task<ActionResult> Index(int? page)
         {
             List<Pokemon> PokInfo = new List<Pokemon>();
 
@@ -42,7 +42,9 @@ namespace Pokemon_4.Taldea.Controllers
 
                 }
                 //returning the employee list to view  
-                return View(PokInfo);
+                int pageSize = 10;
+                int pageNumber = (page ?? 1);
+                return View(PokInfo.ToPagedList(pageNumber, pageSize));
             }
         }
         
