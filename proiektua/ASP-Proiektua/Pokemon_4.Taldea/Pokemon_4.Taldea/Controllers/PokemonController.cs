@@ -69,7 +69,7 @@ namespace Pokemon_4.Taldea.Controllers
 
         public ActionResult Insert()
         {
-            return View();
+            return View("Insert");
         }
 
         [HttpPost]
