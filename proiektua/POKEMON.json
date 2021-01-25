@@ -3,7 +3,7 @@
 	"name": "Bulbasaur",
 	"img": "http://www.serebii.net/pokemon/art/001.png",
 	"type": [
-		"Grass",
+		type:"Grass",
 		"Poison"
 	],
 	"height": "0.71 m",
