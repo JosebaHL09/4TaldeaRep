@@ -258,3 +258,9 @@ C:\Users\hernandez.joseba\Documents\GitHub\4TaldeaRep\Proiektua\ASP-Proiektua\Po
 C:\Users\hernandez.joseba\Documents\GitHub\4TaldeaRep\Proiektua\ASP-Proiektua\Pokemon_4.Taldea\Pokemon_4.Taldea\obj\Debug\Pokemon_4.Taldea.pdb
 C:\Users\hernandez.joseba\Documents\GitHub\4TaldeaRep\Proiektua\ASP-Proiektua\Pokemon_4.Taldea\Pokemon_4.Taldea\bin\System.Net.Http.Formatting.dll
 C:\Users\hernandez.joseba\Documents\GitHub\4TaldeaRep\Proiektua\ASP-Proiektua\Pokemon_4.Taldea\Pokemon_4.Taldea\bin\System.Net.Http.Formatting.xml
+C:\Users\lopez.pablo\Documents\GitHub\4TaldeaRep\proiektua\ASP-Proiektua\Pokemon_4.Taldea\Pokemon_4.Taldea\bin\System.Net.Http.Formatting.dll
+C:\Users\lopez.pablo\Documents\GitHub\4TaldeaRep\proiektua\ASP-Proiektua\Pokemon_4.Taldea\Pokemon_4.Taldea\bin\System.Net.Http.Formatting.xml
+C:\Users\lopez.pablo\Documents\GitHub\4TaldeaRep\proiektua\ASP-Proiektua\Pokemon_4.Taldea\Pokemon_4.Taldea\bin\PagedList.dll
+C:\Users\lopez.pablo\Documents\GitHub\4TaldeaRep\proiektua\ASP-Proiektua\Pokemon_4.Taldea\Pokemon_4.Taldea\bin\PagedList.Mvc.dll
+C:\Users\lopez.pablo\Documents\GitHub\4TaldeaRep\proiektua\ASP-Proiektua\Pokemon_4.Taldea\Pokemon_4.Taldea\bin\PagedList.xml
+C:\Users\lopez.pablo\Documents\GitHub\4TaldeaRep\proiektua\ASP-Proiektua\Pokemon_4.Taldea\Pokemon_4.Taldea\bin\PagedList.Mvc.xml
