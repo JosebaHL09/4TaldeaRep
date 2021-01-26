@@ -4,6 +4,7 @@ import com.mongodb.starter.models.Pokemon;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import org.bson.Document;
 
 /**
  * Interface that allows PokemonController access the MongoDB database

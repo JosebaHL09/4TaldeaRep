@@ -7,7 +7,6 @@ import com.mongodb.client.MongoDatabase;
 import com.mongodb.starter.models.Pokemon;
 import com.mongodb.starter.repositories.PokemonRepository;
 
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
