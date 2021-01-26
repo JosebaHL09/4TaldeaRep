@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 import static java.util.Arrays.asList;
-import org.bson.Document;
 
 /**
  * Controller that allows MVC connect with Java Service
