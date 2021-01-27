@@ -6,6 +6,7 @@ import com.mongodb.TransactionOptions;
 import com.mongodb.WriteConcern;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoCursor;
 import com.mongodb.client.model.FindOneAndReplaceOptions;
 import org.springframework.beans.factory.annotation.Autowired;
 import java.util.ArrayList;
@@ -13,6 +14,7 @@ import java.util.List;
 
 import static com.mongodb.client.model.Filters.eq;
 import static com.mongodb.client.model.Filters.in;
+import static com.mongodb.client.model.Projections.excludeId;
 import static com.mongodb.client.model.ReturnDocument.AFTER;
 import com.mongodb.starter.models.Pokemon;
 import javax.annotation.PostConstruct;
@@ -33,10 +35,12 @@ public class MongoDBPokemonRepository implements PokemonRepository {
     @Autowired
     private MongoClient client;
     private MongoCollection<Pokemon> pokemonCollection;
+    private MongoCollection<Document> typeCollection;
 
     @PostConstruct
     void init() {
         pokemonCollection = client.getDatabase("pokedex").getCollection("pokemon", Pokemon.class);
+        typeCollection = client.getDatabase("pokedex").getCollection("types");
     }
 
     /**
@@ -140,13 +144,23 @@ public class MongoDBPokemonRepository implements PokemonRepository {
         FindOneAndReplaceOptions options = new FindOneAndReplaceOptions().returnDocument(AFTER);
         return pokemonCollection.findOneAndReplace(eq("_id", pokemon.getId()), pokemon, options);
     }
-    
+
     /**
      *
-     * @return List of String with every different Type
+     * @return List of Documents with every different Type
      */
     @Override
-    public List<String> findTypes(){
-        return pokemonCollection.distinct("type", String.class).into(new ArrayList<>());
+    public List<Document> findTypes() {
+        List<Document> types = new ArrayList<>();
+        MongoCursor<Document> cursor = typeCollection.find().projection(excludeId()).iterator();
+        try {
+            while (cursor.hasNext()) {
+                types.add(cursor.next());
+            }
+        } finally {
+            cursor.close();
+        }
+
+        return types;
     }
 }
