@@ -1,6 +1,9 @@
 ﻿@model PagedList.IPagedList<Pokemon_4.Taldea.Models.Pokemon>
 @using PagedList.Mvc;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 18196f8dc4966184832a14e0f1b764fd9f869555
 <link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
 
 @{
@@ -18,6 +21,7 @@
 <br />
 <br />
 Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+<<<<<<< HEAD
 @{
     var findtype = Request.QueryString["Type"];
 
@@ -27,6 +31,11 @@ Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.Page
     //string type = RouteData.Values["type"];
 }
 @Html.PagedListPager(Model, page => Url.Action("Index", new { Page = page, Type = findtype }))
+=======
+
+@Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+>>>>>>> 18196f8dc4966184832a14e0f1b764fd9f869555
 
 @foreach (var item in Model)
 {
@@ -86,6 +95,11 @@ Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.Page
 <br />
 Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
 
+<<<<<<< HEAD
 @Html.PagedListPager(Model, page => Url.Action("Index", new { Page = page, Type = findtype }))
+=======
+@Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+>>>>>>> 18196f8dc4966184832a14e0f1b764fd9f869555
 
 
