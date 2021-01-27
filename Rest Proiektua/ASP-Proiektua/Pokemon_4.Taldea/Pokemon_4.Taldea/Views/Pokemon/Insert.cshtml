@@ -43,16 +43,35 @@
             @Html.LabelFor(model => model.type, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @{
-                    String[] typeList = { "Bug" };
-
+                    String[] typeList = { "Bug", "Dragon", "Electric", "Fighting", "Fire", "Flying", "Ghost", "Grass", "Ground", "Ice", "Normal", "Poison", "Psychic", "Rock", "Water", "Fairy", "Dark", "Steel" };
+                    int count = 0;
                     foreach (var type in typeList)
                     {
-                        <input type="checkbox" id="@type" name="@type" value="@type">
+                        count++;
                         var irudia = type + ".png";
+                        <input type="checkbox" id="@type" name="type" value="@type" onclick="return ValidateTypeSelection();">
                         <img class="typeIrudia" src="@Url.Content("~/Irudiak/tipos/"+irudia)">
+                        if (count % 5 == 0)
+                        {
+                            <br />
+                        }
                     }
                 }
             </div>
+            <script type="text/javascript">
+                function ValidateTypeSelection() {
+                    var checkboxes = document.getElementsByName("type");
+                    var numberOfCheckedItems = 0;
+                    for (var i = 0; i < checkboxes.length; i++) {
+                        if (checkboxes[i].checked)
+                            numberOfCheckedItems++;
+                    }
+                    if (numberOfCheckedItems > 2) {
+                        alert("You can't select more than two types!");
+                        return false;
+                    }
+                }
+            </script>
         </div>
         <div class="form-group">
             @Html.LabelFor(model => model.height, htmlAttributes: new { @class = "control-label col-md-2" })
