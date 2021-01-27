@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Pokemon_4.Taldea.Models.Types>
+
+
+
+
+<div style="margin-top:20%;">
+    @foreach (var item in Model)
+    {
+        var irudia = item.name + ".png";
+
+        <a href="@Url.Action("Index", "Pokemon", new { Page=1, Type = item.name })">
+            <img class="typeIrudia" src="@Url.Content("~/Irudiak/tipos/"+irudia)">
+        </a>
+    }
+</div>

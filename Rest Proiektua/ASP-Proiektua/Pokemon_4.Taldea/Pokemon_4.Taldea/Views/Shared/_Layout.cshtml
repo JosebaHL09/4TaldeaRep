@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img style="margin-left:-300px;margin-right:100px;max-height:150px; max-width:initial" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2000px-International_Pok%C3%A9mon_logo.svg.png" />
+               <br /><br />
+               
+            </div>
+                <div class="navbar-collapse collapse" style="margin-top:60px;">
+                    <ul class="nav navbar-nav">
+                        <li class="layout-polita">@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li class="layout-polita">@Html.ActionLink("Pokemon zerrenda", "Index", "Pokemon", new { Page = 1, Type = "0"  }, null)</li>
+                        <li class="layout-polita">@Html.ActionLink("Pokemon berria", "Insert", "Pokemon")</li>
+                        <li class="layout-polita">@Html.ActionLink("Pokemon bat ezabatu", "delete", "Pokemon")</li>
+                        <li class="layout-polita">@Html.ActionLink("Types", "Index", "Type")</li>
+                        <li class="layout-polita">@Html.ActionLink("Login", "Contact", "Home")</li>
+                    </ul>
+                </div>
+            </div>
+    </div>
+        <div style="background-color:white"   class="container body-content">
+            @RenderBody()
+        </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
