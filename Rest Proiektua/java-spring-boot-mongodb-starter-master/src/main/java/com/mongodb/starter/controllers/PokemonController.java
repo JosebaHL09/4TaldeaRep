@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 import static java.util.Arrays.asList;
+import org.bson.Document;
 
 /**
  * Controller that allows MVC connect with Java Service
@@ -88,8 +89,8 @@ public class PokemonController {
      * @param type Type of a Pokemon
      * @return List of Pokemon that have the introduced type
      */
-    @GetMapping("multiplePokemon/type/{type}")
-    public List<Pokemon> getMultiplePokemonByType(@PathVariable String type) {
+    @GetMapping("pokemon/type/{type}")
+    public List<Pokemon> getPokemonByType(@PathVariable String type) {
         return pokemonRepository.findByType(type);
     }
 
@@ -124,10 +125,10 @@ public class PokemonController {
 
     /**
      *
-     * @return List of String with every different Type
+     * @return List of Documents with every different Type
      */
-    @PutMapping("type")
-    public List<String> findTypes() {
+    @GetMapping("type")
+    public List<Document> findTypes() {
         return pokemonRepository.findTypes();
     }
 

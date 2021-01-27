@@ -4,6 +4,7 @@ import com.mongodb.starter.models.Pokemon;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import org.bson.Document;
 
 /**
  * Interface that allows PokemonController access the MongoDB database
@@ -68,8 +69,8 @@ public interface PokemonRepository {
     
     /**
      *
-     * @return List of String with every different Type
+     * @return List of Documents with every different Type
      */
-    List<String> findTypes();
+    List<Document> findTypes();
 
 }

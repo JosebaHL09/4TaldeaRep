@@ -147,15 +147,15 @@ public class MongoDBPokemonRepository implements PokemonRepository {
 
     /**
      *
-     * @return List of String with every different Type
+     * @return List of Documents with every different Type
      */
     @Override
-    public List<String> findTypes() {
-        List<String> types = new ArrayList<>();
+    public List<Document> findTypes() {
+        List<Document> types = new ArrayList<>();
         MongoCursor<Document> cursor = typeCollection.find().projection(excludeId()).iterator();
         try {
             while (cursor.hasNext()) {
-                types.add(cursor.next().get("name", String.class));
+                types.add(cursor.next());
             }
         } finally {
             cursor.close();
