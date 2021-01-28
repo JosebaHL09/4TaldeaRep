@@ -7,16 +7,18 @@ import com.mongodb.WriteConcern;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
+import static com.mongodb.client.model.Filters.and;
+import static com.mongodb.client.model.Filters.eq;
 import com.mongodb.client.model.FindOneAndReplaceOptions;
 import org.springframework.beans.factory.annotation.Autowired;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.mongodb.client.model.Filters.eq;
 import static com.mongodb.client.model.Filters.in;
 import static com.mongodb.client.model.Projections.excludeId;
 import static com.mongodb.client.model.ReturnDocument.AFTER;
 import com.mongodb.starter.models.Pokemon;
+import com.mongodb.starter.models.User;
 import javax.annotation.PostConstruct;
 import org.bson.Document;
 
@@ -36,11 +38,13 @@ public class MongoDBPokemonRepository implements PokemonRepository {
     private MongoClient client;
     private MongoCollection<Pokemon> pokemonCollection;
     private MongoCollection<Document> typeCollection;
+    private MongoCollection<User> userCollection;
 
     @PostConstruct
     void init() {
         pokemonCollection = client.getDatabase("pokedex").getCollection("pokemon", Pokemon.class);
         typeCollection = client.getDatabase("pokedex").getCollection("types");
+        userCollection = client.getDatabase("pokedex").getCollection("users", User.class);
     }
 
     /**
@@ -98,7 +102,11 @@ public class MongoDBPokemonRepository implements PokemonRepository {
      */
     @Override
     public List<Pokemon> findByType(String type) {
-        return pokemonCollection.find(eq("type", type)).sort(new Document("_id", 1)).into(new ArrayList<>());
+        try {
+            return pokemonCollection.find(eq("type", type)).sort(new Document("_id", 1)).into(new ArrayList<>());
+        } catch (NumberFormatException nfe) {
+            return null;
+        }
     }
 
     /**
@@ -162,5 +170,25 @@ public class MongoDBPokemonRepository implements PokemonRepository {
         }
 
         return types;
+    }
+
+    @Override
+    public boolean checkUser(User user) {
+        try {
+            User checkedUser = userCollection.find(and(eq("username", user.getUsername()), eq("password", user.getPassword()))).first();
+            return checkedUser != null;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    @Override
+    public User insertUser(User newUser) {
+        newUser.setId(0);
+        User azkenUser = userCollection.find().sort(new Document("_id", -1)).first();
+        int id = azkenUser.getId() + 1;
+        newUser.setId(id);
+        userCollection.insertOne(newUser);
+        return newUser;
     }
 }

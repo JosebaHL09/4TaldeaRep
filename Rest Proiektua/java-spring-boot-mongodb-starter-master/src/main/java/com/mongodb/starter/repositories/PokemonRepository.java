@@ -1,6 +1,7 @@
 package com.mongodb.starter.repositories;
 
 import com.mongodb.starter.models.Pokemon;
+import com.mongodb.starter.models.User;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -32,7 +33,7 @@ public interface PokemonRepository {
      * @return List of Pokemon
      */
     List<Pokemon> findAll(List<Integer> ids);
-    
+
     /**
      *
      * @param type All the Pokemon that have the type you want to find
@@ -66,11 +67,15 @@ public interface PokemonRepository {
      * @return Instance of the updated Pokemon
      */
     Pokemon update(Pokemon pokemon);
-    
+
     /**
      *
      * @return List of Documents with every different Type
      */
     List<Document> findTypes();
+
+    boolean checkUser(User user);
+
+    User insertUser(User newUser);
 
 }

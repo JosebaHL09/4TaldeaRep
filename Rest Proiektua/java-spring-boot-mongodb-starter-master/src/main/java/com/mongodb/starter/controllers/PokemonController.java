@@ -1,6 +1,7 @@
 package com.mongodb.starter.controllers;
 
 import com.mongodb.starter.models.Pokemon;
+import com.mongodb.starter.models.User;
 import com.mongodb.starter.repositories.PokemonRepository;
 import java.util.ArrayList;
 import org.slf4j.Logger;
@@ -132,6 +133,16 @@ public class PokemonController {
         return pokemonRepository.findTypes();
     }
 
+    @GetMapping("user")
+    public boolean checkUser(@RequestBody User user){
+        return pokemonRepository.checkUser(user);
+    }
+    
+    @PostMapping("pokemon")
+    @ResponseStatus(HttpStatus.CREATED)
+    public User insertUser(@RequestBody User newUser) {
+        return pokemonRepository.insertUser(newUser);
+    }
     /**
      * Handles All Exceptions
      *
