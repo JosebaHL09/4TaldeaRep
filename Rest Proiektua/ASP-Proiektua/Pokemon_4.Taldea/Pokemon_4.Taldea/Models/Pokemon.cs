@@ -70,31 +70,11 @@ namespace Pokemon_4.Taldea.Models
 
     public class erabiltzailea
     {
-        public int Id { get; set; }
         public string Izena { get; set; }
-        public string Abizena { get; set; }
-        public string emaila { get; set; }
-        public string Erabiltzailea { get; set; }
         public string pasahitza { get; set; }
-        static public void insertErabiltzailea(string izena, string abizena, string emaila, string erabiltzaile, string pasahitza)
+       
+        public erabiltzailea(string izena, string pasahitza)
         {
-            try
-            {
-                List<erabiltzailea> lsErabiltzailea = new List<erabiltzailea>();
-                DataSet dsErabiltzailea = new DataSet();
-                SqlDataAdapter daErabiltzailea = new SqlDataAdapter();
-                SqlCommand oSql = new SqlCommand();
-                //oSql.CommandText = " INSERT INTO dbo.Erabiltzailea (Izena, Abizena, emaila, erabiltzailea, pasahitza) VALUES(" + "'" + izena + "'" + ", " + "'" + abizena + "'" + ", " + "'" + emaila + "'" + ", " + "'" + erabiltzaile + "'" + ", " + "'" + pasahitza + "'" + ")";
-                //oSql.Connection = Konexioa.konex;
-                oSql.Connection.Open();
-                oSql.ExecuteNonQuery();
-                oSql.Connection.Close();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-
-            }
         }
     }  
 }

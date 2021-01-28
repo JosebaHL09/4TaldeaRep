@@ -7,56 +7,56 @@ using System.Web.Mvc;
 
 namespace Pokemon_4.Taldea.Controllers
 {
-    public class LoginController : Controller
+    public class ErregistratuController : Controller
     {
         // GET: Login
         public ActionResult Index()
         {
             return View();
         }
-
-        // GET: Login1/Details/5
+        public ActionResult Erregistratu()
+        {
+            return View();
+        }
+        // GET: Login/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: Login1/Create
+        // GET: Login/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Login1/Create
+        // POST: Login/Create
         [HttpPost]
-        //public ActionResult Create(FormCollection collection)
-        //{
-        //    try
-        //    {
-        //        string erab = collection["erabiltzailea"];
-        //        string pas = collection["pasahitza"];
-        //        if (erabiltzailea.getErabiltzaileaByIzPa(erab, pas))
-        //        {
-        //            return RedirectToAction("Index", "Home");
-        //        }
-        //        else
-        //        {
-        //            return RedirectToAction("Index", "Arazoa");
-        //        }
-        //    }
-        //    catch
-        //    {
-        //        return View();
-        //    }
-        //}
+        public ActionResult Create(FormCollection collection)
+        {
+            try
+            {
+                string iz = collection["Izena"];
+                string ab = collection["Abizena"];
+                string email = collection["emaila"];
+                string erab = collection["erabiltzailea"];
+                string pas = collection["pasahitza"];
+                //erabiltzailea.insertErabiltzailea(iz, ab, email, erab, pas);
+                return RedirectToAction("Index", "Home");
+            }
+            catch
+            {
+                return View("Index", "Home");
+            }
+        }
 
-        // GET: Login1/Edit/5
+        // GET: Login/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: Login1/Edit/5
+        // POST: Login/Edit/5
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
         {
@@ -72,13 +72,13 @@ namespace Pokemon_4.Taldea.Controllers
             }
         }
 
-        // GET: Login1/Delete/5
+        // GET: Login/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: Login1/Delete/5
+        // POST: Login/Delete/5
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {
