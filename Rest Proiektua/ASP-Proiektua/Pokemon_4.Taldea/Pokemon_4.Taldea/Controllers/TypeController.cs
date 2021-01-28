@@ -15,7 +15,7 @@ namespace Pokemon_4.Taldea.Controllers
     public class TypeController : Controller
     {
         //Hosted web API REST Service base url  
-        string Baseurl = "http://192.168.72.7:8080/";
+        string Baseurl = "http://192.168.72.30:8080/";
         public async Task<ActionResult> Index()
         {
             List<Types> TypeInfo = new List<Types>();

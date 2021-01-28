@@ -22,10 +22,12 @@ namespace Pokemon_4.Taldea.Models
         {
         }
 
-        public Pokemon(String name, String img)
+        public Pokemon(String name, String img, String height, String weight)
         {
             this.name = name;
             this.img = img;
+            this.height = height;
+            this.weight = weight;
         }
 
         public Pokemon(int id, String name, String img, List<String> type, String height, String weight, List<String> weaknesses, List<Pokemon> prev_evolution, List<Pokemon> next_evolution)
