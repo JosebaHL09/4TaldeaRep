@@ -74,7 +74,7 @@ public interface PokemonRepository {
      */
     List<Document> findTypes();
 
-    boolean checkUser(User user);
+    boolean checkUser(String username, String password);
 
     User insertUser(User newUser);
 

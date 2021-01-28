@@ -102,11 +102,7 @@ public class MongoDBPokemonRepository implements PokemonRepository {
      */
     @Override
     public List<Pokemon> findByType(String type) {
-        try {
-            return pokemonCollection.find(eq("type", type)).sort(new Document("_id", 1)).into(new ArrayList<>());
-        } catch (NumberFormatException nfe) {
-            return null;
-        }
+        return pokemonCollection.find(eq("type", type)).sort(new Document("_id", 1)).into(new ArrayList<>());
     }
 
     /**
@@ -173,9 +169,9 @@ public class MongoDBPokemonRepository implements PokemonRepository {
     }
 
     @Override
-    public boolean checkUser(User user) {
+    public boolean checkUser(String username, String password) {
         try {
-            User checkedUser = userCollection.find(and(eq("username", user.getUsername()), eq("password", user.getPassword()))).first();
+            User checkedUser = userCollection.find(and(eq("username", username), eq("password", password))).first();
             return checkedUser != null;
         } catch (Exception e) {
             return false;

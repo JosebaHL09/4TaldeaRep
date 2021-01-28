@@ -81,7 +81,7 @@ public class PokemonController {
         for (String s : listIdsString) {
             listIds.add(Integer.valueOf(s));
         }
-        
+
         return pokemonRepository.findAll(listIds);
     }
 
@@ -92,7 +92,11 @@ public class PokemonController {
      */
     @GetMapping("pokemon/type/{type}")
     public List<Pokemon> getPokemonByType(@PathVariable String type) {
-        return pokemonRepository.findByType(type);
+        try {
+            return pokemonRepository.findByType(type);
+        } catch (Exception e) {
+            return null;
+        }
     }
 
     /**
@@ -134,15 +138,17 @@ public class PokemonController {
     }
 
     @GetMapping("user")
-    public boolean checkUser(@RequestBody User user){
-        return pokemonRepository.checkUser(user);
+    @ResponseBody
+    public boolean checkUser(@RequestParam String username,@RequestParam String password) {
+        return pokemonRepository.checkUser(username, password);
     }
-    
-    @PostMapping("pokemon")
+
+    @PostMapping("user")
     @ResponseStatus(HttpStatus.CREATED)
     public User insertUser(@RequestBody User newUser) {
         return pokemonRepository.insertUser(newUser);
     }
+
     /**
      * Handles All Exceptions
      *

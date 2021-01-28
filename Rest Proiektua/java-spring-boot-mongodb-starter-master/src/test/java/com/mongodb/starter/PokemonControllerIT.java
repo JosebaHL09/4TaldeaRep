@@ -5,9 +5,9 @@ package com.mongodb.starter;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.starter.models.Pokemon;
+import com.mongodb.starter.models.User;
 import com.mongodb.starter.repositories.PokemonRepository;
 
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -150,6 +150,18 @@ class PokemonControllerIT {
         assertThat(pokemonRepository.count()).isEqualTo(1L);
     }
 
+    @DisplayName("GET /user/{user},{password}")
+    @Test
+    void checkUser() {
+        // GIVEN
+        Boolean checkedUser = pokemonRepository.checkUser("pepe", "pepe");
+        // WHEN
+        ResponseEntity<User> result = rest.getForEntity(URL + "/user/" + checkedUser, User.class);
+        // THEN
+        assertThat(result.getStatusCode()).isEqualTo(HttpStatus.OK);
+        assertThat(result.getBody()).isEqualTo(checkedUser);
+    }
+    
     private void createPokemonCollectionIfNotPresent(MongoClient mongoClient) {
         // This is required because it is not possible to create a new collection within a multi-documents transaction.
         // Some tests start by inserting 2 documents with a transaction.
