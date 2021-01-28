@@ -158,6 +158,7 @@
     <Content Include="Irudiak\fondo.png" />
     <Content Include="Irudiak\hexagon-green.svg" />
     <Content Include="Irudiak\hexagon-white.svg" />
+    <Content Include="Irudiak\ikonoak\basura.jpg" />
     <Content Include="Irudiak\pokeball.svg" />
     <Content Include="Irudiak\prueba.jpg" />
     <Content Include="Irudiak\tipos\Bug.png" />
@@ -220,6 +221,7 @@
     <Content Include="Views\Type\Index.cshtml" />
     <Content Include="Views\delete\Index.cshtml" />
     <Content Include="Views\Pokemon\delete.cshtml" />
+    <Content Include="Views\Pokemon\View.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
