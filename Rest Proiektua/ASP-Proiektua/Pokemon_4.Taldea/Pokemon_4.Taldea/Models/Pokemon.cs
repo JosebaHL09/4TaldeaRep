@@ -70,7 +70,7 @@ namespace Pokemon_4.Taldea.Models
 
     public class erabiltzailea
     {
-        public string Izena { get; set; }
+        public string izena { get; set; }
         public string pasahitza { get; set; }
        
         public erabiltzailea(string izena, string pasahitza)
