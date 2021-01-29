@@ -180,7 +180,6 @@ public class MongoDBPokemonRepository implements PokemonRepository {
 
     @Override
     public User insertUser(User newUser) {
-        newUser.setId(0);
         User azkenUser = userCollection.find().sort(new Document("_id", -1)).first();
         int id = azkenUser.getId() + 1;
         newUser.setId(id);

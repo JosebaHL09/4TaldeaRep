@@ -137,7 +137,7 @@ public class PokemonController {
         return pokemonRepository.findTypes();
     }
 
-    @GetMapping("user")
+    @GetMapping("user/")
     @ResponseBody
     public boolean checkUser(@RequestParam String username,@RequestParam String password) {
         return pokemonRepository.checkUser(username, password);
