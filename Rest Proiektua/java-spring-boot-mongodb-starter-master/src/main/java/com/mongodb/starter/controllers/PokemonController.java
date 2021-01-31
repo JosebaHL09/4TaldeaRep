@@ -130,10 +130,10 @@ public class PokemonController {
 
     /**
      *
-     * @return List of Documents with every different Type
+     * @return List of String with every different Type
      */
     @GetMapping("type")
-    public List<Document> findTypes() {
+    public List<String> findTypes() {
         return pokemonRepository.findTypes();
     }
 

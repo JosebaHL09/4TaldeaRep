@@ -70,9 +70,9 @@ public interface PokemonRepository {
 
     /**
      *
-     * @return List of Documents with every different Type
+     * @return List of String with every different Type
      */
-    List<Document> findTypes();
+    List<String> findTypes();
 
     boolean checkUser(String username, String password);
 
