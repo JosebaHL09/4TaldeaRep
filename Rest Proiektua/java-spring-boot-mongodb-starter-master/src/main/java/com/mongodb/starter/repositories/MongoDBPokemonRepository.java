@@ -19,6 +19,7 @@ import static com.mongodb.client.model.Projections.excludeId;
 import static com.mongodb.client.model.ReturnDocument.AFTER;
 import com.mongodb.starter.models.Pokemon;
 import com.mongodb.starter.models.User;
+import java.util.Comparator;
 import javax.annotation.PostConstruct;
 import org.bson.Document;
 
@@ -28,7 +29,7 @@ import org.bson.Document;
  * to perform CRUD operations in the database
  */
 public class MongoDBPokemonRepository implements PokemonRepository {
-
+    
     private static final TransactionOptions txnOptions = TransactionOptions.builder()
             .readPreference(ReadPreference.primary())
             .readConcern(ReadConcern.MAJORITY)
@@ -39,7 +40,7 @@ public class MongoDBPokemonRepository implements PokemonRepository {
     private MongoCollection<Pokemon> pokemonCollection;
     private MongoCollection<Document> typeCollection;
     private MongoCollection<User> userCollection;
-
+    
     @PostConstruct
     void init() {
         pokemonCollection = client.getDatabase("pokedex").getCollection("pokemon", Pokemon.class);
@@ -157,17 +158,23 @@ public class MongoDBPokemonRepository implements PokemonRepository {
     public List<String> findTypes() {
         List<String> types = new ArrayList<>();
         MongoCursor<Document> cursor = typeCollection.find().projection(excludeId()).iterator();
-        try{
-            while(cursor.hasNext()){
+        try {
+            while (cursor.hasNext()) {
                 types.add(cursor.next().get("name", String.class));
             }
-        }finally{
+        } finally {
             cursor.close();
         }
         
-        return types; 
+        types.sort(new Comparator<String>() {
+            @Override
+            public int compare(String s1, String s2) {
+                return s1.compareToIgnoreCase(s2);
+            }
+        });
+        return types;        
     }
-
+    
     @Override
     public boolean checkUser(String username, String password) {
         try {
@@ -177,7 +184,7 @@ public class MongoDBPokemonRepository implements PokemonRepository {
             return false;
         }
     }
-
+    
     @Override
     public User insertUser(User newUser) {
         User azkenUser = userCollection.find().sort(new Document("_id", -1)).first();
