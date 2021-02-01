@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - Pokemon</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <a href="#" class="navbar-nav"><img class="logo-image" src="~/Images/Icons/Pokemon_Logo.png"></a>
+            <div class="navbar-button-container">
+                <ul class="nav navbar-nav">
+                    <li class="navbar-button">@Html.ActionLink("Home", "Index", "Pokemon")</li>
+                    <li class="navbar-button">@Html.ActionLink("Pokemon List", "PokemonList", "Pokemon", new { Page = 1, Type = "0" }, null)</li>
+                    <li class="navbar-button">@Html.ActionLink("New Pokemon", "Insert", "Pokemon")</li>
+                    <li class="navbar-button">@Html.ActionLink("Register", "Register", "Login")</li>
+                    <li class="navbar-button">@Html.ActionLink("Login", "Login", "Login")</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p style="text-align:center">&copy; @DateTime.Now.Year - Pokemon ASP by 4.Taldea</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
