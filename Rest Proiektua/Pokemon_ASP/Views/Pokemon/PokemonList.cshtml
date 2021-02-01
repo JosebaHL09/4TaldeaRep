@@ -1,0 +1,112 @@
+﻿@model PagedList.IPagedList<Pokemon_ASP.Models.Pokemon>
+@using PagedList.Mvc;
+
+@{
+    ViewBag.Title = "Pokemon List";
+    var findtype = Request.QueryString["Type"];
+    List<String> typeList = Pokemon_ASP.Models.Pokemon.GetTypeList();
+}
+@if (findtype != "0")
+{
+    var imgName = findtype + ".png";
+    <h2 style="text-align:center">Showing <span><img class="type-img" src="@Url.Content("~/Images/Types/" + imgName)"></span> Type Pokemon</h2>
+}
+else
+{
+    <h2 style="text-align:center">Showing All Pokemon</h2>
+}
+
+<div class="type-div">
+    @foreach (var type in typeList)
+    {
+        if (type != findtype)
+        {
+            var imgName = type + ".png";
+            <a title="@type" href="@Url.Action("PokemonList", "Pokemon", new { Page=1, Type = type })"><img class="type-img" src="@Url.Content("~/Images/Types/" + imgName)"></a>
+        }
+
+    }
+    @if (findtype != "0")
+    {
+        <a title="All" href="@Url.Action("PokemonList", "Pokemon", new { Page=1, Type = "0" })">Show All</a>
+    }
+</div>
+
+<div class="pagination-container">
+    @Html.PagedListPager(Model, page => Url.Action("PokemonList", new { Page = page, Type = findtype }))
+</div>
+@foreach (var item in Model)
+{
+    <div class="pokemon-data clearfix">
+        <p class="pokemon-name">@item.name <span class="pokemon-number"> N.º @item.id</span></p>
+        <div class="pokemon-img-container">
+            <img class="pokemon-img" src="@Html.DisplayFor(modelItem => item.img)" />
+        </div>
+        <div class="pokemon-txt-container">
+            <p class="pokemon-txt-header">Type:</p>
+            @foreach (var type in item.type)
+            {
+                var imgPath = type + ".png";
+                <a title="@type" href="@Url.Action("PokemonList", "Pokemon", new { Page=1, Type = type })"><img class="type-img" src="~/Images/Types/@imgPath" /></a>
+            }
+            <p class="pokemon-txt-header">Weaknesses:</p>
+            @foreach (var type in item.weaknesses)
+            {
+                var imgPath = type + ".png";
+                <a title="@type" href="@Url.Action("PokemonList", "Pokemon", new { Page=1, Type = type })"><img class="type-img" src="~/Images/Types/@imgPath" /></a>
+            }
+            <div class="pokemon-blue-container clearfix">
+                <div class="container">
+                    <p class="pokemon-txt-header">Height:</p>
+                    <p class="pokemon-hw">@item.height</p>
+                </div>
+                <div class="container">
+                    <p class="pokemon-txt-header">Weight:</p>
+                    <p class="pokemon-hw">@item.weight</p>
+                </div>
+
+                @if (item.Prev_evolution != null)
+                {<div class="container">
+                        @if (item.Prev_evolution.Count == 1)
+                        {
+                            <p class="pokemon-txt-header">Prev Evo:</p>
+                        }
+                        else
+                        {
+                            <p class="pokemon-txt-header">Prev Evos:</p>
+                        }
+                        @foreach (var prev_ev in item.Prev_evolution)
+                        {
+
+                            <p class="pokemon-hw">@prev_ev.name</p>
+                        }
+                    </div>
+                }
+
+
+                @if (item.Next_evolution != null)
+                {
+                    <div class="container">
+                        @if (item.Next_evolution.Count == 1)
+                        {
+                            <p class="pokemon-txt-header">Next Evo:</p>
+                        }
+                        else
+                        {
+                            <p class="pokemon-txt-header">Next Evos:</p>
+                        }
+                        @foreach (var next_ev in item.Next_evolution)
+                        {
+                            <p class="pokemon-hw">@next_ev.name</p>
+                        }
+                    </div>
+
+                }
+            </div>
+        </div>
+    </div>
+}
+<div class="pagination-container">
+    <p>Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount</p>
+    @Html.PagedListPager(Model, page => Url.Action("PokemonList", new { Page = page, Type = findtype }))
+</div>
