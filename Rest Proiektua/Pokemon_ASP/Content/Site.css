@@ -109,6 +109,32 @@
     font-size:20px;
 }
 
+.pokeball-div{
+    max-height:80px;
+    max-width: 138px;
+    float:right;
+    margin-left: -50px;
+}
+
+.pokeball-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 55%;
+}
+
+/* Insert Form */
+.type-container{
+    width: 80%;
+    float:right;
+}
+
+.type{
+    width:auto;
+    float:left;
+}
+
+/* Index */
 .header {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('../images/fondoa.png') center center no-repeat;
     background-size: cover;

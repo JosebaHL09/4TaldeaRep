@@ -11,9 +11,9 @@
 {
     @Html.AntiForgeryToken()
 
-    <div class="form-horizontal" style="margin-top:10%;">
+    <div class="form-horizontal">
         <h4>Pokemon</h4>
-
+        <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
         <div class="form-group">
@@ -34,20 +34,17 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.type, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @{
-                    String[] typeList = { "Bug", "Dragon", "Electric", "Fighting", "Fire", "Flying", "Ghost", "Grass", "Ground", "Ice", "Normal", "Poison", "Psychic", "Rock", "Water", "Fairy", "Dark", "Steel" };
-                    int count = 0;
+            <div class="type-container">
+                @{ List<String> typeList = Pokemon_ASP.Models.Pokemon.GetTypeList();
                     foreach (var type in typeList)
                     {
-                        count++;
-                        var irudia = type + ".png";
-                        <input type="checkbox" id="@type" name="type" value="@type" onclick="return ValidateTypeSelection();">
-                        <img class="typeIrudia" src="@Url.Content("~/Irudiak/tipos/"+irudia)">
-                        if (count % 5 == 0)
-                        {
-                            <br />
-                        }
+                        <div class="type">
+                            @{
+                                var irudia = type + ".png";
+                                <input type="checkbox" id="@type" name="type" value="@type" onclick="return ValidateTypeSelection();">
+                                <img class="type-img" src="@Url.Content("~/Images/Types/"+irudia)">
+                            }
+                        </div>
                     }
                 }
             </div>
@@ -83,19 +80,16 @@
         </div>
         <div class="form-group">
             @Html.LabelFor(model => model.weaknesses, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @{
-                    count = 0;
-                    foreach (var type in typeList)
+            <div class="type-container">
+                @{ foreach (var type in typeList)
                     {
-                        count++;
-                        var irudia = type + ".png";
-                        <input type="checkbox" id="@type" name="weakness" value="@type">
-                        <img class="typeIrudia" src="@Url.Content("~/Irudiak/tipos/"+irudia)">
-                        if (count % 5 == 0)
-                        {
-                            <br />
-                        }
+                        <div class="type">
+                            @{
+                                var irudia = type + ".png";
+                                <input type="checkbox" id="@type" name="weakness" value="@type">
+                                <img class="type-img" src="@Url.Content("~/Images/Types/" + irudia)">
+                            }
+                        </div>
                     }
                 }
             </div>
