@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Web;
 using System.Web.Mvc;
 
@@ -24,11 +25,8 @@ namespace Pokemon_4.Taldea.Controllers
             return View();
         }
 
-        // GET: Login/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
+        
+       
 
         // POST: Login/Create
         [HttpPost]
@@ -36,18 +34,32 @@ namespace Pokemon_4.Taldea.Controllers
         {
             try
             {
-                string iz = collection["Izena"];
-                string ab = collection["Abizena"];
-                string email = collection["emaila"];
-                string erab = collection["erabiltzailea"];
+                string iz = collection["izena"];
                 string pas = collection["pasahitza"];
-                //erabiltzailea.insertErabiltzailea(iz, ab, email, erab, pas);
-                return RedirectToAction("Index", "Home");
+
+                erabiltzailea p = new erabiltzailea(iz, pas);
+
+                using (var client = new HttpClient())
+                {
+                    client.BaseAddress = new Uri("http://192.168.72.30:8080/");
+
+                    //HTTP POST
+                    var content = new JsonContent(p);
+                    var postTask = client.PostAsJsonAsync<erabiltzailea>("api/user", p);
+                    postTask.Wait();
+                    var Res = postTask.Result;
+                    var result = postTask.Result;
+                    if (result.IsSuccessStatusCode)
+                    {
+                        return RedirectToAction("Index");
+                    }
+                }
             }
             catch
             {
                 return View("Index", "Home");
             }
+            return RedirectToAction("Index", "Home");
         }
 
         // GET: Login/Edit/5

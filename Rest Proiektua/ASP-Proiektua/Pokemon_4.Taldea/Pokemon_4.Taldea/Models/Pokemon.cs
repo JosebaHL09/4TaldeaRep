@@ -75,6 +75,8 @@ namespace Pokemon_4.Taldea.Models
        
         public erabiltzailea(string izena, string pasahitza)
         {
+            this.izena = izena;
+            this.pasahitza = pasahitza;
         }
     }  
 }
