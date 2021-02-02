@@ -76,7 +76,7 @@ namespace Pokemon_ASP.Controllers
             }
             return RedirectToAction("Index", new { Page = 1, Type = "0" });
         }
-        public ActionResult Delete(int id)
+        public ActionResult DeletePokemon(int id)
         {
             using (var client = new HttpClient())
             {
@@ -89,8 +89,7 @@ namespace Pokemon_ASP.Controllers
                 var result = deleteTask.Result;
                 if (result.IsSuccessStatusCode)
                 {
-
-                    return RedirectToAction("Index", new { Page = 1, Type = "0" });
+                    return RedirectToAction("PokemonList", new { Page = 1, Type = "0" });
                 }
             }
 

@@ -28,7 +28,7 @@ else
     }
     @if (findtype != "0")
     {
-       <div class="pokeball-div">
+        <div class="pokeball-div">
             <a title="All Pokemon" href="@Url.Action("PokemonList", "Pokemon", new { Page=1, Type = "0" })"><img class="pokeball-img" src="@Url.Content("~/Images/Icons/pokeball.png")"></a>
         </div>
     }
@@ -41,22 +41,35 @@ else
 {
     <div class="pokemon-data clearfix">
         <p class="pokemon-name">@item.name <span class="pokemon-number"> N.º @item.id</span></p>
+        @if (Pokemon_ASP.Models.User.logged)
+        {
+            <div class="delete">
+                <a title="All Pokemon" href="@Url.Action("DeletePokemon", "Pokemon", new { id= item.id })"><img class="basura" src="~/Images/Icons/basura.jpg" /></a>
+            </div>
+        }
         <div class="pokemon-img-container">
             <img class="pokemon-img" src="@Html.DisplayFor(modelItem => item.img)" />
         </div>
         <div class="pokemon-txt-container">
             <p class="pokemon-txt-header">Type:</p>
-            @foreach (var type in item.type)
+            @if (item.type != null)
             {
-                var imgPath = type + ".png";
-                <a title="@type" href="@Url.Action("PokemonList", "Pokemon", new { Page=1, Type = type })"><img class="type-img" src="~/Images/Types/@imgPath" /></a>
+                foreach (var type in item.type)
+                {
+                    var imgPath = type + ".png";
+                    <a title="@type" href="@Url.Action("PokemonList", "Pokemon", new { Page=1, Type = type })"><img class="type-img" src="~/Images/Types/@imgPath" /></a>
+                }
             }
             <p class="pokemon-txt-header">Weaknesses:</p>
-            @foreach (var type in item.weaknesses)
+            @if (item.weaknesses != null)
             {
-                var imgPath = type + ".png";
-                <a title="@type" href="@Url.Action("PokemonList", "Pokemon", new { Page=1, Type = type })"><img class="type-img" src="~/Images/Types/@imgPath" /></a>
+                foreach (var type in item.weaknesses)
+                {
+                    var imgPath = type + ".png";
+                    <a title="@type" href="@Url.Action("PokemonList", "Pokemon", new { Page=1, Type = type })"><img class="type-img" src="~/Images/Types/@imgPath" /></a>
+                }
             }
+
             <div class="pokemon-blue-container clearfix">
                 <div class="container">
                     <p class="pokemon-txt-header">Height:</p>

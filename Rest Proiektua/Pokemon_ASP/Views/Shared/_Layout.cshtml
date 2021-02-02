@@ -17,8 +17,15 @@
                 <ul class="nav navbar-nav">
                     <li class="navbar-button">@Html.ActionLink("Home", "Index", "Pokemon")</li>
                     <li class="navbar-button">@Html.ActionLink("Pokemon List", "PokemonList", "Pokemon", new { Page = 1, Type = "0" }, null)</li>
-                    <li class="navbar-button">@Html.ActionLink("New Pokemon", "Insert", "Pokemon")</li>
-                    <li class="navbar-button">@Html.ActionLink("Login", "Login", "Login")</li>
+                    @if (Pokemon_ASP.Models.User.logged)
+                    {
+                        <li class="navbar-button">@Html.ActionLink("New Pokemon", "Insert", "Pokemon")</li>
+                        <li class="navbar-button">@Html.ActionLink("Logout", "Logout", "Login")</li>
+                    }
+                    else
+                    {
+                        <li class="navbar-button">@Html.ActionLink("Login", "Login", "Login")</li>
+                    }
                 </ul>
             </div>
         </div>

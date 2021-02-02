@@ -20,6 +20,11 @@ namespace Pokemon_ASP.Controllers
         {
             return View("Register");
         }
+        public ActionResult Logout()
+        {
+            Pokemon_ASP.Models.User.logged = false;
+            return RedirectToAction("Index", "Pokemon");
+        }
         public async Task<ActionResult> LoginKonprobatu(FormCollection collection)
         {
             string user = collection["Username"];
@@ -35,6 +40,7 @@ namespace Pokemon_ASP.Controllers
                     var PokResponse = Res.Content.ReadAsStringAsync().Result;
                     if (PokResponse == "true")
                     {
+                        Pokemon_ASP.Models.User.logged = true;
                         return RedirectToAction("Index", "Pokemon");
                     }
                 }
