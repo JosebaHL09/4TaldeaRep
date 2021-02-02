@@ -67,20 +67,6 @@ class PokemonControllerIT {
         assertThat(pokemonResult).isEqualToIgnoringGivenFields(testHelper.getBulbasaur(), "id", "createdAt");
     }
 
-    @DisplayName("POST /multiplePokemon with 2 pokemon")
-    @Test
-    void postMultiplePokemon() {
-        // GIVEN
-        // WHEN
-        HttpEntity<List<Pokemon>> body = new HttpEntity<>(testHelper.getListPokemon());
-        ResponseEntity<List<Pokemon>> response = rest.exchange(URL + "/multiplePokemon", HttpMethod.POST, body, new ParameterizedTypeReference<List<Pokemon>>() {
-        });
-        // THEN
-        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.CREATED);
-        assertThat(response.getBody()).usingElementComparatorIgnoringFields("id", "createdAt")
-                .containsExactlyInAnyOrderElementsOf(testHelper.getListPokemon());
-    }
-
     @DisplayName("GET /pokemon/{id}")
     @Test
     void getPokemonById() {
@@ -94,9 +80,9 @@ class PokemonControllerIT {
         assertThat(result.getBody()).isEqualTo(pokemonInserted);
     }
     
-    @DisplayName("GET /multiplePokemon/type/{type}")
+    @DisplayName("GET /pokemon/type/{type}")
     @Test
-    void getMultiplePokemonByType() {
+    void getPokemonByType() {
         // GIVEN
         Pokemon pokemonInserted = pokemonRepository.save(testHelper.getCharizard());
         List<String> type = pokemonInserted.getType();
@@ -109,7 +95,7 @@ class PokemonControllerIT {
     
     @DisplayName("GET /pokemon/count")
     @Test
-    void getCount() {
+    void getPokemonCount() {
         // GIVEN
         pokemonRepository.count();
         // WHEN
@@ -137,7 +123,7 @@ class PokemonControllerIT {
 
     @DisplayName("PUT /pokemon")
     @Test
-    void putPokemon() {
+    void updatePokemon() {
         // GIVEN
         Pokemon pokemonInserted = pokemonRepository.save(testHelper.getBulbasaur());
         // WHEN
@@ -150,7 +136,7 @@ class PokemonControllerIT {
         assertThat(pokemonRepository.count()).isEqualTo(1L);
     }
 
-    @DisplayName("GET /user/{user},{password}")
+    @DisplayName("GET /user/{username,password}")
     @Test
     void checkUser() {
         // GIVEN

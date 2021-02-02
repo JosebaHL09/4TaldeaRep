@@ -85,17 +85,6 @@ public class MongoDBPokemonRepository implements PokemonRepository {
     }
 
     /**
-     * Finds one or more Pokemon in the database using a list of IDs
-     *
-     * @param ids List of IDs of the Pokemon you want to find
-     * @return List of Pokemon
-     */
-    @Override
-    public List<Pokemon> findAll(List<Integer> ids) {
-        return pokemonCollection.find(in("_id", ids)).sort(new Document("_id", 1)).into(new ArrayList<>());
-    }
-
-    /**
      * Finds one or more Pokemon in the database that have the introduced type
      *
      * @param type List of IDs of the Pokemon you want to find

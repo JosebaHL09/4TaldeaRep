@@ -3,7 +3,6 @@ package com.mongodb.starter.controllers;
 import com.mongodb.starter.models.Pokemon;
 import com.mongodb.starter.models.User;
 import com.mongodb.starter.repositories.PokemonRepository;
-import java.util.ArrayList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -11,9 +10,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
-import static java.util.Arrays.asList;
-import org.bson.Document;
 
 /**
  * Controller that allows MVC connect with Java Service
@@ -61,28 +57,12 @@ public class PokemonController {
      * @return JSON representation of the Pokemon with the inserted ID
      */
     @GetMapping("pokemon/{id}")
-    public ResponseEntity<Pokemon> getPokemon(@PathVariable int id) {
+    public ResponseEntity<Pokemon> getPokemonById(@PathVariable int id) {
         Pokemon pokemon = pokemonRepository.findOne(id);
         if (pokemon == null) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
         return ResponseEntity.ok(pokemon);
-    }
-
-    /**
-     *
-     * @param ids String that includes one or more ID separated by comma ","
-     * @return List of Pokemon found
-     */
-    @GetMapping("multiplePokemon/{ids}")
-    public List<Pokemon> getMultiplePokemon(@PathVariable String ids) {
-        List<String> listIdsString = asList(ids.split(","));
-        List<Integer> listIds = new ArrayList<>();
-        for (String s : listIdsString) {
-            listIds.add(Integer.valueOf(s));
-        }
-
-        return pokemonRepository.findAll(listIds);
     }
 
     /**
@@ -104,7 +84,7 @@ public class PokemonController {
      * @return Number of Documents in the collection
      */
     @GetMapping("pokemon/count")
-    public Long getCount() {
+    public Long getPokemonCount() {
         return pokemonRepository.count();
     }
 
@@ -124,7 +104,7 @@ public class PokemonController {
      * @return Instance of the updated Pokemon
      */
     @PutMapping("pokemon")
-    public Pokemon putPokemon(@RequestBody Pokemon pokemon) {
+    public Pokemon updatePokemon(@RequestBody Pokemon pokemon) {
         return pokemonRepository.update(pokemon);
     }
 
@@ -133,19 +113,19 @@ public class PokemonController {
      * @return List of String with every different Type
      */
     @GetMapping("type")
-    public List<String> findTypes() {
+    public List<String> getTypeList() {
         return pokemonRepository.findTypes();
     }
 
-    @GetMapping("user/")
+    @GetMapping("user/{username,password}")
     @ResponseBody
-    public boolean checkUser(@RequestParam String username,@RequestParam String password) {
+    public boolean checkUser(@RequestParam String username, @RequestParam String password) {
         return pokemonRepository.checkUser(username, password);
     }
 
     @PostMapping("user")
     @ResponseStatus(HttpStatus.CREATED)
-    public User insertUser(@RequestBody User newUser) {
+    public User registerUser(@RequestBody User newUser) {
         return pokemonRepository.insertUser(newUser);
     }
 

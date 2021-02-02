@@ -29,13 +29,6 @@ public interface PokemonRepository {
 
     /**
      *
-     * @param ids List of IDs of the Pokemon you want to find
-     * @return List of Pokemon
-     */
-    List<Pokemon> findAll(List<Integer> ids);
-
-    /**
-     *
      * @param type All the Pokemon that have the type you want to find
      * @return List of Pokemon
      */
