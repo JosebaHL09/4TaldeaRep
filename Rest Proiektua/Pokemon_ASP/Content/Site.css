@@ -125,6 +125,19 @@
     width: 55%;
 }
 
+.delete {
+    max-height: 100px;
+    max-width: 100px;
+    float: right;
+    margin-right: 30px;
+    margin-top: -50px;
+}
+
+.basura {
+    margin: auto;
+    width: 100%;
+}
+
 /* Insert Form */
 .type-container {
     width: 80%;
