@@ -37,8 +37,9 @@ else
 <div class="pagination-container">
     @Html.PagedListPager(Model, page => Url.Action("PokemonList", new { Page = page, Type = findtype }))
 </div>
-@if(Model.Count == 0){
-    <img class="pokeball-img" src="~/Images/Icons/error_2.png"/>
+@if (Model.Count == 0)
+{
+    <img class="pokeball-img" src="~/Images/Icons/error_2.png" />
 }
 
 @foreach (var item in Model)
@@ -96,8 +97,8 @@ else
                         }
                         @foreach (var prev_ev in item.Prev_evolution)
                         {
-
-                            <p class="pokemon-hw">@prev_ev.name</p>
+                            var num = int.Parse(prev_ev.num);
+                            <p class="pokemon-hw">@num - @prev_ev.name</p>
                         }
                     </div>
                 }
@@ -116,7 +117,8 @@ else
                         }
                         @foreach (var next_ev in item.Next_evolution)
                         {
-                            <p class="pokemon-hw">@next_ev.name</p>
+                            var num = int.Parse(next_ev.num);
+                            <p class="pokemon-hw">@num - @next_ev.name</p>
                         }
                     </div>
 
