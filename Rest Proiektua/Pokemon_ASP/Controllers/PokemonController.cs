@@ -12,7 +12,6 @@ namespace Pokemon_ASP.Controllers
 {
     public class PokemonController : Controller
     {
-        public string BaseURL = "http://192.168.72.30:8080/";
         public ActionResult Index()
         {
             return View("Index");
@@ -22,7 +21,7 @@ namespace Pokemon_ASP.Controllers
             List<Pokemon> PokInfo = new List<Pokemon>();
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri(BaseURL);
+                client.BaseAddress = new Uri(Models.Pokemon.BaseURL);
                 client.DefaultRequestHeaders.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 HttpResponseMessage Res;
@@ -61,7 +60,7 @@ namespace Pokemon_ASP.Controllers
 
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri(BaseURL);
+                client.BaseAddress = new Uri(Models.Pokemon.BaseURL);
 
                 //HTTP POST
                 var content = new JsonContent(p);
@@ -80,7 +79,7 @@ namespace Pokemon_ASP.Controllers
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri(BaseURL);
+                client.BaseAddress = new Uri(Models.Pokemon.BaseURL);
 
                 //HTTP DELETE
                 var deleteTask = client.DeleteAsync("api/pokemon/" + id);
@@ -101,7 +100,7 @@ namespace Pokemon_ASP.Controllers
 
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri(BaseURL);
+                client.BaseAddress = new Uri(Models.Pokemon.BaseURL);
                 client.DefaultRequestHeaders.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 HttpResponseMessage Res;

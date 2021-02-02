@@ -149,6 +149,11 @@
     float: left;
 }
 
+.error-text {
+    text-align: center;
+    color: #f54242
+}
+
 /* Index */
 .header {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('../images/fondoa.png') center center no-repeat;

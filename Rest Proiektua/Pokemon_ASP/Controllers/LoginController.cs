@@ -11,7 +11,6 @@ namespace Pokemon_ASP.Controllers
 {
     public class LoginController : Controller
     {
-        private string BaseURL = "http://192.168.72.30:8080/";
         public ActionResult Login()
         {
             return View("Login");
@@ -31,7 +30,7 @@ namespace Pokemon_ASP.Controllers
             string pas = collection["Password"];
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri(BaseURL);
+                client.BaseAddress = new Uri(Models.Pokemon.BaseURL);
                 client.DefaultRequestHeaders.Clear();
                 HttpResponseMessage Res;
                 Res = await client.GetAsync("api/user/?password=" + pas + "&username=" + user);
@@ -56,7 +55,7 @@ namespace Pokemon_ASP.Controllers
 
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri(BaseURL);
+                client.BaseAddress = new Uri(Models.Pokemon.BaseURL);
 
                 //HTTP POST
                 var content = new JsonContent(newUser);

@@ -34,15 +34,15 @@
         <div class="limiter">
             <div class="container-login100">
                 <div class="wrap-login100">
-                    
 
-                    <form class="login100-form validate-form">
+
+                    <form class="login100-form validate-form" name="login">
                         <span class="login100-form-title">
                             Member Login
                         </span>
 
                         <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-                            @Html.EditorFor(model => model.username, new { htmlAttributes = new { placeholder = "Username", @class = "input100" } })
+                            @Html.EditorFor(model => model.username, new { htmlAttributes = new { placeholder = "Username", @class = "input100"} })
                             @Html.ValidationMessageFor(model => model.username, "", new { @class = "text-danger" })
                             <span class="focus-input100"></span>
                             <span class="symbol-input100">
@@ -51,7 +51,7 @@
                         </div>
 
                         <div class="wrap-input100 validate-input" data-validate="Password is required">
-                            @Html.EditorFor(model => model.password, new {  htmlAttributes = new { placeholder = "Password", @class = "input100", @type = "password" } })
+                            @Html.EditorFor(model => model.password, new { htmlAttributes = new { placeholder = "Password", @class = "input100", @type = "password"} })
                             @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger" })
                             <span class="focus-input100"></span>
                             <span class="symbol-input100">
@@ -65,7 +65,7 @@
                             </button>
                         </div>
 
-                        <div class="text-center p-t-136">
+                        <div class="text-center p-t-136" style="margin-top:20px;">
                             <a class="txt2" href="#">
                                 @Html.ActionLink("Register", "Register", "Login")
                                 <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
