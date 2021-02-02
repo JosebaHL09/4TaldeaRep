@@ -222,6 +222,7 @@
     }
 
     .cards-1 .card-body {
+        width:250px;
         padding: 0;
         margin-top: 80px;
     }
