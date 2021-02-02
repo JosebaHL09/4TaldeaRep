@@ -80,7 +80,7 @@ namespace Pokemon_ASP.Controllers
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("http://192.168.72.30:8080/");
+                client.BaseAddress = new Uri(BaseURL);
 
                 //HTTP DELETE
                 var deleteTask = client.DeleteAsync("api/pokemon/" + id);

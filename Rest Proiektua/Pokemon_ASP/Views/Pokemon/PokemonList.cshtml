@@ -28,7 +28,9 @@ else
     }
     @if (findtype != "0")
     {
-        <a title="All" href="@Url.Action("PokemonList", "Pokemon", new { Page=1, Type = "0" })">Show All</a>
+       <div class="pokeball-div">
+            <a title="All Pokemon" href="@Url.Action("PokemonList", "Pokemon", new { Page=1, Type = "0" })"><img class="pokeball-img" src="@Url.Content("~/Images/Icons/pokeball.png")"></a>
+        </div>
     }
 </div>
 
