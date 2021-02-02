@@ -57,7 +57,7 @@ namespace Pokemon_ASP.Controllers
             string height = collection["Height"];
             string weight = collection["Weight"];
 
-            Pokemon p = new Pokemon( izena, image, height, weight);
+            Pokemon p = new Pokemon(izena, image, height, weight);
 
             using (var client = new HttpClient())
             {
@@ -71,10 +71,10 @@ namespace Pokemon_ASP.Controllers
                 var result = postTask.Result;
                 if (result.IsSuccessStatusCode)
                 {
-                    return RedirectToAction("Index", new { Page = 1, Type = "0" });
+                    return RedirectToAction("PokemonList", new { Page = 1, Type = "0" });
                 }
             }
-            return RedirectToAction("Index", new { Page = 1, Type = "0" });
+            return RedirectToAction("Index", "Pokemon");
         }
         public ActionResult DeletePokemon(int id)
         {
