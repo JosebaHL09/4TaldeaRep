@@ -10,7 +10,9 @@
 <body>
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
-            <a href="#" class="navbar-nav"><img class="logo-image" src="~/Images/Icons/Pokemon_Logo.png"></a>
+            <div class="navbar-logo">
+                <a href="@Url.Action("Index", "Pokemon")"><img class="logo-image" src="~/Images/Icons/Pokemon_Logo.png"></a>
+            </div>
             <div class="navbar-button-container">
                 <ul class="nav navbar-nav">
                     <li class="navbar-button">@Html.ActionLink("Home", "Index", "Pokemon")</li>

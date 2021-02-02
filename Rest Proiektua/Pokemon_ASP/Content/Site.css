@@ -6,10 +6,7 @@
 
 /* Navbar */
 .logo-image {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 20%;
+    max-width: 100%;
 }
 
 .navbar-button-container {
@@ -31,6 +28,11 @@
         border: 4px solid #3664AE;
         background-color: #FFCB04;
     }
+
+.navbar-logo {
+    margin: auto;
+    width: 20%;
+}
 
 /* Pokemon List */
 .type-div {
@@ -57,7 +59,7 @@
     font-size: 34px;
     margin-top: 10px;
     color: #4169E1;
-    font-weight:bold;
+    font-weight: bold;
 }
 
 .pokemon-number {
@@ -104,15 +106,15 @@
     text-align: center;
 }
 
-.pokemon-hw{
+.pokemon-hw {
     color: white;
-    font-size:20px;
+    font-size: 20px;
 }
 
-.pokeball-div{
-    max-height:80px;
+.pokeball-div {
+    max-height: 80px;
     max-width: 138px;
-    float:right;
+    float: right;
     margin-left: -50px;
 }
 
@@ -124,14 +126,14 @@
 }
 
 /* Insert Form */
-.type-container{
+.type-container {
     width: 80%;
-    float:right;
+    float: right;
 }
 
-.type{
-    width:auto;
-    float:left;
+.type {
+    width: auto;
+    float: left;
 }
 
 /* Index */
@@ -194,7 +196,6 @@
             background: url('../Images/pokeball.svg') center center no-repeat;
             background-size: 6rem 6rem;
             margin-bottom: 30px;
-            
         }
 
     .cards-1 .fa-stack-1x {
