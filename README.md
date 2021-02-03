@@ -4,5 +4,9 @@ Proiektua - 4Taldea
 --
 * **Beta karpeta**  
 * **Proiektu Finalaren karpeta**
+
+Beta karpetan
+--
+Tutoriala jarraituz egindako lehenengo aldaketak,onuragarria izan da karpeta hau gordetzea dudak eta aldaketak ondo egiteko	
 	
 
