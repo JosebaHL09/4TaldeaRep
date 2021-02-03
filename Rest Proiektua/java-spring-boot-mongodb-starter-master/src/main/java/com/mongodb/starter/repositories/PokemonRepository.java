@@ -36,10 +36,9 @@ public interface PokemonRepository {
 
     /**
      *
-     * @param id ID of the Pokemon you want to find
-     * @return Instance of Pokemon
+     * @return Instance of a Random already existing Pokemon 
      */
-    Pokemon findOne(int id);
+    Pokemon findRandomPokemon();
 
     /**
      *

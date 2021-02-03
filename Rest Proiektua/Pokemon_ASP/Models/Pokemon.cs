@@ -58,6 +58,27 @@ namespace Pokemon_ASP.Models
         {
             return GetTypeListAsync().Result;
         }
+        static async Task<Pokemon> GetRandomPokemonAsync()
+        {
+            Pokemon RandomPokInfo = new Pokemon();
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(Models.Pokemon.BaseURL);
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                HttpResponseMessage Res = await client.GetAsync("api/pokemon/random").ConfigureAwait(false);
+                if (Res.IsSuccessStatusCode)
+                {
+                    var PokResponse = Res.Content.ReadAsStringAsync().Result;
+                    RandomPokInfo = JsonConvert.DeserializeObject<Pokemon>(PokResponse);
+                }
+                return RandomPokInfo;
+            }
+        }
 
+        public static Pokemon GetRandomPokemon()
+        {
+            return GetRandomPokemonAsync().Result;
+        }
     }
 }

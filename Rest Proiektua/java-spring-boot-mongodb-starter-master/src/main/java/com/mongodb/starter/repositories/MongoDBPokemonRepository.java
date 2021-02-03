@@ -7,6 +7,7 @@ import com.mongodb.WriteConcern;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
+import com.mongodb.client.model.Aggregates;
 import static com.mongodb.client.model.Filters.and;
 import static com.mongodb.client.model.Filters.eq;
 import com.mongodb.client.model.FindOneAndReplaceOptions;
@@ -19,6 +20,7 @@ import static com.mongodb.client.model.Projections.excludeId;
 import static com.mongodb.client.model.ReturnDocument.AFTER;
 import com.mongodb.starter.models.Pokemon;
 import com.mongodb.starter.models.User;
+import java.util.Arrays;
 import java.util.Comparator;
 import javax.annotation.PostConstruct;
 import org.bson.Document;
@@ -96,14 +98,13 @@ public class MongoDBPokemonRepository implements PokemonRepository {
     }
 
     /**
-     * Finds one Pokemon in the database using a ID
+     * Finds one Random Pokemon in the database
      *
-     * @param id ID of the Pokemon you want to find
      * @return Instance of Pokemon
      */
     @Override
-    public Pokemon findOne(int id) {
-        return pokemonCollection.find(eq("_id", id)).first();
+    public Pokemon findRandomPokemon() {
+        return pokemonCollection.aggregate(Arrays.asList(Aggregates.sample(1))).first();
     }
 
     /**

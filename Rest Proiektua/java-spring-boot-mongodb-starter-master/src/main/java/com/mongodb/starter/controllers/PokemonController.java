@@ -53,15 +53,11 @@ public class PokemonController {
 
     /**
      *
-     * @param id Id of the Pokemon as an Integer
-     * @return JSON representation of the Pokemon with the inserted ID
+     * @return JSON representation of the Random Pokemon found
      */
-    @GetMapping("pokemon/{id}")
-    public ResponseEntity<Pokemon> getPokemonById(@PathVariable int id) {
-        Pokemon pokemon = pokemonRepository.findOne(id);
-        if (pokemon == null) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-        }
+    @GetMapping("pokemon/random")
+    public ResponseEntity<Pokemon> getRandomPokemon() {
+        Pokemon pokemon = pokemonRepository.findRandomPokemon();
         return ResponseEntity.ok(pokemon);
     }
 
@@ -117,7 +113,7 @@ public class PokemonController {
         return pokemonRepository.findTypes();
     }
 
-    @GetMapping("user/{username,password}")
+    @GetMapping("user/")
     @ResponseBody
     public boolean checkUser(@RequestParam String username, @RequestParam String password) {
         return pokemonRepository.checkUser(username, password);

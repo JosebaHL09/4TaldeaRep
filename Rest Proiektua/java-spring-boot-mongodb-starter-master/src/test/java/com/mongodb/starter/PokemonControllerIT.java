@@ -67,14 +67,13 @@ class PokemonControllerIT {
         assertThat(pokemonResult).isEqualToIgnoringGivenFields(testHelper.getBulbasaur(), "id", "createdAt");
     }
 
-    @DisplayName("GET /pokemon/{id}")
+    @DisplayName("GET /pokemon/random")
     @Test
     void getPokemonById() {
         // GIVEN
         Pokemon pokemonInserted = pokemonRepository.save(testHelper.getCharizard());
-        int idInserted = pokemonInserted.getId();
         // WHEN
-        ResponseEntity<Pokemon> result = rest.getForEntity(URL + "/pokemon/" + idInserted, Pokemon.class);
+        ResponseEntity<Pokemon> result = rest.getForEntity(URL + "/pokemon/", Pokemon.class);
         // THEN
         assertThat(result.getStatusCode()).isEqualTo(HttpStatus.OK);
         assertThat(result.getBody()).isEqualTo(pokemonInserted);
@@ -121,7 +120,7 @@ class PokemonControllerIT {
         assertThat(pokemonRepository.count()).isEqualTo(0L);
     }
 
-    @DisplayName("PUT /pokemon")
+    /*@DisplayName("PUT /pokemon")
     @Test
     void updatePokemon() {
         // GIVEN
@@ -134,7 +133,7 @@ class PokemonControllerIT {
         assertThat(result.getStatusCode()).isEqualTo(HttpStatus.OK);
         assertThat(result.getBody()).isEqualTo(pokemonRepository.findOne(pokemonInserted.getId()));
         assertThat(pokemonRepository.count()).isEqualTo(1L);
-    }
+    }*/
 
     @DisplayName("GET /user/{username,password}")
     @Test

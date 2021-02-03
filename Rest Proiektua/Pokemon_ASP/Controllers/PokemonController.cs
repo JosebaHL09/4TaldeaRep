@@ -94,34 +94,5 @@ namespace Pokemon_ASP.Controllers
 
             return RedirectToAction("Index", new { Page = 1, Type = "0" });
         }
-        public async Task<ActionResult> Delete(int? page, string type)
-        {
-            List<Pokemon> PokInfo = new List<Pokemon>();
-
-            using (var client = new HttpClient())
-            {
-                client.BaseAddress = new Uri(Models.Pokemon.BaseURL);
-                client.DefaultRequestHeaders.Clear();
-                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                HttpResponseMessage Res;
-                if (type != "0")
-                {
-                    Res = await client.GetAsync("api/pokemon/type/" + type);
-                }
-                else
-                {
-                    Res = await client.GetAsync("api/pokemon");
-                }
-                if (Res.IsSuccessStatusCode)
-                {
-                    var PokResponse = Res.Content.ReadAsStringAsync().Result;
-                    PokInfo = JsonConvert.DeserializeObject<List<Pokemon>>(PokResponse);
-                }
-                int pageSize = 10;
-                int pageNumber = (page ?? 1);
-                return View(PokInfo.ToPagedList(pageNumber, pageSize));
-            }
-        }
-
     }
 }

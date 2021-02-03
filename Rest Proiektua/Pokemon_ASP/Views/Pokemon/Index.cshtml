@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<Pokemon_ASP.Models.Pokemon>
+@using Pokemon_ASP.Models;
 
 @{
     ViewBag.Title = "Index";
@@ -6,16 +7,14 @@
 <meta charset="utf-8">
 <!-- Header -->
 <header id="header" class="header">
-    <div class="header-content" style="margin-top:20px; margin-bottom:30px; height:600px; " id="fondo">
+    <div class="header-content" style="height:600px;" id="fondo">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="text-container" style="margin-top:100px;">
                         <h1 id="js-rotating" style="font-size:40px; margin-top:200px;">
-                            There 's no time to leave your weaknesses..., You 're so stupid! You don 't know how stupid you are!, A Lugia flying? It can 't be!
+                            There 's no time to leave your weaknesses..., “Take charge of your destiny.” – Rayquaza, A Lugia flying? It can 't be!, “Everybody makes a wrong turn once in a while” – Ash
                         </h1>
-
-                        <a style="margin-top:80px" class="btn-solid-lg page-scroll"> @Html.ActionLink("POKEMON", "PokemonList", "Pokemon", new { Page = 1, Type = "0" }, null) </a>
                     </div>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -23,10 +22,37 @@
     </div> <!-- end of header-content -->
 </header> <!-- end of header -->
 <!-- end of header -->
-
 <!-- Description -->
 <div class="cards-1">
-    <div class="container" ">
+    <div class="container">
+    <h2 class="featured">Featured Pokemon</h2>
+        @{
+            for (int i = 0; i < 3; i++)
+            {
+                Pokemon randomPokemon = Pokemon.GetRandomPokemon();
+                <div class="random-pokemon clearfix">
+                    <p class="pokemon-name">@randomPokemon.name <span class="pokemon-number"> @randomPokemon.id</span></p>
+                    <div class="random-pokemon-img">
+                        <img class="pokemon-img" src="@Html.DisplayFor(modelItem => randomPokemon.img)" />
+                    </div>
+                    <div class="random-pokemon-data">
+                        @if (randomPokemon.type != null)
+                        {
+                            foreach (var type in randomPokemon.type)
+                            {
+                                var imgPath = type + ".png";
+                                <span><a title="@type" href="@Url.Action("PokemonList", "Pokemon", new { Page=1, Type = type })"><img class="type-img" src="~/Images/Types/@imgPath" /></a></span>
+                            }
+                        }
+
+                    </div>
+                </div>
+            }
+        }
+
+        <div class="row">
+
+        </div>
         <div class="row">
             <div class="col-lg-12">
 
@@ -49,7 +75,7 @@
                         <i class="fas fa-list-alt fa-stack-1x"></i>
                     </span>
                     <div class="card-body">
-                        <h4 class="card-title">Machamp Gigamax and Orbeetle Gigamax in Dinamax Incursions</h4>
+                        <h4 class="card-title">Machamp Gigantamax and Orbeetle Gigantamax in Dinamax Incursions</h4>
                         <p>In February, Pokémon Sword and Pokémon Shield Dinamax Incursions are filled with Fighting-type and Psychic-type Pokémon.</p>
                     </div>
                 </div>
@@ -61,7 +87,7 @@
                         <i class="fas fa-chart-pie fa-stack-1x"></i>
                     </span>
                     <div class="card-body">
-                        <h4 class="card-title">Miltank variocolor raids in Pokémon GO</h4>
+                        <h4 class="card-title">Shiny Miltank raids in Pokémon GO</h4>
                         <p>There's plenty to do in this special event, including Johto-inspired raids and the opportunity to evolve certain Pokémon to learn unique attacks.</p>
                     </div>
                 </div>
