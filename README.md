@@ -1,5 +1,8 @@
 Proiektua - 4Taldea
 ==
+
+![image info](./estruktura.PNG)
+
 4Taldearen proiektua, errepositorio honetan aurkituko duzuna hau da
 --
 * **Beta karpeta**  
