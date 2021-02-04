@@ -1,5 +1,8 @@
 Proiektua - 4Taldea
 ==
+
+![image info](./estruktura.PNG)
+
 4Taldearen proiektua, errepositorio honetan aurkituko duzuna hau da
 --
 * **Beta karpeta**  
@@ -7,6 +10,14 @@ Proiektua - 4Taldea
 
 Beta karpetan
 --
-Tutoriala jarraituz egindako lehenengo aldaketak,onuragarria izan da karpeta hau gordetzea dudak eta aldaketak ondo egiteko	
+Tutoriala jarraituz egindako lehenengo aldaketak,onuragarria izan da karpeta hau gordetzea dudak eta aldaketak ondo egiteko
+
+Proiektuaren karpetan
+--
+Proiektuaren azken bertsioa hemen dago, 2 azpikarkpetaz osatuta + dokumentu gehiago
+* **ASP Proiektua**  
+* **Rest Trial Api-aren proiektua**
+* **MongoDB datubasearen JSON fitxategia**
+
 	
 
