@@ -6,32 +6,34 @@
     var findtype = Request.QueryString["Type"];
     List<String> typeList = Pokemon_ASP.Models.Pokemon.GetTypeList();
 }
-@if (findtype != "0")
-{
-    var imgName = findtype + ".png";
-    <h2 style="text-align:center">Showing <span><img class="type-img" src="@Url.Content("~/Images/Types/" + imgName)"></span> Type Pokemon</h2>
-}
-else
-{
-    <h2 style="text-align:center">Showing All Pokemon</h2>
-}
 
-<div class="type-div">
-    @foreach (var type in typeList)
-    {
-        if (type != findtype)
-        {
-            var imgName = type + ".png";
-            <a title="@type" href="@Url.Action("PokemonList", "Pokemon", new { Page=1, Type = type })"><img class="type-img" src="@Url.Content("~/Images/Types/" + imgName)"></a>
-        }
 
-    }
+<div class="type-div white-background">
+
     @if (findtype != "0")
     {
-        <div class="pokeball-div">
-            <a title="All Pokemon" href="@Url.Action("PokemonList", "Pokemon", new { Page=1, Type = "0" })"><img class="pokeball-img" src="@Url.Content("~/Images/Icons/pokeball.png")"></a>
-        </div>
+        var imgName = findtype + ".png";
+        <h2 style="text-align:center">Showing <span><img class="type-img" src="@Url.Content("~/Images/Types/" + imgName)"></span> Type Pokemon</h2>
     }
+    else
+    {
+        <h2 style="text-align:center">Showing All Pokemon</h2>
+    }
+@foreach (var type in typeList)
+{
+    if (type != findtype)
+    {
+        var imgName = type + ".png";
+        <a title="@type" href="@Url.Action("PokemonList", "Pokemon", new { Page=1, Type = type })"><img class="type-img" src="@Url.Content("~/Images/Types/" + imgName)"></a>
+    }
+
+}
+@if (findtype != "0")
+{
+    <div class="pokeball-div">
+        <a title="All Pokemon" href="@Url.Action("PokemonList", "Pokemon", new { Page=1, Type = "0" })"><img class="pokeball-img" src="@Url.Content("~/Images/Icons/pokeball.png")"></a>
+    </div>
+}
 </div>
 
 <div class="pagination-container">
@@ -44,7 +46,7 @@ else
 
 @foreach (var item in Model)
 {
-    <div class="pokemon-data clearfix">
+    <div class="pokemon-data clearfix white-background">
         <p class="pokemon-name">@item.name <span class="pokemon-number"> N.º @item.id</span></p>
         @if (Pokemon_ASP.Models.User.logged)
         {
