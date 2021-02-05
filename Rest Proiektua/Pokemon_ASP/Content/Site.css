@@ -171,6 +171,12 @@ body{
     color: #f54242
 }
 
+.weakness {
+    width: 150px;
+    height: 200px;
+    text-align: center
+}
+
 .random-pokemon {
     float:left;
     width: 30%;
