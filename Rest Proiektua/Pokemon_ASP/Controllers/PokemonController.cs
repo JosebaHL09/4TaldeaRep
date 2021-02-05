@@ -7,6 +7,7 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 using PagedList;
+using System.Linq;
 
 namespace Pokemon_ASP.Controllers
 {
@@ -55,8 +56,19 @@ namespace Pokemon_ASP.Controllers
             string image = collection["Img"];
             string height = collection["Height"];
             string weight = collection["Weight"];
+            string type1 = Request["type1"];
+            string type2 = Request["type2"];
+            string weaknessesString = Request["weaknesses"];
+            List<string> weaknesses = weaknessesString.Split(',').ToList();
 
-            Pokemon p = new Pokemon(izena, image, height, weight);
+            List<string> types = new List<string>();
+            types.Add(type1);
+            if (type2 != ("none") && type1 != type2)
+            {
+                types.Add(type2);
+            }
+
+            Pokemon p = new Pokemon(izena, image, height, weight, types, weaknesses);
 
             using (var client = new HttpClient())
             {

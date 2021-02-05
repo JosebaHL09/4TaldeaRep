@@ -35,32 +35,21 @@
                 @Html.LabelFor(model => model.type, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="type-container">
                     @{ List<String> typeList = Pokemon_ASP.Models.Pokemon.GetTypeList();
-                        foreach (var type in typeList)
-                        {
-                            <div class="type">
-                                @{
-                                    var irudia = type + ".png";
-                                    <input type="checkbox" id="@type" name="type" value="@type" onclick="return ValidateTypeSelection();">
-                                    <img class="type-img" src="@Url.Content("~/Images/Types/"+irudia)">
-                                }
-                            </div>
-                        }
+                        <select id="type1" name="type1">
+                            @foreach (var type in typeList)
+                            {
+                                <option value="@type">@type</option>
+                            }
+                        </select>
+                        <select id="type2" name="type2">
+                            <option value="none">(None)</option>
+                            @foreach (var type in typeList)
+                            {
+                                <option value="@type">@type</option>
+                            }
+                        </select>
                     }
                 </div>
-                <script type="text/javascript">
-                    function ValidateTypeSelection() {
-                        var checkboxes = document.getElementsByName("type");
-                        var numberOfCheckedItems = 0;
-                        for (var i = 0; i < checkboxes.length; i++) {
-                            if (checkboxes[i].checked)
-                                numberOfCheckedItems++;
-                        }
-                        if (numberOfCheckedItems > 2) {
-                            alert("You can't select more than two types!");
-                            return false;
-                        }
-                    }
-                </script>
             </div>
             <div class="form-group">
                 @Html.LabelFor(model => model.height, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -80,17 +69,12 @@
             <div class="form-group">
                 @Html.LabelFor(model => model.weaknesses, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="type-container">
-                    @{ foreach (var type in typeList)
+                    <select id="weaknesses" name="weaknesses" multiple>
+                        @foreach (var type in typeList)
                         {
-                            <div class="type">
-                                @{
-                                    var irudia = type + ".png";
-                                    <input type="checkbox" id="@type" name="weakness" value="@type">
-                                    <img class="type-img" src="@Url.Content("~/Images/Types/" + irudia)">
-                                }
-                            </div>
+                            <option value="@type">@type</option>
                         }
-                    }
+                    </select>
                 </div>
             </div>
 

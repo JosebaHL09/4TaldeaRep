@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -13,11 +14,17 @@ namespace Pokemon_ASP.Models
     {
         public int id { get; set; }
         public string num { get; set; }
+        [Required]
         public string name { get; set; }
+        [Required]
         public string img { get; set; }
+        [Required]
         public List<string> type { get; set; }
+        [Required]
         public string height { get; set; }
+        [Required]
         public string weight { get; set; }
+        [Required]
         public List<string> weaknesses { get; set; }
         public List<Pokemon> Prev_evolution { get; set; }
         public List<Pokemon> Next_evolution { get; set; }
@@ -25,12 +32,14 @@ namespace Pokemon_ASP.Models
         public Pokemon()
         {
         }
-        public Pokemon(string name, string img, string height, string weight)
+        public Pokemon(string name, string img, string height, string weight, List<string> type, List<string> weaknesses)
         {
             this.name= name;
             this.img = img;
             this.height = height;
             this.weight = weight;
+            this.type = type;
+            this.weaknesses = weaknesses;
         }
 
         public static string BaseURL = "http://192.168.72.30:8080/";
