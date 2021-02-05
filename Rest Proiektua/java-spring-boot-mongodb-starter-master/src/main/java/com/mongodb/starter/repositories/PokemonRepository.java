@@ -66,8 +66,19 @@ public interface PokemonRepository {
      */
     List<String> findTypes();
 
+    /**
+     *
+     * @param username String that contains the username
+     * @param password String that contains the password
+     * @return boolean (true if the inserted data matches with the data on the database, else false)
+     */
     boolean checkUser(String username, String password);
 
+    /**
+     *
+     * @param newUser New Instance of user we want to insert
+     * @return New instance of User
+     */
     User insertUser(User newUser);
 
 }

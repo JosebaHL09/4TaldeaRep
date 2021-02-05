@@ -113,12 +113,23 @@ public class PokemonController {
         return pokemonRepository.findTypes();
     }
 
+    /**
+     *
+     * @param username String that contains the username we want to check
+     * @param password String that contains the password we want to check
+     * @return boolean (true if the inserted data matches with the data on the database, else false)
+     */
     @GetMapping("user/")
     @ResponseBody
     public boolean checkUser(@RequestParam String username, @RequestParam String password) {
         return pokemonRepository.checkUser(username, password);
     }
 
+    /**
+     *
+     * @param newUser New Instance of user we want to insert
+     * @return New instance of User
+     */
     @PostMapping("user")
     @ResponseStatus(HttpStatus.CREATED)
     public User registerUser(@RequestBody User newUser) {

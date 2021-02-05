@@ -165,6 +165,12 @@ public class MongoDBPokemonRepository implements PokemonRepository {
         return types;        
     }
     
+    /**
+     *
+     * @param username String that contains the username
+     * @param password String that contains the password
+     * @return boolean (true if the inserted data matches with the data on the database, else false)
+     */
     @Override
     public boolean checkUser(String username, String password) {
         try {
@@ -175,6 +181,11 @@ public class MongoDBPokemonRepository implements PokemonRepository {
         }
     }
     
+    /**
+     *
+     * @param newUser New Instance of user we want to insert
+     * @return New instance of User
+     */
     @Override
     public User insertUser(User newUser) {
         User azkenUser = userCollection.find().sort(new Document("_id", -1)).first();

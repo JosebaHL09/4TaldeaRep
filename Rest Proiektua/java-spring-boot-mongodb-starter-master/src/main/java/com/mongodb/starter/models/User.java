@@ -19,6 +19,10 @@ public class User {
     private String username;
     private String password;
 
+    /**
+     *
+     * @return
+     */
     public int getId() {
         return id;
     }
@@ -33,19 +37,37 @@ public class User {
         return this;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getUsername() {
         return username;
     }
 
+    /**
+     *
+     * @param username
+     * @return
+     */
     public User setUsername(String username) {
         this.username = username;
         return this;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getPassword() {
         return password;
     }
 
+    /**
+     *
+     * @param password
+     * @return
+     */
     public User setPassword(String password) {
         this.password = password;
         return this;
