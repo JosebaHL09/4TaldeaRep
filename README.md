@@ -17,7 +17,7 @@ Proiektuaren karpetan
 Proiektuaren azken bertsioa hemen dago, 2 azpikarkpetaz osatuta + dokumentu gehiago
 * **ASP Proiektua**  
 * **Rest Trial Api-aren proiektua**
-* **MongoDB datubasearen JSON fitxategia**
+* **Datubaseen JSON fitxategiak**
 
 	
 
