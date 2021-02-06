@@ -32,6 +32,12 @@ namespace Pokemon_ASP.Models
         public Pokemon()
         {
         }
+
+        public Pokemon(string num, string name)
+        {
+            this.num = num;
+            this.name = name;
+        }
         public Pokemon(string name, string img, string height, string weight, List<string> type, List<string> weaknesses)
         {
             this.name= name;

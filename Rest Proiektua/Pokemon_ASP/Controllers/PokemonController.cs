@@ -51,16 +51,16 @@ namespace Pokemon_ASP.Controllers
         [HttpPost]
         public ActionResult Create(FormCollection collection)
         {
-            string num = collection["Num"];
             string izena = collection["Name"];
             string image = collection["Img"];
             string height = collection["Height"];
+            height += " m";
             string weight = collection["Weight"];
+            weight += " kg";
+
+            //Types
             string type1 = Request["type1"];
             string type2 = Request["type2"];
-            string weaknessesString = Request["weaknesses"];
-            List<string> weaknesses = weaknessesString.Split(',').ToList();
-
             List<string> types = new List<string>();
             types.Add(type1);
             if (type2 != ("none") && type1 != type2)
@@ -68,15 +68,62 @@ namespace Pokemon_ASP.Controllers
                 types.Add(type2);
             }
 
-            Pokemon p = new Pokemon(izena, image, height, weight, types, weaknesses);
+            //Weaknesses
+            string weaknessesString = Request["weaknesses"];
+            List<string> weaknesses = weaknessesString.Split(',').ToList();
+
+            Pokemon newPokemon = new Pokemon(izena, image, height, weight, types, weaknesses);
+
+            //Evolutions
+            string evo1Type = Request["evo1"];
+            newPokemon.Prev_evolution = new List<Pokemon>();
+            newPokemon.Next_evolution = new List<Pokemon>();
+            if (evo1Type != "none")
+            {
+                string evo1Num = Request["evo1_num"];
+                string evo1Name = Request["evo1_name"];
+                if (evo1Type == "prev")
+                {
+                    newPokemon.Prev_evolution.Add(new Pokemon(evo1Num, evo1Name));
+                }
+                else if (evo1Type == "next")
+                {
+                    newPokemon.Next_evolution.Add(new Pokemon(evo1Num, evo1Name));
+                }
+
+            }
+            string evo2Type = Request["evo2"];
+            if (evo2Type != "none")
+            {
+                string evo2Num = Request["evo2_num"];
+                string evo2Name = Request["evo2_name"];
+                if (evo2Type == "prev")
+                {
+                    newPokemon.Prev_evolution.Add(new Pokemon(evo2Num, evo2Name));
+                }
+                else if (evo2Type == "next")
+                {
+                    newPokemon.Next_evolution.Add(new Pokemon(evo2Num, evo2Name));
+                }
+            }
+
+            if(newPokemon.Prev_evolution.Count == 0)
+            {
+                newPokemon.Prev_evolution = null;
+            }
+            if (newPokemon.Next_evolution.Count == 0)
+            {
+                newPokemon.Next_evolution = null;
+            }
+
 
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri(Models.Pokemon.BaseURL);
 
                 //HTTP POST
-                var content = new JsonContent(p);
-                var postTask = client.PostAsJsonAsync<Pokemon>("api/pokemon", p);
+                var content = new JsonContent(newPokemon);
+                var postTask = client.PostAsJsonAsync<Pokemon>("api/pokemon", newPokemon);
                 postTask.Wait();
                 var Res = postTask.Result;
                 var result = postTask.Result;
