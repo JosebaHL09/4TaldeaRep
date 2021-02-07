@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="64cm" height="53cm" viewBox="338 6 1272 1056" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <rect style="fill: #add8e6" x="341.882" y="27.8454" width="836.946" height="382.624"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="341.882" y="27.8454" width="836.946" height="382.624"/>
+    <rect style="fill: #add8e6" x="341.882" y="7.84539" width="50.2" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="341.882" y="7.84539" width="50.2" height="20"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="343.882" y="21.8454">Models</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="383.321" y="57.5617" width="364.2" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="383.321" y="57.5617" width="364.2" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="565.421" y="77.5617">Pokemon</text>
+    <rect style="fill: #ffffff" x="383.321" y="85.5617" width="364.2" height="180"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="383.321" y="85.5617" width="364.2" height="180"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="386.321" y="98.7617">+id: int</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="386.321" y="114.762">+num: string</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="386.321" y="130.762">+name: string</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="386.321" y="146.762">+img: string</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="386.321" y="162.762">+type: List&lt;string&gt;</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="386.321" y="178.762">+height: string</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="386.321" y="194.762">+weight: string</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="386.321" y="210.762">+weaknesses: List&lt;string&gt;</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="386.321" y="226.762">+prev_evolution: List&lt;Pokemon&gt;</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="386.321" y="242.762">+next_evolution: List&lt;Pokemon&gt;</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="386.321" y="258.762">+BaseURL: string = http://192.168.72.10:8080/</text>
+    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="386.321" y1="265.162" x2="732.821" y2="265.162"/>
+    <rect style="fill: #ffffff" x="383.321" y="265.562" width="364.2" height="132"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="383.321" y="265.562" width="364.2" height="132"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="386.321" y="278.762">+Pokemon(num:string,name:string)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="386.321" y="294.762">+Pokemon(name:string,img:string,height:string,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="386.321" y="310.762">         weight:string,type:List&lt;string&gt;,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="386.321" y="326.762">         weaknesses:List&lt;string&gt;)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="386.321" y="342.762">#GetTypeListAsync(): async Task&lt;List&lt;string&gt;&gt;</text>
+    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="386.321" y1="344.362" x2="732.821" y2="344.362"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="386.321" y="358.762">+GetTypeList(): List&lt;string&gt;</text>
+    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="386.321" y1="360.362" x2="601.921" y2="360.362"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="386.321" y="374.762">#GetRandomPokemonAsync(): async Task&lt;Pokemon&gt;</text>
+    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="386.321" y1="376.362" x2="732.821" y2="376.362"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="386.321" y="390.762">+GetRandomPokemon(): Pokemon</text>
+    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="386.321" y1="392.362" x2="601.921" y2="392.362"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="801.233" y="68.2297" width="302.6" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="801.233" y="68.2297" width="302.6" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="952.533" y="88.2297">User</text>
+    <rect style="fill: #ffffff" x="801.233" y="96.2297" width="302.6" height="52"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="801.233" y="96.2297" width="302.6" height="52"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="804.233" y="109.43">+username: string</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="804.233" y="125.43">+password: string</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="804.233" y="141.43">+logged: bool</text>
+    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="804.233" y1="147.83" x2="904.333" y2="147.83"/>
+    <rect style="fill: #ffffff" x="801.233" y="148.23" width="302.6" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="801.233" y="148.23" width="302.6" height="20"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="804.233" y="161.43">+User(username:string,password:string)</text>
+  </g>
+  <g>
+    <rect style="fill: #ffe798" x="963.265" y="469.459" width="645.571" height="592.385"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="963.265" y="469.459" width="645.571" height="592.385"/>
+    <rect style="fill: #ffe798" x="963.265" y="449.459" width="88.7" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="963.265" y="449.459" width="88.7" height="20"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="965.265" y="463.459">Controllers</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="1018.28" y="496.969" width="479.7" height="44"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1018.28" y="496.969" width="479.7" height="44"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="1258.13" y="512.169">&lt;&lt;Controller&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1258.13" y="532.969">PokemonController</text>
+    <rect style="fill: #ffffff" x="1018.28" y="540.969" width="479.7" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1018.28" y="540.969" width="479.7" height="8"/>
+    <rect style="fill: #ffffff" x="1018.28" y="548.969" width="479.7" height="84"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1018.28" y="548.969" width="479.7" height="84"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1021.28" y="562.169">+Index(): ActionResult</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1021.28" y="578.169">+PokemonList(page:int?,type:string): async Task&lt;ActionResult&gt;</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1021.28" y="594.169">+Insert(): ActionResult</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1021.28" y="610.169">+Create(collection:FormCollection): ActionResult</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1021.28" y="626.169">+DeletePokemon(id:int): ActionResult</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="1016.45" y="702.378" width="541.3" height="44"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1016.45" y="702.378" width="541.3" height="44"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="1287.1" y="717.578">&lt;&lt;Controller&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1287.1" y="738.378">LoginController</text>
+    <rect style="fill: #ffffff" x="1016.45" y="746.378" width="541.3" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1016.45" y="746.378" width="541.3" height="8"/>
+    <rect style="fill: #ffffff" x="1016.45" y="754.378" width="541.3" height="84"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1016.45" y="754.378" width="541.3" height="84"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1019.45" y="767.578">+Login(): ActionResult</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1019.45" y="783.578">+Register(): ActionResult</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1019.45" y="799.578">+Logout(): ActionResult</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1019.45" y="815.578">+LoginKonprobatu(collection:FormCollection): async Task&lt;ActionResult&gt;</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1019.45" y="831.578">+RegisterUser(collection:FormCollection): ActionResult</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="1025.62" y="878.443" width="541.3" height="44"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1025.62" y="878.443" width="541.3" height="44"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="1296.27" y="893.643">&lt;&lt;HttpContent&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1296.27" y="914.443">JsonContent</text>
+    <rect style="fill: #ffffff" x="1025.62" y="922.443" width="541.3" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1025.62" y="922.443" width="541.3" height="20"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1028.62" y="935.643">-_Stream: MemoryStream</text>
+    <rect style="fill: #ffffff" x="1025.62" y="942.443" width="541.3" height="52"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1025.62" y="942.443" width="541.3" height="52"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1028.62" y="955.643">+JsonContent(value:object)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1028.62" y="971.643">+SerializeToStreamAsync(stream:Stream,context:TransportContext): Task</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1028.62" y="987.643">+TryComputeLenght(length:long): bool</text>
+  </g>
+  <g>
+    <rect style="fill: #ccccca" x="339.704" y="467.625" width="561.207" height="497.092"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="339.704" y="467.625" width="561.207" height="497.092"/>
+    <rect style="fill: #ccccca" x="339.704" y="447.625" width="42.5" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="339.704" y="447.625" width="42.5" height="20"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="341.704" y="461.625">Views</text>
+  </g>
+  <g>
+    <rect style="fill: #f7a4a4" x="370.639" y="512.73" width="496.923" height="114.253"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="370.639" y="512.73" width="496.923" height="114.253"/>
+    <rect style="fill: #f7a4a4" x="370.639" y="492.73" width="42.5" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="370.639" y="492.73" width="42.5" height="20"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="372.639" y="506.73">Login</text>
+  </g>
+  <g>
+    <path style="fill: #ffffff" d="M 398.946 538.36 C 423.219,547.792 435.356,547.792 459.629,538.36 C 483.903,528.927 496.04,528.927 520.313,538.36 L 520.313,594.955 C 496.04,585.523 483.903,585.523 459.629,594.955 C 435.356,604.388 423.219,604.388 398.946,594.955 L 398.946,538.36z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 398.946 538.36 C 423.219,547.792 435.356,547.792 459.629,538.36 C 483.903,528.927 496.04,528.927 520.313,538.36 L 520.313,594.955 C 496.04,585.523 483.903,585.523 459.629,594.955 C 435.356,604.388 423.219,604.388 398.946,594.955 L 398.946,538.36"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="459.629" y="571.657">
+      <tspan x="459.629" y="571.657">Error.cshtml</tspan>
+    </text>
+  </g>
+  <g>
+    <path style="fill: #ffffff" d="M 548.117 539.907 C 571.335,548.779 582.944,548.779 606.162,539.907 C 629.38,531.035 640.989,531.035 664.207,539.907 L 664.207,593.138 C 640.989,584.266 629.38,584.266 606.162,593.138 C 582.944,602.009 571.335,602.009 548.117,593.138 L 548.117,539.907z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 548.117 539.907 C 571.335,548.779 582.944,548.779 606.162,539.907 C 629.38,531.035 640.989,531.035 664.207,539.907 L 664.207,593.138 C 640.989,584.266 629.38,584.266 606.162,593.138 C 582.944,602.009 571.335,602.009 548.117,593.138 L 548.117,539.907"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="606.162" y="571.522">
+      <tspan x="606.162" y="571.522">Login.cshtml</tspan>
+    </text>
+  </g>
+  <g>
+    <path style="fill: #ffffff" d="M 694.914 541.988 C 723.498,550.563 737.789,550.563 766.373,541.988 C 794.956,533.414 809.248,533.414 837.831,541.988 L 837.831,593.435 C 809.248,584.86 794.956,584.86 766.373,593.435 C 737.789,602.009 723.498,602.009 694.914,593.435 L 694.914,541.988z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 694.914 541.988 C 723.498,550.563 737.789,550.563 766.373,541.988 C 794.956,533.414 809.248,533.414 837.831,541.988 L 837.831,593.435 C 809.248,584.86 794.956,584.86 766.373,593.435 C 737.789,602.009 723.498,602.009 694.914,593.435 L 694.914,541.988"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="766.373" y="572.712">
+      <tspan x="766.373" y="572.712">Register.cshtml</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #f7a4a4" x="372.852" y="667.416" width="499.467" height="117.731"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="372.852" y="667.416" width="499.467" height="117.731"/>
+    <rect style="fill: #f7a4a4" x="372.852" y="647.416" width="57.9" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="372.852" y="647.416" width="57.9" height="20"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="374.852" y="661.416">Pokemon</text>
+  </g>
+  <g>
+    <path style="fill: #ffffff" d="M 379.614 700.463 C 400.857,709.727 411.478,709.727 432.72,700.463 C 453.963,691.2 464.584,691.2 485.826,700.463 L 485.826,756.045 C 464.584,746.781 453.963,746.781 432.72,756.045 C 411.478,765.308 400.857,765.308 379.614,756.045 L 379.614,700.463z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 379.614 700.463 C 400.857,709.727 411.478,709.727 432.72,700.463 C 453.963,691.2 464.584,691.2 485.826,700.463 L 485.826,756.045 C 464.584,746.781 453.963,746.781 432.72,756.045 C 411.478,765.308 400.857,765.308 379.614,756.045 L 379.614,700.463"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="432.72" y="733.254">
+      <tspan x="432.72" y="733.254">Index.cshtml</tspan>
+    </text>
+  </g>
+  <g>
+    <path style="fill: #ffffff" d="M 506.043 704.626 C 525.546,713.295 535.297,713.295 554.8,704.626 C 574.303,695.957 584.055,695.957 603.558,704.626 L 603.558,756.639 C 584.055,747.97 574.303,747.97 554.8,756.639 C 535.297,765.308 525.546,765.308 506.043,756.639 L 506.043,704.626z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 506.043 704.626 C 525.546,713.295 535.297,713.295 554.8,704.626 C 574.303,695.957 584.055,695.957 603.558,704.626 L 603.558,756.639 C 584.055,747.97 574.303,747.97 554.8,756.639 C 535.297,765.308 525.546,765.308 506.043,756.639 L 506.043,704.626"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="554.8" y="735.632">
+      <tspan x="554.8" y="735.632">Insert.cshtml</tspan>
+    </text>
+  </g>
+  <g>
+    <path style="fill: #ffffff" d="M 625.232 700.017 C 651.579,710.024 664.752,710.024 691.099,700.017 C 717.445,690.011 730.619,690.011 756.965,700.017 L 756.965,760.058 C 730.619,750.051 717.445,750.051 691.099,760.058 C 664.752,770.065 651.579,770.065 625.232,760.058 L 625.232,700.017z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 625.232 700.017 C 651.579,710.024 664.752,710.024 691.099,700.017 C 717.445,690.011 730.619,690.011 756.965,700.017 L 756.965,760.058 C 730.619,750.051 717.445,750.051 691.099,760.058 C 664.752,770.065 651.579,770.065 625.232,760.058 L 625.232,700.017"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="691.099" y="735.038">
+      <tspan x="691.099" y="735.038">PokemonList.cshtml</tspan>
+    </text>
+  </g>
+  <g>
+    <path style="fill: #ffffff" d="M 770.047 698.335 C 788.36,707.849 797.517,707.849 815.831,698.335 C 834.145,688.821 843.302,688.821 861.615,698.335 L 861.615,755.417 C 843.302,745.903 834.145,745.903 815.831,755.417 C 797.517,764.931 788.36,764.931 770.047,755.417 L 770.047,698.335z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 770.047 698.335 C 788.36,707.849 797.517,707.849 815.831,698.335 C 834.145,688.821 843.302,688.821 861.615,698.335 L 861.615,755.417 C 843.302,745.903 834.145,745.903 815.831,755.417 C 797.517,764.931 788.36,764.931 770.047,755.417 L 770.047,698.335"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="815.831" y="731.876">
+      <tspan x="815.831" y="731.876">View.cshtml</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #f7a4a4" x="371.662" y="822.012" width="396.006" height="110.596"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="371.662" y="822.012" width="396.006" height="110.596"/>
+    <rect style="fill: #f7a4a4" x="371.662" y="802.012" width="50.2" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="371.662" y="802.012" width="50.2" height="20"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="373.662" y="816.012">Shared</text>
+  </g>
+  <g>
+    <path style="fill: #ffffff" d="M 405.373 850.303 C 434.307,859.567 448.774,859.567 477.708,850.303 C 506.642,841.04 521.109,841.04 550.043,850.303 L 550.043,905.885 C 521.109,896.621 506.642,896.621 477.708,905.885 C 448.774,915.148 434.307,915.148 405.373,905.885 L 405.373,850.303z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 405.373 850.303 C 434.307,859.567 448.774,859.567 477.708,850.303 C 506.642,841.04 521.109,841.04 550.043,850.303 L 550.043,905.885 C 521.109,896.621 506.642,896.621 477.708,905.885 C 448.774,915.148 434.307,915.148 405.373,905.885 L 405.373,850.303"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="477.708" y="883.094">
+      <tspan x="477.708" y="883.094">_Layout.cshtml</tspan>
+    </text>
+  </g>
+  <g>
+    <path style="fill: #ffffff" d="M 604.096 845.546 C 629.199,854.81 641.751,854.81 666.855,845.546 C 691.958,836.283 704.51,836.283 729.614,845.546 L 729.614,901.128 C 704.51,891.864 691.958,891.864 666.855,901.128 C 641.751,910.391 629.199,910.391 604.096,901.128 L 604.096,845.546z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 604.096 845.546 C 629.199,854.81 641.751,854.81 666.855,845.546 C 691.958,836.283 704.51,836.283 729.614,845.546 L 729.614,901.128 C 704.51,891.864 691.958,891.864 666.855,901.128 C 641.751,910.391 629.199,910.391 604.096,901.128 L 604.096,845.546"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="666.855" y="878.337">
+      <tspan x="666.855" y="878.337">Error.cshtml</tspan>
+    </text>
+  </g>
+</svg>

@@ -44,7 +44,7 @@ namespace Pokemon_ASP.Controllers
                 return View(PokInfo.ToPagedList(pageNumber, pageSize));
             }
         }
-        public ActionResult Insert(FormCollection collection)
+        public ActionResult Insert()
         {
             return View("Insert");
         }
