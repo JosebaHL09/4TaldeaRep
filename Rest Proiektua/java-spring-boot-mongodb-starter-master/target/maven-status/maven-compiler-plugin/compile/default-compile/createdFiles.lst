@@ -1,0 +1,8 @@
+com\mongodb\starter\ApplicationStarter.class
+com\mongodb\starter\repositories\MongoDBPokemonRepository.class
+com\mongodb\starter\SpringConfiguration.class
+com\mongodb\starter\repositories\PokemonRepository.class
+com\mongodb\starter\SwaggerConfig.class
+com\mongodb\starter\controllers\PokemonController.class
+com\mongodb\starter\models\Pokemon.class
+com\mongodb\starter\models\User.class
