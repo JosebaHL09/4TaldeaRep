@@ -26,8 +26,8 @@ namespace Pokemon_ASP.Models
         public string weight { get; set; }
         [Required]
         public List<string> weaknesses { get; set; }
-        public List<Pokemon> Prev_evolution { get; set; }
-        public List<Pokemon> Next_evolution { get; set; }
+        public List<Pokemon> prev_evolution { get; set; }
+        public List<Pokemon> next_evolution { get; set; }
 
         public Pokemon()
         {
@@ -48,7 +48,7 @@ namespace Pokemon_ASP.Models
             this.weaknesses = weaknesses;
         }
 
-        public static string BaseURL = "http://192.168.72.30:8080/";
+        public static string BaseURL = "http://localhost:8080/";
 
         // Tipo guztien lista era asinkrono baten jasoko ditugu. ConfigureAwait false izan behar da errorerik ez emateko
         static async Task<List<string>> GetTypeListAsync()

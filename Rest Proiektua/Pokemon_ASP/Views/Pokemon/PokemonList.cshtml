@@ -87,9 +87,9 @@
                     <p class="pokemon-hw">@item.weight</p>
                 </div>
 
-                @if (item.Prev_evolution != null)
+                @if (item.prev_evolution != null)
                 {<div class="container">
-                        @if (item.Prev_evolution.Count == 1)
+                        @if (item.prev_evolution.Count == 1)
                         {
                             <p class="pokemon-txt-header">Prev Evo:</p>
                         }
@@ -97,7 +97,7 @@
                         {
                             <p class="pokemon-txt-header">Prev Evos:</p>
                         }
-                        @foreach (var prev_ev in item.Prev_evolution)
+                        @foreach (var prev_ev in item.prev_evolution)
                         {
                             var num = int.Parse(prev_ev.num);
                             <p class="pokemon-hw">@num - @prev_ev.name</p>
@@ -106,10 +106,10 @@
                 }
 
 
-                @if (item.Next_evolution != null)
+                @if (item.next_evolution != null)
                 {
                     <div class="container">
-                        @if (item.Next_evolution.Count == 1)
+                        @if (item.next_evolution.Count == 1)
                         {
                             <p class="pokemon-txt-header">Next Evo:</p>
                         }
@@ -117,7 +117,7 @@
                         {
                             <p class="pokemon-txt-header">Next Evos:</p>
                         }
-                        @foreach (var next_ev in item.Next_evolution)
+                        @foreach (var next_ev in item.next_evolution)
                         {
                             var num = int.Parse(next_ev.num);
                             <p class="pokemon-hw">@num - @next_ev.name</p>

@@ -76,19 +76,19 @@ namespace Pokemon_ASP.Controllers
 
             //Evolutions
             string evo1Type = Request["evo1"];
-            newPokemon.Prev_evolution = new List<Pokemon>();
-            newPokemon.Next_evolution = new List<Pokemon>();
+            newPokemon.prev_evolution = new List<Pokemon>();
+            newPokemon.next_evolution = new List<Pokemon>();
             if (evo1Type != "none")
             {
                 string evo1Num = Request["evo1_num"];
                 string evo1Name = Request["evo1_name"];
                 if (evo1Type == "prev")
                 {
-                    newPokemon.Prev_evolution.Add(new Pokemon(evo1Num, evo1Name));
+                    newPokemon.prev_evolution.Add(new Pokemon(evo1Num, evo1Name));
                 }
                 else if (evo1Type == "next")
                 {
-                    newPokemon.Next_evolution.Add(new Pokemon(evo1Num, evo1Name));
+                    newPokemon.next_evolution.Add(new Pokemon(evo1Num, evo1Name));
                 }
 
             }
@@ -99,21 +99,21 @@ namespace Pokemon_ASP.Controllers
                 string evo2Name = Request["evo2_name"];
                 if (evo2Type == "prev")
                 {
-                    newPokemon.Prev_evolution.Add(new Pokemon(evo2Num, evo2Name));
+                    newPokemon.prev_evolution.Add(new Pokemon(evo2Num, evo2Name));
                 }
                 else if (evo2Type == "next")
                 {
-                    newPokemon.Next_evolution.Add(new Pokemon(evo2Num, evo2Name));
+                    newPokemon.next_evolution.Add(new Pokemon(evo2Num, evo2Name));
                 }
             }
 
-            if(newPokemon.Prev_evolution.Count == 0)
+            if(newPokemon.prev_evolution.Count == 0)
             {
-                newPokemon.Prev_evolution = null;
+                newPokemon.prev_evolution = null;
             }
-            if (newPokemon.Next_evolution.Count == 0)
+            if (newPokemon.next_evolution.Count == 0)
             {
-                newPokemon.Next_evolution = null;
+                newPokemon.next_evolution = null;
             }
 
 
