@@ -120,21 +120,6 @@ class PokemonControllerIT {
         assertThat(pokemonRepository.count()).isEqualTo(0L);
     }
 
-    /*@DisplayName("PUT /pokemon")
-    @Test
-    void updatePokemon() {
-        // GIVEN
-        Pokemon pokemonInserted = pokemonRepository.save(testHelper.getBulbasaur());
-        // WHEN
-        HttpEntity<Pokemon> body = new HttpEntity<>(pokemonInserted);
-        ResponseEntity<Pokemon> result = rest.exchange(URL + "/pokemon", HttpMethod.PUT, body, new ParameterizedTypeReference<Pokemon>() {
-        });
-        // THEN
-        assertThat(result.getStatusCode()).isEqualTo(HttpStatus.OK);
-        assertThat(result.getBody()).isEqualTo(pokemonRepository.findOne(pokemonInserted.getId()));
-        assertThat(pokemonRepository.count()).isEqualTo(1L);
-    }*/
-
     @DisplayName("GET /user/{username,password}")
     @Test
     void checkUser() {
