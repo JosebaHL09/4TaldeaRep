@@ -84,7 +84,7 @@
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="weaknesses">Weakness(es)</label>
                     <div class="col-md-4">
-                        <select id="weaknesses" name="weaknesses" class="form-control" multiple="multiple" required>
+                        <select id="weaknesses" name="weaknesses" class="form-control" multiple="multiple" required style="height:315px;">
                             @foreach (var type in typeList)
                             {
                                 <option value="@type">@type</option>
@@ -112,14 +112,14 @@
                 <div class="form-group" id="evo1_num" style="display:none">
                     <label class="col-md-4 control-label" for="name">First Evolution Number</label>
                     <div class="col-md-4">
-                        <input id="evo1_num" name="evo1_num" type="number" placeholder="Number" class="form-control input-md">
+                        <input id="evo1_num" name="evo1_num" type="number" placeholder="Number" class="form-control input-md" required>
                     </div>
                 </div>
 
                 <div class="form-group" id="evo1_name" style="display:none">
                     <label class="col-md-4 control-label" for="name">First Evolution Name</label>
                     <div class="col-md-4">
-                        <input id="evo1_name" name="evo1_name" type="text" placeholder="Name" class="form-control input-md">
+                        <input id="evo1_name" name="evo1_name" type="text" placeholder="Name" class="form-control input-md" required>
                     </div>
                 </div>
 
@@ -138,14 +138,14 @@
                 <div class="form-group" id="evo2_num" style="display:none">
                     <label class="col-md-4 control-label" for="name">Second Evolution Number</label>
                     <div class="col-md-4">
-                        <input id="evo2_num" name="evo2_num" type="number" placeholder="Number" class="form-control input-md">
+                        <input id="evo2_num" name="evo2_num" type="number" placeholder="Number" class="form-control input-md" required>
                     </div>
                 </div>
 
                 <div class="form-group" id="evo2_name" style="display:none">
                     <label class="col-md-4 control-label" for="name">Second Evolution Name</label>
                     <div class="col-md-4">
-                        <input id="evo2_name" name="evo2_name" type="text" placeholder="Name" class="form-control input-md">
+                        <input id="evo2_name" name="evo2_name" type="text" placeholder="Name" class="form-control input-md" required>
                     </div>
                 </div>
 

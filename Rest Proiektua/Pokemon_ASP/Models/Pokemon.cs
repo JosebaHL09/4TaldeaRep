@@ -48,7 +48,7 @@ namespace Pokemon_ASP.Models
             this.weaknesses = weaknesses;
         }
 
-        public static string BaseURL = "http://192.168.72.10:8080/";
+        public static string BaseURL = "http://192.168.72.30:8080/";
 
         // Tipo guztien lista era asinkrono baten jasoko ditugu. ConfigureAwait false izan behar da errorerik ez emateko
         static async Task<List<string>> GetTypeListAsync()
