@@ -1,7 +1,7 @@
 Proiektua - 4Taldea
 ==
 
-![image info](./Rest Proiektua/Dokumentazioa/Trial_eta_Bestelakoak/estruktura.PNG)
+![image info](../Dokumentazioa/Trial_eta_Bestelakoak/estruktura.PNG)
 
 4Taldearen proiektua, errepositorio honetan aurkituko duzuna hau da
 --
