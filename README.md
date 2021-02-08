@@ -15,8 +15,8 @@ Tutoriala jarraituz egindako lehenengo aldaketak,onuragarria izan da karpeta hau
 Proiektuaren karpetan
 --
 Proiektuaren azken bertsioa hemen dago, 2 azpikarkpetaz osatuta + dokumentu gehiago
-* **ASP Proiektua**  
-* **Rest Api-aren proiektua**
+* **[ASP Proiektua](https://github.com/JosebaHL09/4TaldeaRep/tree/main/Rest%20Proiektua/Pokemon_ASP)**  
+* **[Rest Api-aren proiektua](https://github.com/JosebaHL09/4TaldeaRep/tree/main/Rest%20Proiektua/java-spring-boot-mongodb-starter-master)**
 * **[Datubaseen JSON fitxategiak](https://github.com/JosebaHL09/4TaldeaRep/tree/main/Rest%20Proiektua/Json_fitxategiak)**
 
 
