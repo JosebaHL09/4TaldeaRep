@@ -17,7 +17,7 @@ Proiektuaren karpetan
 Proiektuaren azken bertsioa hemen dago, 2 azpikarkpetaz osatuta + dokumentu gehiago
 * **ASP Proiektua**  
 * **Rest Api-aren proiektua**
-* **Datubaseen JSON fitxategiak**
+* **[Datubaseen JSON fitxategiak](https://github.com/JosebaHL09/4TaldeaRep/tree/main/Rest%20Proiektua/Json_fitxategiak)**
 
 
 Proiektua Martxan jartzen
