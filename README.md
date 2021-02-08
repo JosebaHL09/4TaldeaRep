@@ -1,40 +1,40 @@
 Proiektua - 4Taldea
 ==
 
-Taldea
---
-**Gu Markel Salgado, Aritz Izarcelaya, Joseba Hernandez eta Pablo Lopez gara, eta 4. Taldea sortu dugu DAM 2. mailako ‘Interfazeen Garapena’ eta ‘Datu Atzipena’ ikasgaien arteko ETHAZI proiektuan aurkeztu zaigun ikasturte amaierako erronka egiteko**
-
-
 Zertan datza proiektu hau?
 --
 
-**Proiektu hau api bat erabiliz ASP, Java eta MongoDB datubasearekin lan egiten duen proiektu bat da, gure kasuan pokemonen inguruan egindako proiektu bat da.**
+**Erronka honen helburua datu-base baten gordetako datuekin web-orri bat garatzea da, bitartekari moduan RESTful API bat eta elementu hauek erabiliz:**
+* **MongoDB datu-basea.**
+* **Java Spring Boot Framework-en egindako RESTful API-a.**
+* **ASP.NET MVC egindako Web Aplikazioa (C# lengoaia).**
+
 
 ![image info](https://github.com/JosebaHL09/4TaldeaRep/blob/main/Rest%20Proiektua/Dokumentazioa/Trial_eta_Bestelakoak/estruktura.PNG)
 
-4Taldearen proiektua, errepositorio honetan aurkituko duzuna hau da
+Karpetak
 --
 * **Beta karpeta**  
 * **Proiektu Finalaren karpeta**
 
-Beta karpetan
+Proiektuaren karpeta
 --
-**Tutoriala jarraituz egindako lehenengo aldaketak,onuragarria izan da karpeta hau gordetzea dudak eta aldaketak ondo egiteko**
-
-Proiektuaren karpetan
---
-Proiektuaren azken bertsioa hemen dago, 2 azpikarkpetaz osatuta + dokumentu gehiago
-* **[ASP Proiektua](https://github.com/JosebaHL09/4TaldeaRep/tree/main/Rest%20Proiektua/Pokemon_ASP)**  
-* **[Rest Api-aren proiektua](https://github.com/JosebaHL09/4TaldeaRep/tree/main/Rest%20Proiektua/java-spring-boot-mongodb-starter-master)**
-* **[Datubaseen JSON fitxategiak](https://github.com/JosebaHL09/4TaldeaRep/tree/main/Rest%20Proiektua/Json_fitxategiak)**
+Proiektuaren azken bertsioa:
+* **[ASP.NET Proiektua](https://github.com/JosebaHL09/4TaldeaRep/tree/main/Rest%20Proiektua/Pokemon_ASP)**  
+* **[Rest API-aren Java Proiektua](https://github.com/JosebaHL09/4TaldeaRep/tree/main/Rest%20Proiektua/java-spring-boot-mongodb-starter-master)**
+* **[Datu-baserako JSON fitxategiak](https://github.com/JosebaHL09/4TaldeaRep/tree/main/Rest%20Proiektua/Json_fitxategiak)**
+* **[Dokumentazioa](https://github.com/JosebaHL09/4TaldeaRep/tree/main/Rest%20Proiektua/Dokumentazioa)**
 
 
 Proiektua Martxan jartzen
 --
-**1. Proiektu hau ikusten den moduan hiru parti ditu, MongoDB, Rest Apia eta ASP-MVC proiektua. Funtzionamenduarekin hasteko lehenengo MongoDB datubasea sortu eta zure datuak sartu.**
+* *1. MongoDB datu-basea sortu eta datuak sartu.*
 
-**2. Hurrengoa zure rest apia konfiguratzea da, gomendagarria izango zen gure karpetan dagoena erabiltzea, beste proiektu bat sortzean arazoak sortzen direlako eta apia ez du behar bezala funtzionatzen. Api hau goiko irudian ikusten den moduan datubasea eta ASP proiektua elkar-konektatzen duena da.**
+* *2. REST API-a deskargatu eta konfiguratu eta "src/main/resources" application.properties fitxategian IP helbidea aldatu.*
 
-**3. Azken pausua izango zen erabilitako datuekin web orri bat sortzea, ASP proiektua rest api-arekin konektatu beharko duzu (localhost zure ordenagailua bada edo beste ordenagailuaren ip-arekin, + portu zenbakia), atal hau zure irudimena erabiliz gustoko duzun web orria sortu eta erabili, edo guk daukagunarekin landu.**
+* *3. ASP.NET deskargatu eta Pokemon klasean BaseURL aldagaiari helbidea aldatu.*
 
+
+Taldea
+--
+**Gu Markel Salgado, Aritz Izarcelaya, Joseba Hernandez eta Pablo Lopez gara, eta 4. Taldea sortu dugu DAM 2. mailako ‘Interfazeen Garapena’ eta ‘Datu Atzipena’ ikasgaien arteko ETHAZI proiektuan aurkeztu zaigun ikasturte amaierako erronka egiteko**
