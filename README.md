@@ -1,6 +1,16 @@
 Proiektua - 4Taldea
 ==
 
+Taldea
+--
+**Gu Markel Salgado, Aritz Izarcelaya, Joseba Hernandez eta Pablo Lopez gara, eta 4. Taldea sortu dugu DAM 2. mailako ‘Interfazeen Garapena’ eta ‘Datu Atzipena’ ikasgaien arteko ETHAZI proiektuan aurkeztu zaigun ikasturte amaierako erronka egiteko**
+
+
+Zertan datza proiektu hau?
+--
+
+**Proiektu hau api bat erabiliz ASP, Java eta MongoDB datubasearekin lan egiten duen proiektu bat da, gure kasuan pokemonen inguruan egindako proiektu bat da.**
+
 ![image info](https://github.com/JosebaHL09/4TaldeaRep/blob/main/Rest%20Proiektua/Dokumentazioa/Trial_eta_Bestelakoak/estruktura.PNG)
 
 4Taldearen proiektua, errepositorio honetan aurkituko duzuna hau da
