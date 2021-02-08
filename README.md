@@ -20,7 +20,7 @@ Zertan datza proiektu hau?
 
 Beta karpetan
 --
-Tutoriala jarraituz egindako lehenengo aldaketak,onuragarria izan da karpeta hau gordetzea dudak eta aldaketak ondo egiteko
+**Tutoriala jarraituz egindako lehenengo aldaketak,onuragarria izan da karpeta hau gordetzea dudak eta aldaketak ondo egiteko**
 
 Proiektuaren karpetan
 --
