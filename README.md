@@ -28,11 +28,11 @@ Proiektuaren azken bertsioa:
 
 Proiektua Martxan jartzen
 --
-* **1. MongoDB datu-basea sortu eta datuak sartu.**
+* **MongoDB datu-basea sortu eta datuak sartu.**
 
-* **2. REST API-a deskargatu eta konfiguratu eta "src/main/resources" application.properties fitxategian IP helbidea aldatu.**
+* **REST API-a deskargatu eta konfiguratu eta "src/main/resources" application.properties fitxategian IP helbidea aldatu.**
 
-* **3. ASP.NET deskargatu eta Pokemon klasean BaseURL aldagaiari helbidea aldatu.**
+* **ASP.NET deskargatu eta Pokemon klasean BaseURL aldagaiari helbidea aldatu.**
 
 
 Taldea
